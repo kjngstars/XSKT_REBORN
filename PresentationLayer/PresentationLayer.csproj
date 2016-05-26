@@ -73,6 +73,12 @@
     <Compile Include="FormDanhSachCCGT.Designer.cs">
       <DependentUpon>FormDanhSachCCGT.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDanhSachDaiLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDanhSachDaiLy.Designer.cs">
+      <DependentUpon>FormDanhSachDaiLy.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDanhSachLoaiVe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDanhSachCCGT.resx">
       <DependentUpon>FormDanhSachCCGT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDanhSachDaiLy.resx">
+      <DependentUpon>FormDanhSachDaiLy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDanhSachLoaiVe.resx">
       <DependentUpon>FormDanhSachLoaiVe.cs</DependentUpon>

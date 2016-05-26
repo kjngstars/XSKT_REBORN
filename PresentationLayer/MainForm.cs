@@ -84,5 +84,16 @@ namespace PresentationLayer
             FormEditCCGT form = new FormEditCCGT();
             form.ShowDialog();
         }
+
+        private void barButtonItem_DanhSachDoiTac_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormDanhSachDaiLy f = new FormDanhSachDaiLy();
+
+            if (!this.CheckExist(f)) 
+            {
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
     }
 }

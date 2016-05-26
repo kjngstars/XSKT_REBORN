@@ -65,26 +65,26 @@
             this.toolStripMenuItem_CapNhat,
             this.toolStripMenuItem_Xoa});
             this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.Size = new System.Drawing.Size(153, 92);
+            this.contextMenuStrip.Size = new System.Drawing.Size(125, 70);
             // 
             // toolStripMenuItem_Them
             // 
             this.toolStripMenuItem_Them.Name = "toolStripMenuItem_Them";
-            this.toolStripMenuItem_Them.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem_Them.Size = new System.Drawing.Size(124, 22);
             this.toolStripMenuItem_Them.Text = "Thêm";
             this.toolStripMenuItem_Them.Click += new System.EventHandler(this.toolStripMenuItem_Them_Click);
             // 
             // toolStripMenuItem_CapNhat
             // 
             this.toolStripMenuItem_CapNhat.Name = "toolStripMenuItem_CapNhat";
-            this.toolStripMenuItem_CapNhat.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem_CapNhat.Size = new System.Drawing.Size(124, 22);
             this.toolStripMenuItem_CapNhat.Text = "Cập Nhật";
             this.toolStripMenuItem_CapNhat.Click += new System.EventHandler(this.toolStripMenuItem_CapNhat_Click);
             // 
             // toolStripMenuItem_Xoa
             // 
             this.toolStripMenuItem_Xoa.Name = "toolStripMenuItem_Xoa";
-            this.toolStripMenuItem_Xoa.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem_Xoa.Size = new System.Drawing.Size(124, 22);
             this.toolStripMenuItem_Xoa.Text = "Xóa";
             this.toolStripMenuItem_Xoa.Click += new System.EventHandler(this.toolStripMenuItem_Xoa_Click);
             // 

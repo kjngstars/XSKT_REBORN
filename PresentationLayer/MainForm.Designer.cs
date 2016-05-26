@@ -158,6 +158,7 @@
             this.barButtonItem_DanhSachDoiTac.Id = 6;
             this.barButtonItem_DanhSachDoiTac.LargeGlyph = global::PresentationLayer.Properties.Resources.DanhSachDoiTac;
             this.barButtonItem_DanhSachDoiTac.Name = "barButtonItem_DanhSachDoiTac";
+            this.barButtonItem_DanhSachDoiTac.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem_DanhSachDoiTac_ItemClick);
             // 
             // barButtonItem_TiepNhanDoiTac
             // 

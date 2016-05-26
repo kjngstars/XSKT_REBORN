@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CoCauGiaiThuongDAL.cs" />
+    <Compile Include="DanhSachDaiLyDAL.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="DoiTacDAL.cs" />
     <Compile Include="GiaiThuongDAL.cs" />
