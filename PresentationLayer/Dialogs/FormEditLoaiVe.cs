@@ -154,6 +154,9 @@ namespace PresentationLayer.Dialogs
         /// </summary>
         public void InsertGiaiThuong()
         {
+            if (this.textEdit_MenhGia.EditValue == null)
+                this.textEdit_MenhGia.EditValue = 0;
+
             try
             {
                 this.loaiVe = new LoaiVe(
@@ -183,6 +186,9 @@ namespace PresentationLayer.Dialogs
         /// </summary>
         public void UpdateGiaiThuong()
         {
+            if (this.textEdit_MenhGia.EditValue == null)
+                this.textEdit_MenhGia.EditValue = 0;
+
             try
             {
                 this.loaiVe = new LoaiVe(
