@@ -103,7 +103,7 @@
             // 
             // textEdit_MenhGia
             // 
-            this.textEdit_MenhGia.EditValue = "";
+            this.textEdit_MenhGia.EditValue = "0";
             this.textEdit_MenhGia.Location = new System.Drawing.Point(122, 157);
             this.textEdit_MenhGia.Name = "textEdit_MenhGia";
             this.textEdit_MenhGia.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F);

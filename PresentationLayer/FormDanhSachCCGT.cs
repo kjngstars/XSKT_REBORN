@@ -29,7 +29,14 @@ namespace PresentationLayer
 
         private void FormDanhSachCCGT_Shown(object sender, EventArgs e)
         {
-            this.gridControl.DataSource = this.coCauGiaiThuongBUS.GetAll();
+            try
+            {
+                this.gridControl.DataSource = this.coCauGiaiThuongBUS.GetAll();
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, @"Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void toolStripMenuItem_Them_Click(object sender, EventArgs e)
@@ -48,7 +55,15 @@ namespace PresentationLayer
                 if (form.DialogResult != DialogResult.Abort)
                 {
                     form.ShowDialog();
-                    this.gridControl.DataSource = this.coCauGiaiThuongBUS.GetAll();
+
+                    try
+                    {
+                        this.gridControl.DataSource = this.coCauGiaiThuongBUS.GetAll();
+                    }
+                    catch (Exception ex)
+                    {
+                        XtraMessageBox.Show(ex.Message, @"Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }
@@ -63,7 +78,15 @@ namespace PresentationLayer
                 if (form.DialogResult != DialogResult.Abort)
                 {
                     form.ShowDialog();
-                    this.gridControl.DataSource = this.coCauGiaiThuongBUS.GetAll();
+
+                    try
+                    {
+                        this.gridControl.DataSource = this.coCauGiaiThuongBUS.GetAll();
+                    }
+                    catch (Exception ex)
+                    {
+                        XtraMessageBox.Show(ex.Message, @"Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }
@@ -78,7 +101,14 @@ namespace PresentationLayer
                 {
                     this.coCauGiaiThuongBUS.Delete(maCoCauGiaiThuong);
 
-                    this.gridControl.DataSource = this.coCauGiaiThuongBUS.GetAll();
+                    try
+                    {
+                        this.gridControl.DataSource = this.coCauGiaiThuongBUS.GetAll();
+                    }
+                    catch (Exception ex)
+                    {
+                        XtraMessageBox.Show(ex.Message, @"Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
 
                     XtraMessageBox.Show(@"Xóa Thành Công", @"Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

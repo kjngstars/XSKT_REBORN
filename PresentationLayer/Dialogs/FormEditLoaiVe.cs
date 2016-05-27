@@ -85,55 +85,68 @@ namespace PresentationLayer.Dialogs
 
         private void FillCTPhatHanh()
         {
-            DataTable dataTable = this.doiTacBUS.GetAll_CT();
-
-            DoiTac ct = new DoiTac(null, "Công ty");
-            this.comboBoxEdit_CTPhatHanh.Properties.Items.Add(ct);
-
-            foreach (DataRow row in dataTable.Rows)
+            try
             {
-                DoiTac doiTac = new DoiTac(row);
+                DataTable dataTable = this.doiTacBUS.GetAll_CT();
 
-                this.comboBoxEdit_CTPhatHanh.Properties.Items.Add(doiTac);
+                DoiTac ct = new DoiTac(null, "Công ty");
+                this.comboBoxEdit_CTPhatHanh.Properties.Items.Add(ct);
+
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    DoiTac doiTac = new DoiTac(row);
+
+                    this.comboBoxEdit_CTPhatHanh.Properties.Items.Add(doiTac);
+                }
+
+                if (this.loaiVe == null ||
+                    this.loaiVe.MaDoiTac == string.Empty)
+                    this.comboBoxEdit_CTPhatHanh.SelectedIndex = 0;
+                else
+                {
+                    for (int i = 0; i < this.comboBoxEdit_CTPhatHanh.Properties.Items.Count; i++)
+                        if (((DoiTac)this.comboBoxEdit_CTPhatHanh.Properties.Items[i]).MaDoiTac == this.loaiVe.MaDoiTac)
+                        {
+                            this.comboBoxEdit_CTPhatHanh.SelectedIndex = i;
+                            break;
+                        }
+                }
             }
-
-            if (this.loaiVe == null ||
-                this.loaiVe.MaDoiTac == string.Empty)
-                this.comboBoxEdit_CTPhatHanh.SelectedIndex = 0;
-            else
+            catch (Exception ex)
             {
-                for (int i = 0; i < this.comboBoxEdit_CTPhatHanh.Properties.Items.Count; i++)
-                    if (((DoiTac)this.comboBoxEdit_CTPhatHanh.Properties.Items[i]).MaDoiTac == this.loaiVe.MaDoiTac)
-                    {
-                        this.comboBoxEdit_CTPhatHanh.SelectedIndex = i;
-                        break;
-                    }
+                XtraMessageBox.Show(ex.Message, @"Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void FillMaCCGT()
         {
-            DataTable dataTable = this.coCauGiaiThuongBUS.GetAll();
-
-            foreach (DataRow row in dataTable.Rows)
+            try
             {
-                CoCauGiaiThuong coCauGiaiThuong = new CoCauGiaiThuong(row);
+                DataTable dataTable = this.coCauGiaiThuongBUS.GetAll();
 
-                this.comboBoxEdit_MaCCGT.Properties.Items.Add(coCauGiaiThuong);
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    CoCauGiaiThuong coCauGiaiThuong = new CoCauGiaiThuong(row);
+
+                    this.comboBoxEdit_MaCCGT.Properties.Items.Add(coCauGiaiThuong);
+                }
+
+                if (this.loaiVe == null)
+                    this.comboBoxEdit_MaCCGT.SelectedIndex = 0;
+                else
+                {
+                    for (int i = 0; i < this.comboBoxEdit_MaCCGT.Properties.Items.Count; i++)
+                        if (((CoCauGiaiThuong)this.comboBoxEdit_MaCCGT.Properties.Items[i]).MaCoCauGiaiThuong == this.loaiVe.MaCoCauGiaiThuong)
+                        {
+                            this.comboBoxEdit_MaCCGT.SelectedIndex = i;
+                            break;
+                        }
+                }
             }
-
-            if (this.loaiVe == null)
-                this.comboBoxEdit_MaCCGT.SelectedIndex = 0;
-            else
+            catch (Exception ex)
             {
-                for (int i = 0; i < this.comboBoxEdit_MaCCGT.Properties.Items.Count; i++)
-                    if (((CoCauGiaiThuong)this.comboBoxEdit_MaCCGT.Properties.Items[i]).MaCoCauGiaiThuong == this.loaiVe.MaCoCauGiaiThuong)
-                    {
-                        this.comboBoxEdit_MaCCGT.SelectedIndex = i;
-                        break;
-                    }
+                XtraMessageBox.Show(ex.Message, @"Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void simpleButton_OK_Click(object sender, EventArgs e)

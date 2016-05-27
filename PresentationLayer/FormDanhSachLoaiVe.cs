@@ -29,7 +29,14 @@ namespace PresentationLayer
 
         private void FormDanhSachLoaiVe_Shown(object sender, EventArgs e)
         {
-            this.gridControl.DataSource = this.loaiVeBUS.GetAll();
+            try
+            {
+                this.gridControl.DataSource = this.loaiVeBUS.GetAll();
+            }
+            catch(Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, @"Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void toolStripMenuItem_Them_Click(object sender, EventArgs e)

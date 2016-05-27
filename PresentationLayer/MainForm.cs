@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
 using PresentationLayer.Dialogs;
+using DevExpress.Skins;
 
 namespace PresentationLayer
 {
@@ -20,13 +21,55 @@ namespace PresentationLayer
             InitializeComponent();
         }
 
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            this.AddSkin();
+            this.SetSkin(Properties.Settings.Default.SkinName);
+        }
+
+        /// <summary>
+        /// Nạp danh sách SkinName vào repositoryItemComboBox_Skin 
+        /// </summary>
+        public void AddSkin()
+        {
+            SkinContainerCollection skinContainerCollection = SkinManager.Default.Skins;
+            foreach (SkinContainer skinContainer in skinContainerCollection)
+                this.repositoryItemComboBox_Skin.Items.Add(skinContainer.SkinName);
+
+            if (Properties.Settings.Default.SkinName != string.Empty)
+                this.barEditItem_Skin.EditValue = Properties.Settings.Default.SkinName;
+            else
+                this.barEditItem_Skin.EditValue = this.defaultLookAndFeel.LookAndFeel.SkinName;
+        }
+
+        /// <summary>
+        /// Set Skin
+        /// </summary>
+        public void SetSkin(string skinName)
+        {
+            if (skinName != string.Empty)
+            {
+                this.defaultLookAndFeel.LookAndFeel.SkinName = skinName;
+
+                Properties.Settings.Default.SkinName = skinName;
+            }
+            else
+                Properties.Settings.Default.SkinName = this.defaultLookAndFeel.LookAndFeel.SkinName;
+
+            Properties.Settings.Default.Save();
+        }
+
+        private void barEditItem_Skin_EditValueChanged(object sender, EventArgs e)
+        {
+            this.SetSkin(this.barEditItem_Skin.EditValue.ToString());
+        }
 
         /// <summary>
         /// Kiểm tra tab tồn tại chưa
         /// </summary>
         public bool CheckExist(XtraForm form)
         {
-            foreach(XtraForm child in this.MdiChildren)
+            foreach (XtraForm child in this.MdiChildren)
             {
                 if (form.Name == child.Name)
                 {
@@ -38,7 +81,6 @@ namespace PresentationLayer
             return false;
         }
 
-        
         /// <summary>
         /// Thêm tab Danh sách loại vé
         /// </summary>
@@ -84,5 +126,7 @@ namespace PresentationLayer
             FormEditCCGT form = new FormEditCCGT();
             form.ShowDialog();
         }
+
+
     }
 }

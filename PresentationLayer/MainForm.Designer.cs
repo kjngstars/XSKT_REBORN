@@ -52,9 +52,12 @@
             this.barButtonItem_LapKeHoachPhanPhoi = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem_GhiNhanKQXS = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem_TraCuuKQXS = new DevExpress.XtraBars.BarButtonItem();
+            this.barEditItem_Skin = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemComboBox_Skin = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.ribbonPage_HeThong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup_TaiKhoan = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup_Khac = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup_GiaoDien = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage_QuanLyDoiTac = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup_DoiTac = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup_Phieu = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -72,11 +75,13 @@
             this.defaultLookAndFeel = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.xtraTabbedMdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox_Skin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
             // 
+            this.ribbon.ApplicationIcon = ((System.Drawing.Bitmap)(resources.GetObject("ribbon.ApplicationIcon")));
             this.ribbon.ExpandCollapseItem.Id = 0;
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbon.ExpandCollapseItem,
@@ -100,9 +105,10 @@
             this.barButtonItem_LapKeHoachPhatHanh,
             this.barButtonItem_LapKeHoachPhanPhoi,
             this.barButtonItem_GhiNhanKQXS,
-            this.barButtonItem_TraCuuKQXS});
+            this.barButtonItem_TraCuuKQXS,
+            this.barEditItem_Skin});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 22;
+            this.ribbon.MaxItemId = 23;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage_HeThong,
@@ -112,6 +118,8 @@
             this.ribbonPage_KetQuaXoSo,
             this.ribbonPage_BaoCao,
             this.ribbonPage_TroGiup});
+            this.ribbon.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemComboBox_Skin});
             this.ribbon.ShowToolbarCustomizeItem = false;
             this.ribbon.Size = new System.Drawing.Size(798, 147);
             this.ribbon.StatusBar = this.ribbonStatusBar;
@@ -268,11 +276,29 @@
             this.barButtonItem_TraCuuKQXS.LargeGlyph = global::PresentationLayer.Properties.Resources.TraCuuKQXS;
             this.barButtonItem_TraCuuKQXS.Name = "barButtonItem_TraCuuKQXS";
             // 
+            // barEditItem_Skin
+            // 
+            this.barEditItem_Skin.Caption = "Skin";
+            this.barEditItem_Skin.Edit = this.repositoryItemComboBox_Skin;
+            this.barEditItem_Skin.Id = 22;
+            this.barEditItem_Skin.Name = "barEditItem_Skin";
+            this.barEditItem_Skin.Width = 150;
+            this.barEditItem_Skin.EditValueChanged += new System.EventHandler(this.barEditItem_Skin_EditValueChanged);
+            // 
+            // repositoryItemComboBox_Skin
+            // 
+            this.repositoryItemComboBox_Skin.AutoHeight = false;
+            this.repositoryItemComboBox_Skin.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemComboBox_Skin.Name = "repositoryItemComboBox_Skin";
+            this.repositoryItemComboBox_Skin.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            // 
             // ribbonPage_HeThong
             // 
             this.ribbonPage_HeThong.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup_TaiKhoan,
-            this.ribbonPageGroup_Khac});
+            this.ribbonPageGroup_Khac,
+            this.ribbonPageGroup_GiaoDien});
             this.ribbonPage_HeThong.Name = "ribbonPage_HeThong";
             this.ribbonPage_HeThong.Text = "Hệ Thống";
             // 
@@ -292,6 +318,13 @@
             this.ribbonPageGroup_Khac.Name = "ribbonPageGroup_Khac";
             this.ribbonPageGroup_Khac.ShowCaptionButton = false;
             this.ribbonPageGroup_Khac.Text = "Khác";
+            // 
+            // ribbonPageGroup_GiaoDien
+            // 
+            this.ribbonPageGroup_GiaoDien.ItemLinks.Add(this.barEditItem_Skin);
+            this.ribbonPageGroup_GiaoDien.Name = "ribbonPageGroup_GiaoDien";
+            this.ribbonPageGroup_GiaoDien.ShowCaptionButton = false;
+            this.ribbonPageGroup_GiaoDien.Text = "Giao Diện";
             // 
             // ribbonPage_QuanLyDoiTac
             // 
@@ -405,7 +438,10 @@
             // 
             // xtraTabbedMdiManager
             // 
+            this.xtraTabbedMdiManager.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InAllTabPageHeaders;
+            this.xtraTabbedMdiManager.HeaderButtons = DevExpress.XtraTab.TabButtons.Close;
             this.xtraTabbedMdiManager.MdiParent = this;
+            this.xtraTabbedMdiManager.PinPageButtonShowMode = DevExpress.XtraTab.PinPageButtonShowMode.InAllTabPageHeaders;
             // 
             // MainForm
             // 
@@ -414,12 +450,15 @@
             this.ClientSize = new System.Drawing.Size(798, 599);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "MainForm";
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "Quản Lý Xổ Số";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox_Skin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -469,5 +508,8 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage_BaoCao;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage_TroGiup;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager;
+        private DevExpress.XtraBars.BarEditItem barEditItem_Skin;
+        private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox_Skin;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup_GiaoDien;
     }
 }

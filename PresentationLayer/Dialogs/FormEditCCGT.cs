@@ -88,7 +88,14 @@ namespace PresentationLayer.Dialogs
         {
             this.barEditItem_NgayLap.EditValue = this.coCauGiaiThuong.NgayLap;
 
-            this.gridControl.DataSource = this.giaiThuongBUS.GetGiaiThuongByMaCoCauGiaiThuong(this.coCauGiaiThuong.MaCoCauGiaiThuong);
+            try
+            {
+                this.gridControl.DataSource = this.giaiThuongBUS.GetGiaiThuongByMaCoCauGiaiThuong(this.coCauGiaiThuong.MaCoCauGiaiThuong);
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, @"Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         /// <summary>
@@ -219,8 +226,13 @@ namespace PresentationLayer.Dialogs
         public void UpdateGiaiThuong(DataRow row)
         {
             GiaiThuong giaiThuong = new GiaiThuong(row);
-
-            this.giaiThuongBUS.Update(giaiThuong);
+            try
+            {
+                this.giaiThuongBUS.Update(giaiThuong);
+            }catch(Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, @"Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
