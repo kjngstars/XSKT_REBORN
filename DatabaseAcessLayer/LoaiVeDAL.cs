@@ -117,5 +117,14 @@ namespace DatabaseAcessLayer
             else
                 return null;
         }
+
+        public DataTable GetLoaiVeCT()
+        {
+            string query = @"SELECT *
+                            FROM LOAIVE
+                            WHERE MADOITAC LIKE 'CT%'";
+
+            return this.getTable(query, string.Empty);
+        }
     }
 }

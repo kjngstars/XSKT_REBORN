@@ -114,6 +114,8 @@ namespace PresentationLayer.Dialogs
             }
             catch (Exception ex)
             {
+                this.DialogResult = DialogResult.Abort;
+
                 XtraMessageBox.Show(ex.Message, @"Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -145,6 +147,8 @@ namespace PresentationLayer.Dialogs
             }
             catch (Exception ex)
             {
+                this.DialogResult = DialogResult.Abort;
+
                 XtraMessageBox.Show(ex.Message, @"Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

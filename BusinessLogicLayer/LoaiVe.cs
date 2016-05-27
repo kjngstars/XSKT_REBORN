@@ -47,5 +47,10 @@ namespace BusinessLogicLayer
             this.MaDoiTac = row["MADOITAC"].ToString();
             this.MaCoCauGiaiThuong = row["MACOCAUGIAITHUONG"].ToString();
         }
+
+        public override string ToString()
+        {
+            return this.TenLoaiVe;
+        }
     }
 }

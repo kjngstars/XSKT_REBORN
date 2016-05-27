@@ -94,6 +94,8 @@ namespace PresentationLayer.Dialogs
             }
             catch (Exception ex)
             {
+                this.DialogResult = DialogResult.Abort;
+
                 XtraMessageBox.Show(ex.Message, @"Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -111,7 +113,7 @@ namespace PresentationLayer.Dialogs
         /// </summary>
         private void barButtonItem_Xoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (this.gridView.FocusedRowHandle != -1)
+            if (this.gridView.FocusedRowHandle >= 0)
             {
                 string maGiaiThuong = this.gridView.GetDataRow(this.gridView.FocusedRowHandle)["MaGiaiThuong"].ToString();
 

@@ -27,6 +27,12 @@ namespace PresentationLayer
             this.SetSkin(Properties.Settings.Default.SkinName);
         }
 
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Properties.Settings.Default.SkinName = this.defaultLookAndFeel.LookAndFeel.SkinName;
+            Properties.Settings.Default.Save();
+        }
+
         /// <summary>
         /// Nạp danh sách SkinName vào repositoryItemComboBox_Skin 
         /// </summary>
@@ -48,15 +54,7 @@ namespace PresentationLayer
         public void SetSkin(string skinName)
         {
             if (skinName != string.Empty)
-            {
                 this.defaultLookAndFeel.LookAndFeel.SkinName = skinName;
-
-                Properties.Settings.Default.SkinName = skinName;
-            }
-            else
-                Properties.Settings.Default.SkinName = this.defaultLookAndFeel.LookAndFeel.SkinName;
-
-            Properties.Settings.Default.Save();
         }
 
         private void barEditItem_Skin_EditValueChanged(object sender, EventArgs e)
@@ -101,7 +99,9 @@ namespace PresentationLayer
         private void barButtonItem_ThemLoaiVe_ItemClick(object sender, ItemClickEventArgs e)
         {
             FormEditLoaiVe form = new FormEditLoaiVe();
-            form.ShowDialog();
+
+            if (form.DialogResult != DialogResult.Abort)
+                form.ShowDialog();
         }
 
         /// <summary>
@@ -124,9 +124,20 @@ namespace PresentationLayer
         private void barButtonItem_ThemCCGT_ItemClick(object sender, ItemClickEventArgs e)
         {
             FormEditCCGT form = new FormEditCCGT();
-            form.ShowDialog();
+
+            if (form.DialogResult != DialogResult.Abort)
+                form.ShowDialog();
         }
 
+        /// <summary>
+        /// Mở form ghi nhận KQSX
+        /// </summary>
+        private void barButtonItem_GhiNhanKQXS_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormGhiNhanKQSX form = new FormGhiNhanKQSX();
 
+            if (form.DialogResult != DialogResult.Abort)
+                form.ShowDialog();
+        }
     }
 }

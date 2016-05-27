@@ -62,5 +62,10 @@ namespace BusinessLogicLayer
 
             return new LoaiVe(dataRow);
         }
+
+        public DataTable GetLoaiVeCT()
+        {
+            return this.loaiVeDAL.GetLoaiVeCT();
+        }
     }
 }

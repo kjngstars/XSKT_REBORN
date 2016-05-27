@@ -74,6 +74,12 @@
     <Compile Include="Dialogs\FormEditLoaiVe.Designer.cs">
       <DependentUpon>FormEditLoaiVe.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dialogs\FormGhiNhanKQSX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FormGhiNhanKQSX.Designer.cs">
+      <DependentUpon>FormGhiNhanKQSX.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDanhSachCCGT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\FormEditLoaiVe.resx">
       <DependentUpon>FormEditLoaiVe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormGhiNhanKQSX.resx">
+      <DependentUpon>FormGhiNhanKQSX.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDanhSachCCGT.resx">
       <DependentUpon>FormDanhSachCCGT.cs</DependentUpon>

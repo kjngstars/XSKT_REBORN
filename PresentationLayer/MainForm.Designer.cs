@@ -268,6 +268,7 @@
             this.barButtonItem_GhiNhanKQXS.Id = 20;
             this.barButtonItem_GhiNhanKQXS.LargeGlyph = global::PresentationLayer.Properties.Resources.GhiNhanKQXS;
             this.barButtonItem_GhiNhanKQXS.Name = "barButtonItem_GhiNhanKQXS";
+            this.barButtonItem_GhiNhanKQXS.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem_GhiNhanKQXS_ItemClick);
             // 
             // barButtonItem_TraCuuKQXS
             // 
@@ -456,6 +457,7 @@
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "Quản Lý Xổ Số";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox_Skin)).EndInit();
