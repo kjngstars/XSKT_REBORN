@@ -95,5 +95,11 @@ namespace PresentationLayer
                 f.Show();
             }
         }
+
+        private void barButtonItem_TiepNhanDoiTac_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var f = new FormThemDoiTac();
+            f.Show();
+        }
     }
 }

@@ -166,6 +166,7 @@
             this.barButtonItem_TiepNhanDoiTac.Id = 7;
             this.barButtonItem_TiepNhanDoiTac.LargeGlyph = global::PresentationLayer.Properties.Resources.TiepNhanDoiTac;
             this.barButtonItem_TiepNhanDoiTac.Name = "barButtonItem_TiepNhanDoiTac";
+            this.barButtonItem_TiepNhanDoiTac.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem_TiepNhanDoiTac_ItemClick);
             // 
             // barButtonItem_PhieuDangKyVe
             // 
