@@ -28,109 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.barEditItem_LoaiVe = new DevExpress.XtraBars.BarEditItem();
-            this.repositoryItemComboBox_LoaiVe = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
-            this.barEditItem_NgayMoThuong = new DevExpress.XtraBars.BarEditItem();
-            this.repositoryItemDateEdit_NgayMoThuong = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
-            this.ribbonPage_KQSX = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup_LoaiVe = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup_NgayMoThuong = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.repositoryItemComboBox_NgayLap = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.simpleButton_Cancel = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton_OK = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl = new DevExpress.XtraEditors.PanelControl();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox_LoaiVe)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit_NgayMoThuong)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit_NgayMoThuong.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox_NgayLap)).BeginInit();
+            this.labelControl_LoaiVe = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl_NgayMoThuong = new DevExpress.XtraEditors.LabelControl();
+            this.comboBoxEdit_LoaiVe = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.dateEdit_NgayMoThuong = new DevExpress.XtraEditors.DateEdit();
+            this.userControlKQSX = new PresentationLayer.UserControls.UserControlKQSX();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl)).BeginInit();
+            this.panelControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit_LoaiVe.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit_NgayMoThuong.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit_NgayMoThuong.Properties)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ribbonControl
-            // 
-            this.ribbonControl.ExpandCollapseItem.Id = 0;
-            this.ribbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.ribbonControl.ExpandCollapseItem,
-            this.barEditItem_LoaiVe,
-            this.barEditItem_NgayMoThuong});
-            this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 5;
-            this.ribbonControl.Name = "ribbonControl";
-            this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage_KQSX});
-            this.ribbonControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemComboBox_LoaiVe,
-            this.repositoryItemComboBox_NgayLap,
-            this.repositoryItemDateEdit_NgayMoThuong});
-            this.ribbonControl.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
-            this.ribbonControl.ShowToolbarCustomizeItem = false;
-            this.ribbonControl.Size = new System.Drawing.Size(784, 119);
-            this.ribbonControl.Toolbar.ShowCustomizeItem = false;
-            // 
-            // barEditItem_LoaiVe
-            // 
-            this.barEditItem_LoaiVe.Caption = "Loại Vé";
-            this.barEditItem_LoaiVe.Edit = this.repositoryItemComboBox_LoaiVe;
-            this.barEditItem_LoaiVe.Id = 1;
-            this.barEditItem_LoaiVe.Name = "barEditItem_LoaiVe";
-            this.barEditItem_LoaiVe.Width = 150;
-            // 
-            // repositoryItemComboBox_LoaiVe
-            // 
-            this.repositoryItemComboBox_LoaiVe.AutoHeight = false;
-            this.repositoryItemComboBox_LoaiVe.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemComboBox_LoaiVe.Name = "repositoryItemComboBox_LoaiVe";
-            this.repositoryItemComboBox_LoaiVe.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            // 
-            // barEditItem_NgayMoThuong
-            // 
-            this.barEditItem_NgayMoThuong.Caption = "Ngày Lập";
-            this.barEditItem_NgayMoThuong.Edit = this.repositoryItemDateEdit_NgayMoThuong;
-            this.barEditItem_NgayMoThuong.Id = 4;
-            this.barEditItem_NgayMoThuong.Name = "barEditItem_NgayMoThuong";
-            this.barEditItem_NgayMoThuong.Width = 150;
-            // 
-            // repositoryItemDateEdit_NgayMoThuong
-            // 
-            this.repositoryItemDateEdit_NgayMoThuong.AutoHeight = false;
-            this.repositoryItemDateEdit_NgayMoThuong.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemDateEdit_NgayMoThuong.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemDateEdit_NgayMoThuong.Name = "repositoryItemDateEdit_NgayMoThuong";
-            this.repositoryItemDateEdit_NgayMoThuong.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            // 
-            // ribbonPage_KQSX
-            // 
-            this.ribbonPage_KQSX.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup_LoaiVe,
-            this.ribbonPageGroup_NgayMoThuong});
-            this.ribbonPage_KQSX.Name = "ribbonPage_KQSX";
-            this.ribbonPage_KQSX.Text = "Kết Quả  Sổ Xố";
-            // 
-            // ribbonPageGroup_LoaiVe
-            // 
-            this.ribbonPageGroup_LoaiVe.ItemLinks.Add(this.barEditItem_LoaiVe, true);
-            this.ribbonPageGroup_LoaiVe.Name = "ribbonPageGroup_LoaiVe";
-            this.ribbonPageGroup_LoaiVe.ShowCaptionButton = false;
-            this.ribbonPageGroup_LoaiVe.Text = "Loại Vé";
-            // 
-            // ribbonPageGroup_NgayMoThuong
-            // 
-            this.ribbonPageGroup_NgayMoThuong.ItemLinks.Add(this.barEditItem_NgayMoThuong);
-            this.ribbonPageGroup_NgayMoThuong.Name = "ribbonPageGroup_NgayMoThuong";
-            this.ribbonPageGroup_NgayMoThuong.ShowCaptionButton = false;
-            this.ribbonPageGroup_NgayMoThuong.Text = "Ngày Mở Thưởng";
-            // 
-            // repositoryItemComboBox_NgayLap
-            // 
-            this.repositoryItemComboBox_NgayLap.AutoHeight = false;
-            this.repositoryItemComboBox_NgayLap.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemComboBox_NgayLap.Name = "repositoryItemComboBox_NgayLap";
             // 
             // simpleButton_Cancel
             // 
@@ -142,6 +53,7 @@
             this.simpleButton_Cancel.Size = new System.Drawing.Size(80, 60);
             this.simpleButton_Cancel.TabIndex = 16;
             this.simpleButton_Cancel.Text = "Cancel";
+            this.simpleButton_Cancel.Click += new System.EventHandler(this.simpleButton_Cancel_Click);
             // 
             // simpleButton_OK
             // 
@@ -153,6 +65,7 @@
             this.simpleButton_OK.Size = new System.Drawing.Size(80, 60);
             this.simpleButton_OK.TabIndex = 15;
             this.simpleButton_OK.Text = "OK";
+            this.simpleButton_OK.Click += new System.EventHandler(this.simpleButton_OK_Click);
             // 
             // panelControl
             // 
@@ -161,51 +74,104 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl.Appearance.BackColor = System.Drawing.Color.White;
             this.panelControl.Appearance.Options.UseBackColor = true;
-            this.panelControl.ContentImageAlignment = System.Drawing.ContentAlignment.BottomCenter;
-            this.panelControl.Location = new System.Drawing.Point(0, 119);
+            this.panelControl.Controls.Add(this.userControlKQSX);
+            this.panelControl.Location = new System.Drawing.Point(0, 68);
             this.panelControl.Name = "panelControl";
-            this.panelControl.Size = new System.Drawing.Size(784, 364);
+            this.panelControl.Size = new System.Drawing.Size(784, 415);
             this.panelControl.TabIndex = 18;
+            // 
+            // labelControl_LoaiVe
+            // 
+            this.labelControl_LoaiVe.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelControl_LoaiVe.Location = new System.Drawing.Point(12, 15);
+            this.labelControl_LoaiVe.Name = "labelControl_LoaiVe";
+            this.labelControl_LoaiVe.Size = new System.Drawing.Size(43, 17);
+            this.labelControl_LoaiVe.TabIndex = 19;
+            this.labelControl_LoaiVe.Text = "Loại Vé";
+            // 
+            // labelControl_NgayMoThuong
+            // 
+            this.labelControl_NgayMoThuong.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelControl_NgayMoThuong.Location = new System.Drawing.Point(12, 43);
+            this.labelControl_NgayMoThuong.Name = "labelControl_NgayMoThuong";
+            this.labelControl_NgayMoThuong.Size = new System.Drawing.Size(107, 17);
+            this.labelControl_NgayMoThuong.TabIndex = 20;
+            this.labelControl_NgayMoThuong.Text = "Ngày Mở Thưởng";
+            // 
+            // comboBoxEdit_LoaiVe
+            // 
+            this.comboBoxEdit_LoaiVe.Location = new System.Drawing.Point(150, 12);
+            this.comboBoxEdit_LoaiVe.Name = "comboBoxEdit_LoaiVe";
+            this.comboBoxEdit_LoaiVe.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.comboBoxEdit_LoaiVe.Properties.Appearance.Options.UseFont = true;
+            this.comboBoxEdit_LoaiVe.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEdit_LoaiVe.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.comboBoxEdit_LoaiVe.Size = new System.Drawing.Size(200, 22);
+            this.comboBoxEdit_LoaiVe.TabIndex = 21;
+            this.comboBoxEdit_LoaiVe.SelectedIndexChanged += new System.EventHandler(this.comboBoxEdit_LoaiVe_SelectedIndexChanged);
+            // 
+            // dateEdit_NgayMoThuong
+            // 
+            this.dateEdit_NgayMoThuong.EditValue = null;
+            this.dateEdit_NgayMoThuong.Location = new System.Drawing.Point(150, 40);
+            this.dateEdit_NgayMoThuong.Name = "dateEdit_NgayMoThuong";
+            this.dateEdit_NgayMoThuong.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.dateEdit_NgayMoThuong.Properties.Appearance.Options.UseFont = true;
+            this.dateEdit_NgayMoThuong.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit_NgayMoThuong.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit_NgayMoThuong.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.dateEdit_NgayMoThuong.Size = new System.Drawing.Size(200, 22);
+            this.dateEdit_NgayMoThuong.TabIndex = 22;
+            // 
+            // userControlKQSX
+            // 
+            this.userControlKQSX.AutoScroll = true;
+            this.userControlKQSX.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlKQSX.Location = new System.Drawing.Point(2, 2);
+            this.userControlKQSX.Name = "userControlKQSX";
+            this.userControlKQSX.Size = new System.Drawing.Size(780, 411);
+            this.userControlKQSX.TabIndex = 0;
+            this.userControlKQSX.TextEditWidth = 75;
             // 
             // FormGhiNhanKQSX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.dateEdit_NgayMoThuong);
+            this.Controls.Add(this.comboBoxEdit_LoaiVe);
+            this.Controls.Add(this.labelControl_NgayMoThuong);
+            this.Controls.Add(this.labelControl_LoaiVe);
             this.Controls.Add(this.panelControl);
             this.Controls.Add(this.simpleButton_Cancel);
             this.Controls.Add(this.simpleButton_OK);
-            this.Controls.Add(this.ribbonControl);
             this.Name = "FormGhiNhanKQSX";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Ghi Nhận Kết Quả Xổ Số";
             this.Load += new System.EventHandler(this.FormGhiNhanKQSX_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox_LoaiVe)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit_NgayMoThuong.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit_NgayMoThuong)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox_NgayLap)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl)).EndInit();
+            this.panelControl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit_LoaiVe.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit_NgayMoThuong.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit_NgayMoThuong.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage_KQSX;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup_LoaiVe;
-        private DevExpress.XtraBars.BarEditItem barEditItem_LoaiVe;
-        private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox_LoaiVe;
-        private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox_NgayLap;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup_NgayMoThuong;
         private DevExpress.XtraEditors.SimpleButton simpleButton_Cancel;
         private DevExpress.XtraEditors.SimpleButton simpleButton_OK;
-        private DevExpress.XtraBars.BarEditItem barEditItem_NgayMoThuong;
-        private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryItemDateEdit_NgayMoThuong;
         private DevExpress.XtraEditors.PanelControl panelControl;
+        private DevExpress.XtraEditors.LabelControl labelControl_LoaiVe;
+        private DevExpress.XtraEditors.LabelControl labelControl_NgayMoThuong;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit_LoaiVe;
+        private DevExpress.XtraEditors.DateEdit dateEdit_NgayMoThuong;
+        private UserControls.UserControlKQSX userControlKQSX;
     }
 }

@@ -39,12 +39,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChiTietKetQuaXoSo.cs" />
+    <Compile Include="ChiTietKetQuaXoSoBUS.cs" />
     <Compile Include="GiaiThuong.cs" />
     <Compile Include="CoCauGiaiThuong.cs" />
     <Compile Include="CoCauGiaiThuongBUS.cs" />
     <Compile Include="DoiTac.cs" />
     <Compile Include="DoiTacBUS.cs" />
     <Compile Include="GiaiThuongBUS.cs" />
+    <Compile Include="KetQuaXoSo.cs" />
+    <Compile Include="KetQuaXoSoBUS.cs" />
     <Compile Include="LoaiVe.cs" />
     <Compile Include="LoaiVeBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

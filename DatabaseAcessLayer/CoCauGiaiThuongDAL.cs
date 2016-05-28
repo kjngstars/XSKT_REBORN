@@ -19,7 +19,7 @@ namespace DatabaseAcessLayer
             return this.getTable(query, string.Empty);
         }
 
-        public string Insert(string parameter)
+        public string Insert(string parameters)
         {
             if (connection.State != ConnectionState.Open)
                 connection.Open();
@@ -31,7 +31,7 @@ namespace DatabaseAcessLayer
 
             cmd.Parameters.Add("@p_MACOCAUGIAITHUONG", SqlDbType.VarChar, 15);
             cmd.Parameters["@p_MACOCAUGIAITHUONG"].Direction = ParameterDirection.Output;
-            cmd.Parameters.Add("@p_NGAYLAP", parameter);
+            cmd.Parameters.Add("@p_NGAYLAP", parameters);
 
             cmd.ExecuteNonQuery();
 
@@ -40,7 +40,7 @@ namespace DatabaseAcessLayer
             return cmd.Parameters["@p_MACOCAUGIAITHUONG"].Value.ToString();
         }
 
-        public void Update(string[] parameter)
+        public void Update(string[] parameters)
         {
             if (connection.State != ConnectionState.Open)
                 connection.Open();
@@ -50,8 +50,8 @@ namespace DatabaseAcessLayer
             cmd.Connection = this.connection;
             cmd.CommandText = @"COCAUGIAITHUONG_UPDATE";
 
-            cmd.Parameters.Add("@p_MACOCAUGIAITHUONG", parameter[0]);
-            cmd.Parameters.Add("@p_NGAYLAP", parameter[1]);
+            cmd.Parameters.Add("@p_MACOCAUGIAITHUONG", parameters[0]);
+            cmd.Parameters.Add("@p_NGAYLAP", parameters[1]);
 
             cmd.ExecuteNonQuery();
 

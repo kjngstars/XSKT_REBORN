@@ -22,7 +22,7 @@ namespace DatabaseAcessLayer
             return this.getTable(query, string.Empty);
         }
 
-        public string Insert(string[] parameter)
+        public string Insert(string[] parameters)
         {
             if (connection.State != ConnectionState.Open)
                 connection.Open();
@@ -35,11 +35,11 @@ namespace DatabaseAcessLayer
 
             cmd.Parameters.Add("@p_MALOAIVE", SqlDbType.VarChar, 15);
             cmd.Parameters["@p_MALOAIVE"].Direction= ParameterDirection.Output;
-            cmd.Parameters.Add("@p_TENLOAIVE", parameter[0]);
-            cmd.Parameters.Add("@p_NGAYLAP", parameter[1]);
-            cmd.Parameters.Add("@p_MENHGIA", parameter[2]);
-            cmd.Parameters.Add("@p_MADOITAC", parameter[3]);
-            cmd.Parameters.Add("@p_MACOCAUGIAITHUONG", parameter[4]);
+            cmd.Parameters.Add("@p_TENLOAIVE", parameters[0]);
+            cmd.Parameters.Add("@p_NGAYLAP", parameters[1]);
+            cmd.Parameters.Add("@p_MENHGIA", parameters[2]);
+            cmd.Parameters.Add("@p_MADOITAC", parameters[3]);
+            cmd.Parameters.Add("@p_MACOCAUGIAITHUONG", parameters[4]);
 
             cmd.ExecuteNonQuery();
 
@@ -48,7 +48,7 @@ namespace DatabaseAcessLayer
             return cmd.Parameters["@p_MALOAIVE"].Value.ToString();
         }
 
-        public void Update(string[] parameter)
+        public void Update(string[] parameters)
         {
             if (connection.State != ConnectionState.Open)
                 connection.Open();
@@ -58,12 +58,12 @@ namespace DatabaseAcessLayer
             cmd.Connection = this.connection;
             cmd.CommandText = @"LOAIVE_UPDATE";
 
-            cmd.Parameters.Add("@p_MALOAIVE", parameter[0]);
-            cmd.Parameters.Add("@p_TENLOAIVE", parameter[1]);
-            cmd.Parameters.Add("@p_NGAYLAP", parameter[2]);
-            cmd.Parameters.Add("@p_MENHGIA", parameter[3]);
-            cmd.Parameters.Add("@p_MADOITAC", parameter[4]);
-            cmd.Parameters.Add("@p_MACOCAUGIAITHUONG", parameter[5]);
+            cmd.Parameters.Add("@p_MALOAIVE", parameters[0]);
+            cmd.Parameters.Add("@p_TENLOAIVE", parameters[1]);
+            cmd.Parameters.Add("@p_NGAYLAP", parameters[2]);
+            cmd.Parameters.Add("@p_MENHGIA", parameters[3]);
+            cmd.Parameters.Add("@p_MADOITAC", parameters[4]);
+            cmd.Parameters.Add("@p_MACOCAUGIAITHUONG", parameters[5]);
 
             cmd.ExecuteNonQuery();
 
@@ -122,7 +122,7 @@ namespace DatabaseAcessLayer
         {
             string query = @"SELECT *
                             FROM LOAIVE
-                            WHERE MADOITAC LIKE 'CT%'";
+                            WHERE MADOITAC IS NULL";
 
             return this.getTable(query, string.Empty);
         }

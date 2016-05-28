@@ -26,29 +26,29 @@ namespace BusinessLogicLayer
 
         public string Insert(LoaiVe loaiVe)
         {
-            string[] parameter = new string[5];
+            string[] parameters = new string[5];
 
-            parameter[0] = loaiVe.TenLoaiVe;
-            parameter[1] = loaiVe.NgayLap;
-            parameter[2] = loaiVe.MenhGia.ToString();
-            parameter[3] = loaiVe.MaDoiTac;
-            parameter[4] = loaiVe.MaCoCauGiaiThuong;
+            parameters[0] = loaiVe.TenLoaiVe;
+            parameters[1] = loaiVe.NgayLap;
+            parameters[2] = loaiVe.MenhGia.ToString();
+            parameters[3] = loaiVe.MaDoiTac;
+            parameters[4] = loaiVe.MaCoCauGiaiThuong;
 
-            return this.loaiVeDAL.Insert(parameter);
+            return this.loaiVeDAL.Insert(parameters);
         }
 
         public void Update(LoaiVe loaiVe)
         {
-            string[] parameter = new string[6];
+            string[] parameters = new string[6];
 
-            parameter[0] = loaiVe.MaLoaiVe;
-            parameter[1] = loaiVe.TenLoaiVe;
-            parameter[2] = loaiVe.NgayLap;
-            parameter[3] = loaiVe.MenhGia.ToString();
-            parameter[4] = loaiVe.MaDoiTac;
-            parameter[5] = loaiVe.MaCoCauGiaiThuong;
+            parameters[0] = loaiVe.MaLoaiVe;
+            parameters[1] = loaiVe.TenLoaiVe;
+            parameters[2] = loaiVe.NgayLap;
+            parameters[3] = loaiVe.MenhGia.ToString();
+            parameters[4] = loaiVe.MaDoiTac;
+            parameters[5] = loaiVe.MaCoCauGiaiThuong;
 
-            this.loaiVeDAL.Update(parameter);
+            this.loaiVeDAL.Update(parameters);
         }
 
         public void Delete(string maLoaiVe)

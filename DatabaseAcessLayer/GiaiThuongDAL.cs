@@ -12,7 +12,7 @@ namespace DatabaseAcessLayer
     {
         public GiaiThuongDAL() : base() { }
 
-        public string Insert(string[] parameter)
+        public string Insert(string[] parameters)
         {
             if (connection.State != ConnectionState.Open)
                 connection.Open();
@@ -25,12 +25,12 @@ namespace DatabaseAcessLayer
 
             cmd.Parameters.Add("@p_MAGIAITHUONG", SqlDbType.VarChar, 15);
             cmd.Parameters["@p_MAGIAITHUONG"].Direction = ParameterDirection.Output;
-            cmd.Parameters.Add("@p_TENGIAITHUONG", parameter[0]);
-            cmd.Parameters.Add("@p_MACOCAUGIAITHUONG", parameter[1]);
-            cmd.Parameters.Add("@p_TRIGIA", parameter[2]);
-            cmd.Parameters.Add("@p_SOLUONG", parameter[3]);
-            cmd.Parameters.Add("@p_SOCHUSOTRUNG", parameter[4]);
-            cmd.Parameters.Add("@p_SOLANQUAY", parameter[5]);
+            cmd.Parameters.Add("@p_TENGIAITHUONG", parameters[0]);
+            cmd.Parameters.Add("@p_MACOCAUGIAITHUONG", parameters[1]);
+            cmd.Parameters.Add("@p_TRIGIA", parameters[2]);
+            cmd.Parameters.Add("@p_SOLUONG", parameters[3]);
+            cmd.Parameters.Add("@p_SOCHUSOTRUNG", parameters[4]);
+            cmd.Parameters.Add("@p_SOLANQUAY", parameters[5]);
 
             cmd.ExecuteNonQuery();
 
@@ -39,7 +39,7 @@ namespace DatabaseAcessLayer
             return cmd.Parameters["@p_MAGIAITHUONG"].Value.ToString();
         }
 
-        public void Update(string[] parameter)
+        public void Update(string[] parameters)
         {
             if (connection.State != ConnectionState.Open)
                 connection.Open();
@@ -49,13 +49,13 @@ namespace DatabaseAcessLayer
             cmd.Connection = this.connection;
             cmd.CommandText = @"GIAITHUONG_UPDATE";
 
-            cmd.Parameters.Add("@p_MAGIAITHUONG", parameter[0]);
-            cmd.Parameters.Add("@p_TENGIAITHUONG", parameter[1]);
-            cmd.Parameters.Add("@p_MACOCAUGIAITHUONG", parameter[2]);
-            cmd.Parameters.Add("@p_TRIGIA", parameter[3]);
-            cmd.Parameters.Add("@p_SOLUONG", parameter[4]);
-            cmd.Parameters.Add("@p_SOCHUSOTRUNG", parameter[5]);
-            cmd.Parameters.Add("@p_SOLANQUAY", parameter[6]);
+            cmd.Parameters.Add("@p_MAGIAITHUONG", parameters[0]);
+            cmd.Parameters.Add("@p_TENGIAITHUONG", parameters[1]);
+            cmd.Parameters.Add("@p_MACOCAUGIAITHUONG", parameters[2]);
+            cmd.Parameters.Add("@p_TRIGIA", parameters[3]);
+            cmd.Parameters.Add("@p_SOLUONG", parameters[4]);
+            cmd.Parameters.Add("@p_SOCHUSOTRUNG", parameters[5]);
+            cmd.Parameters.Add("@p_SOLANQUAY", parameters[6]);
 
             cmd.ExecuteNonQuery();
 

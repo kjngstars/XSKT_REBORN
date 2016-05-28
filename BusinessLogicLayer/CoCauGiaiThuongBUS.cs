@@ -29,12 +29,12 @@ namespace BusinessLogicLayer
 
         public void Update(CoCauGiaiThuong coCauGiaiThuong)
         {
-            string[] parameter = new string[2];
+            string[] parameters = new string[2];
 
-            parameter[0] = coCauGiaiThuong.MaCoCauGiaiThuong;
-            parameter[1] = coCauGiaiThuong.NgayLap;
+            parameters[0] = coCauGiaiThuong.MaCoCauGiaiThuong;
+            parameters[1] = coCauGiaiThuong.NgayLap;
 
-            this.coCauGiaiThuongDAL.Update(parameter);
+            this.coCauGiaiThuongDAL.Update(parameters);
         }
 
         public void Delete(string maCoCauGiaiThuong)

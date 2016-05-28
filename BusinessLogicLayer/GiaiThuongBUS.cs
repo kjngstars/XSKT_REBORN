@@ -19,33 +19,32 @@ namespace BusinessLogicLayer
 
         public string Insert(GiaiThuong giaiThuong)
         {
-            string[] parameter = new string[6];
+            string[] parameters = new string[6];
 
-            parameter[0] = giaiThuong.TenGiaiThuong;
-            parameter[1] = giaiThuong.MaCoCauGiaiThuong;
-            parameter[2] = giaiThuong.TriGia.ToString();
-            parameter[3] = giaiThuong.SoLuong.ToString();
-            parameter[4] = giaiThuong.SoChuSoTrung.ToString();
+            parameters[0] = giaiThuong.TenGiaiThuong;
+            parameters[1] = giaiThuong.MaCoCauGiaiThuong;
+            parameters[2] = giaiThuong.TriGia.ToString();
+            parameters[3] = giaiThuong.SoLuong.ToString();
+            parameters[4] = giaiThuong.SoChuSoTrung.ToString();
             if (giaiThuong.SoLanQuay != 0)
-                parameter[5] = giaiThuong.SoLanQuay.ToString();
+                parameters[5] = giaiThuong.SoLanQuay.ToString();
 
-            return this.giaiThuongDAL.Insert(parameter);
+            return this.giaiThuongDAL.Insert(parameters);
         }
 
         public void Update(GiaiThuong giaiThuong)
         {
-            string[] parameter = new string[7];
+            string[] parameters = new string[7];
 
-            parameter[0] = giaiThuong.MaGiaiThuong;
-            parameter[1] = giaiThuong.TenGiaiThuong;
-            parameter[2] = giaiThuong.MaCoCauGiaiThuong;
-            parameter[3] = giaiThuong.TriGia.ToString();
-            parameter[4] = giaiThuong.SoLuong.ToString();
-            parameter[5] = giaiThuong.SoChuSoTrung.ToString();
-            if (giaiThuong.SoLanQuay != 0)
-                parameter[6] = giaiThuong.SoLanQuay.ToString();
+            parameters[0] = giaiThuong.MaGiaiThuong;
+            parameters[1] = giaiThuong.TenGiaiThuong;
+            parameters[2] = giaiThuong.MaCoCauGiaiThuong;
+            parameters[3] = giaiThuong.TriGia.ToString();
+            parameters[4] = giaiThuong.SoLuong.ToString();
+            parameters[5] = giaiThuong.SoChuSoTrung.ToString();
+            parameters[6] = giaiThuong.SoLanQuay.ToString();
 
-            this.giaiThuongDAL.Update(parameter);
+            this.giaiThuongDAL.Update(parameters);
         }
 
         public void Delete(string maGiaiThuong)
