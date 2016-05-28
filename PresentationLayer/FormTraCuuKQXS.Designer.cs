@@ -33,7 +33,7 @@
             this.labelControl_NgayMoThuong = new DevExpress.XtraEditors.LabelControl();
             this.labelControl_LoaiVe = new DevExpress.XtraEditors.LabelControl();
             this.panelControl = new DevExpress.XtraEditors.PanelControl();
-            this.userControlKQSX = new PresentationLayer.UserControls.UserControlGhiNhanKQXS();
+            this.userControlTraCuuKQXS = new PresentationLayer.UserControls.UserControlTraCuuKQXS();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_NgayMoThuong.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_NgayMoThuong.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit_LoaiVe.Properties)).BeginInit();
@@ -90,24 +90,24 @@
             // 
             // panelControl
             // 
+            this.panelControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl.Appearance.BackColor = System.Drawing.Color.White;
             this.panelControl.Appearance.Options.UseBackColor = true;
-            this.panelControl.Controls.Add(this.userControlKQSX);
-            this.panelControl.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelControl.Controls.Add(this.userControlTraCuuKQXS);
             this.panelControl.Location = new System.Drawing.Point(0, 68);
             this.panelControl.Name = "panelControl";
             this.panelControl.Size = new System.Drawing.Size(784, 493);
             this.panelControl.TabIndex = 27;
             // 
-            // userControlKQSX
+            // userControlTraCuuKQXS
             // 
-            this.userControlKQSX.AutoScroll = true;
-            this.userControlKQSX.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControlKQSX.Location = new System.Drawing.Point(2, 2);
-            this.userControlKQSX.Name = "userControlKQSX";
-            this.userControlKQSX.Size = new System.Drawing.Size(780, 489);
-            this.userControlKQSX.TabIndex = 0;
-            this.userControlKQSX.TextEditWidth = 75;
+            this.userControlTraCuuKQXS.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlTraCuuKQXS.Location = new System.Drawing.Point(2, 2);
+            this.userControlTraCuuKQXS.Name = "userControlTraCuuKQXS";
+            this.userControlTraCuuKQXS.Size = new System.Drawing.Size(780, 489);
+            this.userControlTraCuuKQXS.TabIndex = 0;
             // 
             // FormTraCuuKQXS
             // 
@@ -139,6 +139,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl_NgayMoThuong;
         private DevExpress.XtraEditors.LabelControl labelControl_LoaiVe;
         private DevExpress.XtraEditors.PanelControl panelControl;
-        private UserControls.UserControlGhiNhanKQXS userControlKQSX;
+        private UserControls.UserControlTraCuuKQXS userControlTraCuuKQXS;
     }
 }

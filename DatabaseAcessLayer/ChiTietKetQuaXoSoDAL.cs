@@ -31,5 +31,32 @@ namespace DatabaseAcessLayer
 
             connection.Close();
         }
+
+        public DataTable GetCTKQSXByNgayMoThuongLoaiVe(string[] parameters)
+        {
+            if (connection.State != ConnectionState.Open)
+                connection.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            DataTable dataTable = new DataTable();
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = this.connection;
+            cmd.CommandText = @"CHITIETKETQUAXOSO_SEARCHBYNGAYMOTHUONGMALOAIVE";
+
+            cmd.Parameters.Add("@p_NGAYMOTHUONG", parameters[0]);
+            cmd.Parameters.Add("@p_MALOAIVE", parameters[1]);
+
+            cmd.ExecuteNonQuery();
+
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            adapter.SelectCommand = cmd;
+
+            adapter.Fill(dataTable);
+
+            connection.Close();
+
+            return dataTable;
+        }
     }
 }

@@ -14,12 +14,14 @@ namespace PresentationLayer
 {
     public partial class FormTraCuuKQXS : DevExpress.XtraEditors.XtraForm
     {
+        ChiTietKetQuaXoSoBUS chiTietKetQuaXoSoBUS = null;
         private LoaiVeBUS loaiVeBUS = null;
 
         public FormTraCuuKQXS()
         {
             InitializeComponent();
 
+            this.chiTietKetQuaXoSoBUS = new ChiTietKetQuaXoSoBUS();
             this.loaiVeBUS = new LoaiVeBUS();
         }
 
@@ -62,7 +64,7 @@ namespace PresentationLayer
         /// </summary>
         private void comboBoxEdit_LoaiVe_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            this.LoadKQSX();
         }
 
         /// <summary>
@@ -70,7 +72,7 @@ namespace PresentationLayer
         /// </summary>
         private void dateEdit_NgayMoThuong_EditValueChanged(object sender, EventArgs e)
         {
-
+            this.LoadKQSX();
         }
 
         /// <summary>
@@ -81,7 +83,7 @@ namespace PresentationLayer
             LoaiVe loaiVe = (LoaiVe)this.comboBoxEdit_LoaiVe.Properties.Items[this.comboBoxEdit_LoaiVe.SelectedIndex];
             string ngayMoThuong = this.dateEdit_NgayMoThuong.Text;
 
-
+            this.userControlTraCuuKQXS.CreateComponentControls(this.chiTietKetQuaXoSoBUS.GetCTKQSXByNgayMoThuongLoaiVe(ngayMoThuong, loaiVe.MaLoaiVe));
         }
     }
 }

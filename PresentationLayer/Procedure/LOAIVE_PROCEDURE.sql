@@ -4,7 +4,7 @@ CREATE PROCEDURE LOAIVE_INSERT @p_MALOAIVE          VARCHAR(15)   = NULL OUTPUT,
 						 @p_TENLOAIVE         NVARCHAR(500) = NULL,
 						 @p_NGAYLAP           DATETIME      = NULL,
 						 @p_MENHGIA           MONEY         = NULL,
-						 @p_MADOITAC          VARCHAR(15)   = NULL,
+						 @p_MADOITAC          VARCHAR(20)   = NULL,
 						 @p_MACOCAUGIAITHUONG VARCHAR(15)   = NULL
 AS
     BEGIN TRANSACTION;
@@ -45,7 +45,7 @@ CREATE PROCEDURE LOAIVE_UPDATE @p_MALOAIVE          VARCHAR(15)   = NULL,
 						 @p_TENLOAIVE         NVARCHAR(500) = NULL,
 						 @p_NGAYLAP           DATETIME      = NULL,
 						 @p_MENHGIA           MONEY         = NULL,
-						 @p_MADOITAC          VARCHAR(15)   = NULL,
+						 @p_MADOITAC          VARCHAR(20)   = NULL,
 						 @p_MACOCAUGIAITHUONG VARCHAR(15)   = NULL
 AS
     BEGIN TRANSACTION;
