@@ -134,10 +134,24 @@ namespace PresentationLayer
         /// </summary>
         private void barButtonItem_GhiNhanKQXS_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FormGhiNhanKQSX form = new FormGhiNhanKQSX();
+            FormGhiNhanKQXS form = new FormGhiNhanKQXS();
 
             if (form.DialogResult != DialogResult.Abort)
                 form.ShowDialog();
+        }
+
+        /// <summary>
+        /// Thêm tab Tra cứu KQSX
+        /// </summary>
+        private void barButtonItem_TraCuuKQXS_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormTraCuuKQXS form = new FormTraCuuKQXS();
+
+            if (!this.CheckExist(form))
+            {
+                form.MdiParent = this;
+                form.Show();
+            }
         }
     }
 }

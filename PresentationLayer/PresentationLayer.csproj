@@ -74,11 +74,11 @@
     <Compile Include="Dialogs\FormEditLoaiVe.Designer.cs">
       <DependentUpon>FormEditLoaiVe.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\FormGhiNhanKQSX.cs">
+    <Compile Include="Dialogs\FormGhiNhanKQXS.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dialogs\FormGhiNhanKQSX.Designer.cs">
-      <DependentUpon>FormGhiNhanKQSX.cs</DependentUpon>
+    <Compile Include="Dialogs\FormGhiNhanKQXS.Designer.cs">
+      <DependentUpon>FormGhiNhanKQXS.cs</DependentUpon>
     </Compile>
     <Compile Include="FormDanhSachCCGT.cs">
       <SubType>Form</SubType>
@@ -92,6 +92,12 @@
     <Compile Include="FormDanhSachLoaiVe.Designer.cs">
       <DependentUpon>FormDanhSachLoaiVe.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTraCuuKQXS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTraCuuKQXS.Designer.cs">
+      <DependentUpon>FormTraCuuKQXS.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,11 +106,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserControls\UserControlKQSX.cs">
+    <Compile Include="UserControls\UserControlGhiNhanKQXS.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UserControlKQSX.Designer.cs">
-      <DependentUpon>UserControlKQSX.cs</DependentUpon>
+    <Compile Include="UserControls\UserControlGhiNhanKQXS.Designer.cs">
+      <DependentUpon>UserControlGhiNhanKQXS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControlTraCuuKQXS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControlTraCuuKQXS.Designer.cs">
+      <DependentUpon>UserControlTraCuuKQXS.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Dialogs\FormEditCCGT.resx">
       <DependentUpon>FormEditCCGT.cs</DependentUpon>
@@ -112,14 +124,17 @@
     <EmbeddedResource Include="Dialogs\FormEditLoaiVe.resx">
       <DependentUpon>FormEditLoaiVe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\FormGhiNhanKQSX.resx">
-      <DependentUpon>FormGhiNhanKQSX.cs</DependentUpon>
+    <EmbeddedResource Include="Dialogs\FormGhiNhanKQXS.resx">
+      <DependentUpon>FormGhiNhanKQXS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDanhSachCCGT.resx">
       <DependentUpon>FormDanhSachCCGT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDanhSachLoaiVe.resx">
       <DependentUpon>FormDanhSachLoaiVe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTraCuuKQXS.resx">
+      <DependentUpon>FormTraCuuKQXS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -135,8 +150,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UserControls\UserControlKQSX.resx">
-      <DependentUpon>UserControlKQSX.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\UserControlGhiNhanKQXS.resx">
+      <DependentUpon>UserControlGhiNhanKQXS.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">

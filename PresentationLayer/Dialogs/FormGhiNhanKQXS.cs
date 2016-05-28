@@ -13,14 +13,14 @@ using PresentationLayer.UserControls;
 
 namespace PresentationLayer.Dialogs
 {
-    public partial class FormGhiNhanKQSX : DevExpress.XtraEditors.XtraForm
+    public partial class FormGhiNhanKQXS : DevExpress.XtraEditors.XtraForm
     {
         private ChiTietKetQuaXoSoBUS chiTietKetQuaXoSoBUS = null;
         private GiaiThuongBUS giaiThuongBUS = null;
         private KetQuaXoSoBUS ketQuaXoSoBUS = null;
         private LoaiVeBUS loaiVeBUS = null;
 
-        public FormGhiNhanKQSX()
+        public FormGhiNhanKQXS()
         {
             InitializeComponent();
 
@@ -75,7 +75,7 @@ namespace PresentationLayer.Dialogs
 
                 try
                 {
-                    this.userControlKQSX.CreateComponentControls(this.giaiThuongBUS.GetGiaiThuongByMaCoCauGiaiThuong(loaiVe.MaCoCauGiaiThuong));
+                    this.userControlGhiNhanKQXS.CreateComponentControls(this.giaiThuongBUS.GetGiaiThuongByMaCoCauGiaiThuong(loaiVe.MaCoCauGiaiThuong));
                 }
                 catch (Exception ex)
                 {
@@ -107,7 +107,7 @@ namespace PresentationLayer.Dialogs
                     XtraMessageBox.Show(ex.Message, @"Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
-                List<ChiTietKetQuaXoSo> listChiTietKetQuaXoSo = this.userControlKQSX.GetListChiTietKetQuaXoSo(ketQuaXoSo.MaKetQuaXoSo);
+                List<ChiTietKetQuaXoSo> listChiTietKetQuaXoSo = this.userControlGhiNhanKQXS.GetListChiTietKetQuaXoSo(ketQuaXoSo.MaKetQuaXoSo);
 
                 foreach (ChiTietKetQuaXoSo chiTietKetQuaXoSo in listChiTietKetQuaXoSo)
                 {

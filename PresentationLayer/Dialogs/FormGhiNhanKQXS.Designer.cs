@@ -1,6 +1,6 @@
 ﻿namespace PresentationLayer.Dialogs
 {
-    partial class FormGhiNhanKQSX
+    partial class FormGhiNhanKQXS
     {
         /// <summary>
         /// Required designer variable.
@@ -35,7 +35,7 @@
             this.labelControl_NgayMoThuong = new DevExpress.XtraEditors.LabelControl();
             this.comboBoxEdit_LoaiVe = new DevExpress.XtraEditors.ComboBoxEdit();
             this.dateEdit_NgayMoThuong = new DevExpress.XtraEditors.DateEdit();
-            this.userControlKQSX = new PresentationLayer.UserControls.UserControlKQSX();
+            this.userControlGhiNhanKQXS = new PresentationLayer.UserControls.UserControlGhiNhanKQXS();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl)).BeginInit();
             this.panelControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit_LoaiVe.Properties)).BeginInit();
@@ -74,7 +74,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl.Appearance.BackColor = System.Drawing.Color.White;
             this.panelControl.Appearance.Options.UseBackColor = true;
-            this.panelControl.Controls.Add(this.userControlKQSX);
+            this.panelControl.Controls.Add(this.userControlGhiNhanKQXS);
             this.panelControl.Location = new System.Drawing.Point(0, 68);
             this.panelControl.Name = "panelControl";
             this.panelControl.Size = new System.Drawing.Size(784, 415);
@@ -126,17 +126,17 @@
             this.dateEdit_NgayMoThuong.Size = new System.Drawing.Size(200, 22);
             this.dateEdit_NgayMoThuong.TabIndex = 22;
             // 
-            // userControlKQSX
+            // userControlGhiNhanKQXS
             // 
-            this.userControlKQSX.AutoScroll = true;
-            this.userControlKQSX.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControlKQSX.Location = new System.Drawing.Point(2, 2);
-            this.userControlKQSX.Name = "userControlKQSX";
-            this.userControlKQSX.Size = new System.Drawing.Size(780, 411);
-            this.userControlKQSX.TabIndex = 0;
-            this.userControlKQSX.TextEditWidth = 75;
+            this.userControlGhiNhanKQXS.AutoScroll = true;
+            this.userControlGhiNhanKQXS.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlGhiNhanKQXS.Location = new System.Drawing.Point(2, 2);
+            this.userControlGhiNhanKQXS.Name = "userControlGhiNhanKQXS";
+            this.userControlGhiNhanKQXS.Size = new System.Drawing.Size(780, 411);
+            this.userControlGhiNhanKQXS.TabIndex = 0;
+            this.userControlGhiNhanKQXS.TextEditWidth = 75;
             // 
-            // FormGhiNhanKQSX
+            // FormGhiNhanKQXS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -148,7 +148,7 @@
             this.Controls.Add(this.panelControl);
             this.Controls.Add(this.simpleButton_Cancel);
             this.Controls.Add(this.simpleButton_OK);
-            this.Name = "FormGhiNhanKQSX";
+            this.Name = "FormGhiNhanKQXS";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -172,6 +172,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl_NgayMoThuong;
         private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit_LoaiVe;
         private DevExpress.XtraEditors.DateEdit dateEdit_NgayMoThuong;
-        private UserControls.UserControlKQSX userControlKQSX;
+        private UserControls.UserControlGhiNhanKQXS userControlGhiNhanKQXS;
     }
 }

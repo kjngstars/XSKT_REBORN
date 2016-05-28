@@ -1,6 +1,6 @@
 ﻿namespace PresentationLayer.UserControls
 {
-    partial class UserControlKQSX
+    partial class UserControlTraCuuKQXS
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,17 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // UserControlKQSX
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
-            this.Name = "UserControlKQSX";
-            this.Size = new System.Drawing.Size(400, 300);
-            this.ResumeLayout(false);
-
         }
 
         #endregion

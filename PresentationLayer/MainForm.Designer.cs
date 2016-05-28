@@ -276,6 +276,7 @@
             this.barButtonItem_TraCuuKQXS.Id = 21;
             this.barButtonItem_TraCuuKQXS.LargeGlyph = global::PresentationLayer.Properties.Resources.TraCuuKQXS;
             this.barButtonItem_TraCuuKQXS.Name = "barButtonItem_TraCuuKQXS";
+            this.barButtonItem_TraCuuKQXS.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem_TraCuuKQXS_ItemClick);
             // 
             // barEditItem_Skin
             // 

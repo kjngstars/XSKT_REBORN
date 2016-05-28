@@ -24,7 +24,7 @@ namespace PresentationLayer.UserControls
         }
     }
 
-    public partial class UserControlKQSX : DevExpress.XtraEditors.XtraUserControl
+    public partial class UserControlGhiNhanKQXS : DevExpress.XtraEditors.XtraUserControl
     {
         private List<TextEditVe> listTextEditVe = null;
 
@@ -43,7 +43,7 @@ namespace PresentationLayer.UserControls
         }
 
 
-        public UserControlKQSX()
+        public UserControlGhiNhanKQXS()
         {
             InitializeComponent();
 
