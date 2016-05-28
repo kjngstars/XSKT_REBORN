@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DanhSachDaiLyBUS.cs" />
+    <Compile Include="DoiTacObject.cs" />
     <Compile Include="GiaiThuong.cs" />
     <Compile Include="CoCauGiaiThuong.cs" />
     <Compile Include="CoCauGiaiThuongBUS.cs" />

@@ -18,5 +18,10 @@ namespace DatabaseAcessLayer
 
             return this.getTable(query, string.Empty);
         }
+
+        public void Insert(string[] str)
+        {
+              
+        }
     }
 }
