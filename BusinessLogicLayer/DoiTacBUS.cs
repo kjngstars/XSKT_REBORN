@@ -21,5 +21,16 @@ namespace BusinessLogicLayer
         {
             return this.doiTacDAL.GetAllCT();
         }
+
+        public void CreateProcedure()
+        {
+            doiTacDAL.CreateProcedure();
+        }
+
+        public int InsertDoiTac(DoiTacObject partner)
+        {
+            string[] data = { partner.MaDoiTac, partner.TenDoiTac, partner.GetDateTime(), partner.DiaChi, partner.DienThoai, partner.Email, partner.Rate.ToString() };
+            return doiTacDAL.Insert(data);
+        }
     }
 }

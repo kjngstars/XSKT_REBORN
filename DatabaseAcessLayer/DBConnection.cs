@@ -131,12 +131,12 @@ namespace DatabaseAcessLayer
             }
 
             //check if procedure has already existed
-            string checkExist = "select * from sysobjects where id = object_id                  (N'{0}')" +
+            string checkExist = "select * from sysobjects where id = object_id(N'{0}')" +
             "  and OBJECTPROPERTY(id, N'IsProcedure') = 1";
             checkExist = string.Format(checkExist, procedureName);
 
             SqlCommand command = new SqlCommand(checkExist, connection);
-
+            command.Connection = this.connection;
             command.CommandType = CommandType.Text;
 
             SqlDataReader sqlDataReader = command.ExecuteReader();

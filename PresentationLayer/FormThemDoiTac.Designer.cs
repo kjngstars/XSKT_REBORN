@@ -39,14 +39,15 @@
             DevExpress.XtraLayout.RowDefinition rowDefinition7 = new DevExpress.XtraLayout.RowDefinition();
             DevExpress.XtraLayout.RowDefinition rowDefinition8 = new DevExpress.XtraLayout.RowDefinition();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.textEdit7 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.checkedListCompany = new DevExpress.XtraEditors.CheckedListBoxControl();
+            this.deDate = new DevExpress.XtraEditors.DateEdit();
+            this.btnHuyBo = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThemDoiTac = new DevExpress.XtraEditors.SimpleButton();
+            this.teRate = new DevExpress.XtraEditors.TextEdit();
+            this.teEmail = new DevExpress.XtraEditors.TextEdit();
+            this.teDienThoai = new DevExpress.XtraEditors.TextEdit();
+            this.teDiaChi = new DevExpress.XtraEditors.TextEdit();
+            this.teTenDoiTac = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -58,17 +59,17 @@
             this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.checkedListBoxControl1 = new DevExpress.XtraEditors.CheckedListBoxControl();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkedListCompany)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deDate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teRate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teEmail.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teDienThoai.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teDiaChi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teTenDoiTac.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
@@ -79,21 +80,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkedListBoxControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.checkedListBoxControl1);
-            this.layoutControl1.Controls.Add(this.dateEdit1);
-            this.layoutControl1.Controls.Add(this.simpleButton2);
-            this.layoutControl1.Controls.Add(this.simpleButton1);
-            this.layoutControl1.Controls.Add(this.textEdit7);
-            this.layoutControl1.Controls.Add(this.textEdit6);
-            this.layoutControl1.Controls.Add(this.textEdit5);
-            this.layoutControl1.Controls.Add(this.textEdit4);
-            this.layoutControl1.Controls.Add(this.textEdit1);
+            this.layoutControl1.Controls.Add(this.checkedListCompany);
+            this.layoutControl1.Controls.Add(this.deDate);
+            this.layoutControl1.Controls.Add(this.btnHuyBo);
+            this.layoutControl1.Controls.Add(this.btnThemDoiTac);
+            this.layoutControl1.Controls.Add(this.teRate);
+            this.layoutControl1.Controls.Add(this.teEmail);
+            this.layoutControl1.Controls.Add(this.teDienThoai);
+            this.layoutControl1.Controls.Add(this.teDiaChi);
+            this.layoutControl1.Controls.Add(this.teTenDoiTac);
             this.layoutControl1.Controls.Add(this.labelControl1);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
@@ -104,90 +104,104 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // dateEdit1
+            // checkedListCompany
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(150, 108);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateEdit1.Properties.Appearance.Options.UseFont = true;
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.checkedListCompany.CheckOnClick = true;
+            this.checkedListCompany.Items.AddRange(new DevExpress.XtraEditors.Controls.CheckedListBoxItem[] {
+            new DevExpress.XtraEditors.Controls.CheckedListBoxItem("DL", "Đại Lý"),
+            new DevExpress.XtraEditors.Controls.CheckedListBoxItem("CT", "Công Ty")});
+            this.checkedListCompany.Location = new System.Drawing.Point(323, 300);
+            this.checkedListCompany.Name = "checkedListCompany";
+            this.checkedListCompany.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.checkedListCompany.Size = new System.Drawing.Size(308, 44);
+            this.checkedListCompany.StyleController = this.layoutControl1;
+            this.checkedListCompany.TabIndex = 21;
+            // 
+            // deDate
+            // 
+            this.deDate.EditValue = null;
+            this.deDate.Location = new System.Drawing.Point(150, 108);
+            this.deDate.Name = "deDate";
+            this.deDate.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deDate.Properties.Appearance.Options.UseFont = true;
+            this.deDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.deDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(481, 40);
-            this.dateEdit1.StyleController = this.layoutControl1;
-            this.dateEdit1.TabIndex = 20;
+            this.deDate.Size = new System.Drawing.Size(481, 40);
+            this.deDate.StyleController = this.layoutControl1;
+            this.deDate.TabIndex = 20;
             // 
-            // simpleButton2
+            // btnHuyBo
             // 
-            this.simpleButton2.Image = global::PresentationLayer.Properties.Resources.Cancel;
-            this.simpleButton2.Location = new System.Drawing.Point(323, 348);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(308, 44);
-            this.simpleButton2.StyleController = this.layoutControl1;
-            this.simpleButton2.TabIndex = 19;
-            this.simpleButton2.Text = "Hủy";
+            this.btnHuyBo.Image = global::PresentationLayer.Properties.Resources.Cancel;
+            this.btnHuyBo.Location = new System.Drawing.Point(323, 348);
+            this.btnHuyBo.Name = "btnHuyBo";
+            this.btnHuyBo.Size = new System.Drawing.Size(308, 44);
+            this.btnHuyBo.StyleController = this.layoutControl1;
+            this.btnHuyBo.TabIndex = 19;
+            this.btnHuyBo.Text = "Hủy";
             // 
-            // simpleButton1
+            // btnThemDoiTac
             // 
-            this.simpleButton1.Image = global::PresentationLayer.Properties.Resources.Apply;
-            this.simpleButton1.Location = new System.Drawing.Point(12, 348);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(307, 44);
-            this.simpleButton1.StyleController = this.layoutControl1;
-            this.simpleButton1.TabIndex = 18;
-            this.simpleButton1.Text = "Thêm";
+            this.btnThemDoiTac.Image = global::PresentationLayer.Properties.Resources.Apply;
+            this.btnThemDoiTac.Location = new System.Drawing.Point(12, 348);
+            this.btnThemDoiTac.Name = "btnThemDoiTac";
+            this.btnThemDoiTac.Size = new System.Drawing.Size(307, 44);
+            this.btnThemDoiTac.StyleController = this.layoutControl1;
+            this.btnThemDoiTac.TabIndex = 18;
+            this.btnThemDoiTac.Text = "Thêm";
+            this.btnThemDoiTac.Click += new System.EventHandler(this.btnThemDoiTac_Click);
             // 
-            // textEdit7
+            // teRate
             // 
-            this.textEdit7.Location = new System.Drawing.Point(150, 300);
-            this.textEdit7.Name = "textEdit7";
-            this.textEdit7.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit7.Properties.Appearance.Options.UseFont = true;
-            this.textEdit7.Size = new System.Drawing.Size(169, 40);
-            this.textEdit7.StyleController = this.layoutControl1;
-            this.textEdit7.TabIndex = 17;
+            this.teRate.Location = new System.Drawing.Point(150, 300);
+            this.teRate.Name = "teRate";
+            this.teRate.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teRate.Properties.Appearance.Options.UseFont = true;
+            this.teRate.Size = new System.Drawing.Size(169, 40);
+            this.teRate.StyleController = this.layoutControl1;
+            this.teRate.TabIndex = 17;
             // 
-            // textEdit6
+            // teEmail
             // 
-            this.textEdit6.Location = new System.Drawing.Point(150, 252);
-            this.textEdit6.Name = "textEdit6";
-            this.textEdit6.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit6.Properties.Appearance.Options.UseFont = true;
-            this.textEdit6.Size = new System.Drawing.Size(481, 40);
-            this.textEdit6.StyleController = this.layoutControl1;
-            this.textEdit6.TabIndex = 16;
+            this.teEmail.Location = new System.Drawing.Point(150, 252);
+            this.teEmail.Name = "teEmail";
+            this.teEmail.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teEmail.Properties.Appearance.Options.UseFont = true;
+            this.teEmail.Size = new System.Drawing.Size(481, 40);
+            this.teEmail.StyleController = this.layoutControl1;
+            this.teEmail.TabIndex = 16;
             // 
-            // textEdit5
+            // teDienThoai
             // 
-            this.textEdit5.Location = new System.Drawing.Point(150, 204);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit5.Properties.Appearance.Options.UseFont = true;
-            this.textEdit5.Size = new System.Drawing.Size(481, 40);
-            this.textEdit5.StyleController = this.layoutControl1;
-            this.textEdit5.TabIndex = 15;
+            this.teDienThoai.Location = new System.Drawing.Point(150, 204);
+            this.teDienThoai.Name = "teDienThoai";
+            this.teDienThoai.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teDienThoai.Properties.Appearance.Options.UseFont = true;
+            this.teDienThoai.Size = new System.Drawing.Size(481, 40);
+            this.teDienThoai.StyleController = this.layoutControl1;
+            this.teDienThoai.TabIndex = 15;
             // 
-            // textEdit4
+            // teDiaChi
             // 
-            this.textEdit4.Location = new System.Drawing.Point(150, 156);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit4.Properties.Appearance.Options.UseFont = true;
-            this.textEdit4.Size = new System.Drawing.Size(481, 40);
-            this.textEdit4.StyleController = this.layoutControl1;
-            this.textEdit4.TabIndex = 14;
+            this.teDiaChi.Location = new System.Drawing.Point(150, 156);
+            this.teDiaChi.Name = "teDiaChi";
+            this.teDiaChi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teDiaChi.Properties.Appearance.Options.UseFont = true;
+            this.teDiaChi.Size = new System.Drawing.Size(481, 40);
+            this.teDiaChi.StyleController = this.layoutControl1;
+            this.teDiaChi.TabIndex = 14;
             // 
-            // textEdit1
+            // teTenDoiTac
             // 
-            this.textEdit1.Location = new System.Drawing.Point(150, 60);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Size = new System.Drawing.Size(481, 40);
-            this.textEdit1.StyleController = this.layoutControl1;
-            this.textEdit1.TabIndex = 5;
+            this.teTenDoiTac.Location = new System.Drawing.Point(150, 60);
+            this.teTenDoiTac.Name = "teTenDoiTac";
+            this.teTenDoiTac.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teTenDoiTac.Properties.Appearance.Options.UseFont = true;
+            this.teTenDoiTac.Size = new System.Drawing.Size(481, 40);
+            this.teTenDoiTac.StyleController = this.layoutControl1;
+            this.teTenDoiTac.TabIndex = 5;
             // 
             // labelControl1
             // 
@@ -273,7 +287,7 @@
             // 
             this.layoutControlItem2.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 15F);
             this.layoutControlItem2.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem2.Control = this.textEdit1;
+            this.layoutControlItem2.Control = this.teTenDoiTac;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem2.MaxSize = new System.Drawing.Size(0, 44);
             this.layoutControlItem2.MinSize = new System.Drawing.Size(157, 44);
@@ -290,7 +304,7 @@
             // 
             this.layoutControlItem11.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 15F);
             this.layoutControlItem11.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem11.Control = this.textEdit4;
+            this.layoutControlItem11.Control = this.teDiaChi;
             this.layoutControlItem11.Location = new System.Drawing.Point(0, 144);
             this.layoutControlItem11.MaxSize = new System.Drawing.Size(0, 45);
             this.layoutControlItem11.MinSize = new System.Drawing.Size(157, 24);
@@ -306,7 +320,7 @@
             // 
             this.layoutControlItem12.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 15F);
             this.layoutControlItem12.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem12.Control = this.textEdit5;
+            this.layoutControlItem12.Control = this.teDienThoai;
             this.layoutControlItem12.Location = new System.Drawing.Point(0, 192);
             this.layoutControlItem12.MaxSize = new System.Drawing.Size(0, 45);
             this.layoutControlItem12.MinSize = new System.Drawing.Size(157, 24);
@@ -322,7 +336,7 @@
             // 
             this.layoutControlItem13.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 15F);
             this.layoutControlItem13.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem13.Control = this.textEdit6;
+            this.layoutControlItem13.Control = this.teEmail;
             this.layoutControlItem13.Location = new System.Drawing.Point(0, 240);
             this.layoutControlItem13.MaxSize = new System.Drawing.Size(0, 45);
             this.layoutControlItem13.MinSize = new System.Drawing.Size(157, 45);
@@ -338,7 +352,7 @@
             // 
             this.layoutControlItem14.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 15F);
             this.layoutControlItem14.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem14.Control = this.textEdit7;
+            this.layoutControlItem14.Control = this.teRate;
             this.layoutControlItem14.Location = new System.Drawing.Point(0, 288);
             this.layoutControlItem14.MaxSize = new System.Drawing.Size(0, 45);
             this.layoutControlItem14.MinSize = new System.Drawing.Size(157, 24);
@@ -351,7 +365,7 @@
             // 
             // layoutControlItem15
             // 
-            this.layoutControlItem15.Control = this.simpleButton1;
+            this.layoutControlItem15.Control = this.btnThemDoiTac;
             this.layoutControlItem15.ControlAlignment = System.Drawing.ContentAlignment.MiddleRight;
             this.layoutControlItem15.Location = new System.Drawing.Point(0, 336);
             this.layoutControlItem15.MaxSize = new System.Drawing.Size(500, 50);
@@ -365,7 +379,7 @@
             // 
             // layoutControlItem10
             // 
-            this.layoutControlItem10.Control = this.simpleButton2;
+            this.layoutControlItem10.Control = this.btnHuyBo;
             this.layoutControlItem10.ControlAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.layoutControlItem10.Location = new System.Drawing.Point(311, 336);
             this.layoutControlItem10.MaxSize = new System.Drawing.Size(500, 50);
@@ -383,7 +397,7 @@
             // 
             this.layoutControlItem3.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 15F);
             this.layoutControlItem3.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem3.Control = this.dateEdit1;
+            this.layoutControlItem3.Control = this.deDate;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 96);
             this.layoutControlItem3.MaxSize = new System.Drawing.Size(0, 50);
             this.layoutControlItem3.MinSize = new System.Drawing.Size(186, 24);
@@ -395,22 +409,9 @@
             this.layoutControlItem3.Text = "Ngày tiếp nhận";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(135, 24);
             // 
-            // checkedListBoxControl1
-            // 
-            this.checkedListBoxControl1.CheckOnClick = true;
-            this.checkedListBoxControl1.Items.AddRange(new DevExpress.XtraEditors.Controls.CheckedListBoxItem[] {
-            new DevExpress.XtraEditors.Controls.CheckedListBoxItem("DL", "Đại Lý"),
-            new DevExpress.XtraEditors.Controls.CheckedListBoxItem("CT", "Công Ty")});
-            this.checkedListBoxControl1.Location = new System.Drawing.Point(323, 300);
-            this.checkedListBoxControl1.Name = "checkedListBoxControl1";
-            this.checkedListBoxControl1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.checkedListBoxControl1.Size = new System.Drawing.Size(308, 44);
-            this.checkedListBoxControl1.StyleController = this.layoutControl1;
-            this.checkedListBoxControl1.TabIndex = 21;
-            // 
             // layoutControlItem4
             // 
-            this.layoutControlItem4.Control = this.checkedListBoxControl1;
+            this.layoutControlItem4.Control = this.checkedListCompany;
             this.layoutControlItem4.Location = new System.Drawing.Point(311, 288);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.OptionsTableLayoutItem.ColumnIndex = 1;
@@ -427,15 +428,17 @@
             this.Controls.Add(this.layoutControl1);
             this.Name = "FormThemDoiTac";
             this.Text = "Tiếp Nhận Đối Tác";
+            this.Load += new System.EventHandler(this.FormThemDoiTac_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkedListCompany)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deDate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teRate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teEmail.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teDienThoai.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teDiaChi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teTenDoiTac.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
@@ -446,7 +449,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkedListBoxControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             this.ResumeLayout(false);
 
@@ -455,26 +457,26 @@
         #endregion
 
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit teTenDoiTac;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
-        private DevExpress.XtraEditors.TextEdit textEdit7;
-        private DevExpress.XtraEditors.TextEdit textEdit6;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
+        private DevExpress.XtraEditors.TextEdit teRate;
+        private DevExpress.XtraEditors.TextEdit teEmail;
+        private DevExpress.XtraEditors.TextEdit teDienThoai;
+        private DevExpress.XtraEditors.TextEdit teDiaChi;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnHuyBo;
+        private DevExpress.XtraEditors.SimpleButton btnThemDoiTac;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem15;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
+        private DevExpress.XtraEditors.DateEdit deDate;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
-        private DevExpress.XtraEditors.CheckedListBoxControl checkedListBoxControl1;
+        private DevExpress.XtraEditors.CheckedListBoxControl checkedListCompany;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
     }
 }
