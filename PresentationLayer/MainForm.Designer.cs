@@ -174,6 +174,7 @@
             this.barButtonItem_PhieuDangKyVe.Id = 8;
             this.barButtonItem_PhieuDangKyVe.LargeGlyph = global::PresentationLayer.Properties.Resources.PhieuDangKyVe;
             this.barButtonItem_PhieuDangKyVe.Name = "barButtonItem_PhieuDangKyVe";
+            this.barButtonItem_PhieuDangKyVe.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem_PhieuDangKyVe_ItemClick);
             // 
             // barButtonItem_PhieuNhanVe
             // 

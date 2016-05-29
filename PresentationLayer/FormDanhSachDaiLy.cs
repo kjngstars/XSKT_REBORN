@@ -14,6 +14,8 @@ namespace PresentationLayer
 {
     public partial class FormDanhSachDaiLy : XtraForm
     {
+        DataTable tableDoiTac = null;
+
         private static FormDanhSachDaiLy instance = null;
 
         public static FormDanhSachDaiLy Instance
@@ -37,8 +39,8 @@ namespace PresentationLayer
 
         private void FormDanhSachDaiLy_Load(object sender, EventArgs e)
         {
-            var dtTable = agencyFiles.GetDanhSachDaiLy();
-            gcDanhSachDaiLy.DataSource = dtTable;
+            tableDoiTac = agencyFiles.GetDanhSachDaiLy();
+            gcDanhSachDaiLy.DataSource = tableDoiTac;
             
         }
 
@@ -46,6 +48,11 @@ namespace PresentationLayer
         {
             var dtTable = agencyFiles.GetDanhSachDaiLy();
             gcDanhSachDaiLy.DataSource = dtTable;
+        }
+
+        public DataTable GetDoiTacTable()
+        {
+            return agencyFiles.GetDanhSachDaiLy();
         }
 
     }

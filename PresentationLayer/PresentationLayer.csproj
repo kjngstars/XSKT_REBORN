@@ -69,6 +69,12 @@
     <Compile Include="Dialogs\FormEditLoaiVe.Designer.cs">
       <DependentUpon>FormEditLoaiVe.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDangKyNhanVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDangKyNhanVe.Designer.cs">
+      <DependentUpon>FormDangKyNhanVe.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDanhSachCCGT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     <EmbeddedResource Include="Dialogs\FormEditLoaiVe.resx">
       <DependentUpon>FormEditLoaiVe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormDangKyNhanVe.resx">
+      <DependentUpon>FormDangKyNhanVe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDanhSachCCGT.resx">
       <DependentUpon>FormDanhSachCCGT.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,6 +142,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
