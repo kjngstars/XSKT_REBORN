@@ -30,9 +30,9 @@ namespace PresentationLayer
             deDate.DateTime = DateTime.Now;
 
             var tableDoiTac = FormDanhSachDaiLy.Instance.GetDoiTacTable();
-            if (tableDoiTac != null) 
+            if (tableDoiTac != null)
             {
-                //FillComboBox(tableDoiTac);
+                FillComboBox(tableDoiTac);
             }
         }
 
@@ -51,13 +51,13 @@ namespace PresentationLayer
                 LayoutControlItem item = layoutControlLoaiVe.Root.AddItem();
                 item.SizeConstraintsType = SizeConstraintsType.Custom;
                 item.MaxSize = new Size(0, 50);
-                item.OptionsTableLayoutItem.RowIndex = i;                
+                item.OptionsTableLayoutItem.RowIndex = i;
                 LabelControl label = new LabelControl();
                 label.Text = tableLoaiVe.Rows[i]["TENLOAIVE"].ToString();
                 label.Font = new System.Drawing.Font(label.Font.FontFamily, 15.0f);
                 item.Control = label;
                 item.TextVisible = false;
-                
+
                 //so luong
                 LayoutControlItem item2 = layoutControlLoaiVe.Root.AddItem();
                 item2.SizeConstraintsType = SizeConstraintsType.Custom;
@@ -89,25 +89,18 @@ namespace PresentationLayer
         void FillComboBox(DataTable table)
         {
             BindingSource bs = new BindingSource();
-            bs.DataSource=table;
+            bs.DataSource = table;
 
-            for (int i = 0; i < table.Rows.Count; i++)
-            {                
+            lookUpEditDoiTac.Properties.DataSource = table;
+            lookUpEditDoiTac.Properties.DisplayMember = "TENDOITAC";
+            lookUpEditDoiTac.Properties.ValueMember = "MADOITAC";
 
-                lookUpEditDoiTac.Properties.DataSource = table;
-                lookUpEditDoiTac.Properties.DisplayMember = "TENDOITAC";
-                lookUpEditDoiTac.Properties.ValueMember = "MADOITAC";
+            lookUpEditDoiTac.Properties.Columns.Add(new LookUpColumnInfo("TENDOITAC", 0, "Tên Đối Tác"));
+            lookUpEditDoiTac.Properties.Columns.Add(new LookUpColumnInfo("MADOITAC", 0, "Mã Đối Tác"));
 
-                //add column to collection
-                LookUpColumnInfoCollection col = lookUpEditDoiTac.Properties.Columns;
+            lookUpEditDoiTac.Properties.SearchMode = SearchMode.AutoComplete;
+            lookUpEditDoiTac.Properties.AutoSearchColumnIndex = 1;
 
-                col.Add(new LookUpColumnInfo("MADOITAC",0));
-                col.Add(new LookUpColumnInfo("TENDOITAC", 0));
-
-                lookUpEditDoiTac.Properties.SearchMode = SearchMode.AutoComplete;
-                lookUpEditDoiTac.Properties.AutoSearchColumnIndex = 1;
-
-            }
         }
     }
 }

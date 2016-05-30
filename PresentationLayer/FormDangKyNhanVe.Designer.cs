@@ -37,34 +37,34 @@
             DevExpress.XtraLayout.ColumnDefinition columnDefinition4 = new DevExpress.XtraLayout.ColumnDefinition();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.lookUpEditDoiTac = new DevExpress.XtraEditors.LookUpEdit();
             this.cbDotPhatHanh = new DevExpress.XtraEditors.ComboBoxEdit();
             this.deDate = new DevExpress.XtraEditors.DateEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.layoutControlLoaiVe = new DevExpress.XtraLayout.LayoutControl();
             this.layoutControlGroupLoaiVe = new DevExpress.XtraLayout.LayoutControlGroup();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.btnHuyBo = new DevExpress.XtraEditors.SimpleButton();
-            this.lookUpEditDoiTac = new DevExpress.XtraEditors.LookUpEdit();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditDoiTac.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbDotPhatHanh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlLoaiVe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroupLoaiVe)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditDoiTac.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -88,6 +88,20 @@
             this.layoutControl1.Size = new System.Drawing.Size(539, 151);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // lookUpEditDoiTac
+            // 
+            this.lookUpEditDoiTac.Location = new System.Drawing.Point(146, 12);
+            this.lookUpEditDoiTac.Name = "lookUpEditDoiTac";
+            this.lookUpEditDoiTac.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 18F);
+            this.lookUpEditDoiTac.Properties.Appearance.Options.UseFont = true;
+            this.lookUpEditDoiTac.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEditDoiTac.Properties.NullText = "";
+            this.lookUpEditDoiTac.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.lookUpEditDoiTac.Size = new System.Drawing.Size(381, 36);
+            this.lookUpEditDoiTac.StyleController = this.layoutControl1;
+            this.lookUpEditDoiTac.TabIndex = 7;
             // 
             // cbDotPhatHanh
             // 
@@ -180,6 +194,21 @@
             this.layoutControlItem3.Text = "Đợt Phát Hành";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(131, 24);
             // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 15F);
+            this.layoutControlItem1.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem1.Control = this.lookUpEditDoiTac;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.MaxSize = new System.Drawing.Size(0, 43);
+            this.layoutControlItem1.MinSize = new System.Drawing.Size(188, 24);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.OptionsTableLayoutItem.ColumnSpan = 2;
+            this.layoutControlItem1.Size = new System.Drawing.Size(519, 43);
+            this.layoutControlItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem1.Text = "Đối Tác";
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(131, 24);
+            // 
             // panelControl2
             // 
             this.panelControl2.Controls.Add(this.layoutControlLoaiVe);
@@ -241,34 +270,6 @@
             this.btnHuyBo.Text = "Hủy bỏ";
             this.btnHuyBo.Click += new System.EventHandler(this.btnHuyBo_Click);
             // 
-            // lookUpEditDoiTac
-            // 
-            this.lookUpEditDoiTac.Location = new System.Drawing.Point(146, 12);
-            this.lookUpEditDoiTac.Name = "lookUpEditDoiTac";
-            this.lookUpEditDoiTac.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 15F);
-            this.lookUpEditDoiTac.Properties.Appearance.Options.UseFont = true;
-            this.lookUpEditDoiTac.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEditDoiTac.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.lookUpEditDoiTac.Size = new System.Drawing.Size(381, 30);
-            this.lookUpEditDoiTac.StyleController = this.layoutControl1;
-            this.lookUpEditDoiTac.TabIndex = 7;
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 15F);
-            this.layoutControlItem1.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem1.Control = this.lookUpEditDoiTac;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem1.MaxSize = new System.Drawing.Size(0, 43);
-            this.layoutControlItem1.MinSize = new System.Drawing.Size(188, 24);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.OptionsTableLayoutItem.ColumnSpan = 2;
-            this.layoutControlItem1.Size = new System.Drawing.Size(519, 43);
-            this.layoutControlItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem1.Text = "Đối Tác";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(131, 24);
-            // 
             // FormDangKyNhanVe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -287,18 +288,18 @@
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditDoiTac.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbDotPhatHanh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlLoaiVe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroupLoaiVe)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditDoiTac.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
 
         }
