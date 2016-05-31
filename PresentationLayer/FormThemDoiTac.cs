@@ -66,5 +66,10 @@ namespace PresentationLayer
 
 
         #endregion
+
+        private void btnHuyBo_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

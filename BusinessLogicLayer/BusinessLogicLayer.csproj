@@ -49,7 +49,10 @@
     <Compile Include="GiaiThuongBUS.cs" />
     <Compile Include="LoaiVe.cs" />
     <Compile Include="LoaiVeBUS.cs" />
+    <Compile Include="PhieuDangKyVeBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublishBUS.cs" />
+    <Compile Include="RegisterDetailObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DatabaseAcessLayer\DatabaseAcessLayer.csproj">

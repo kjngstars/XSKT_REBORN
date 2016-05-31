@@ -141,6 +141,7 @@
             this.btnHuyBo.StyleController = this.layoutControl1;
             this.btnHuyBo.TabIndex = 19;
             this.btnHuyBo.Text = "Hủy";
+            this.btnHuyBo.Click += new System.EventHandler(this.btnHuyBo_Click);
             // 
             // btnThemDoiTac
             // 
@@ -427,6 +428,7 @@
             this.ClientSize = new System.Drawing.Size(643, 404);
             this.Controls.Add(this.layoutControl1);
             this.Name = "FormThemDoiTac";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tiếp Nhận Đối Tác";
             this.Load += new System.EventHandler(this.FormThemDoiTac_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
