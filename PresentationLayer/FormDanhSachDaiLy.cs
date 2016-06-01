@@ -45,9 +45,10 @@ namespace PresentationLayer
         }
 
         public void RefreshTable()
-        {
+        {            
             var dtTable = agencyFiles.GetDanhSachDaiLy();
             gcDanhSachDaiLy.DataSource = dtTable;
+            gcDanhSachDaiLy.Invalidate();
         }
 
         public DataTable GetDoiTacTable()
