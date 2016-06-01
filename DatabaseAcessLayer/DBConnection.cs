@@ -117,8 +117,44 @@ namespace DatabaseAcessLayer
             adapter.Fill(dt);
 
             connection.Close();
-
+            
             return dt;
         }
+        
+        public void ExistOrCreateProcedure(string procedureName, string procedure)
+        {
+            //dung ham nay de kiem tra mot procedure da ton tai hay chua
+            //neu chua ton tai thi tao procedure do
+            if (connection.State != ConnectionState.Open) 
+            {
+                connection.Open();
+            }
+
+            //check if procedure has already existed
+            string checkExist = "select * from sysobjects where id = object_id(N'{0}')" +
+            "  and OBJECTPROPERTY(id, N'IsProcedure') = 1";
+            checkExist = string.Format(checkExist, procedureName);
+
+            SqlCommand command = new SqlCommand(checkExist, connection);
+            command.Connection = this.connection;
+            command.CommandType = CommandType.Text;
+
+            SqlDataReader sqlDataReader = command.ExecuteReader();
+
+            if (!sqlDataReader.Read())
+            {
+                command.CommandText = procedure;
+                sqlDataReader.Close();
+                command.ExecuteNonQuery();
+            }
+            else
+            {
+                sqlDataReader.Close();
+            }
+            
+            command.Dispose();
+            connection.Close();
+        }
+
     }
 }

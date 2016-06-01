@@ -153,5 +153,28 @@ namespace PresentationLayer
                 form.Show();
             }
         }
+
+        private void barButtonItem_DanhSachDoiTac_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormDanhSachDaiLy f = new FormDanhSachDaiLy();
+
+            if (!this.CheckExist(f)) 
+            {
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void barButtonItem_TiepNhanDoiTac_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var f = new FormThemDoiTac();
+            f.Show();
+        }
+
+        private void barButtonItem_PhieuDangKyVe_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var f = new FormDangKyNhanVe();
+            f.Show();
+        }
     }
 }

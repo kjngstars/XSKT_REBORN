@@ -166,6 +166,7 @@
             this.barButtonItem_DanhSachDoiTac.Id = 6;
             this.barButtonItem_DanhSachDoiTac.LargeGlyph = global::PresentationLayer.Properties.Resources.DanhSachDoiTac;
             this.barButtonItem_DanhSachDoiTac.Name = "barButtonItem_DanhSachDoiTac";
+            this.barButtonItem_DanhSachDoiTac.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem_DanhSachDoiTac_ItemClick);
             // 
             // barButtonItem_TiepNhanDoiTac
             // 
@@ -173,6 +174,7 @@
             this.barButtonItem_TiepNhanDoiTac.Id = 7;
             this.barButtonItem_TiepNhanDoiTac.LargeGlyph = global::PresentationLayer.Properties.Resources.TiepNhanDoiTac;
             this.barButtonItem_TiepNhanDoiTac.Name = "barButtonItem_TiepNhanDoiTac";
+            this.barButtonItem_TiepNhanDoiTac.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem_TiepNhanDoiTac_ItemClick);
             // 
             // barButtonItem_PhieuDangKyVe
             // 
@@ -180,6 +182,7 @@
             this.barButtonItem_PhieuDangKyVe.Id = 8;
             this.barButtonItem_PhieuDangKyVe.LargeGlyph = global::PresentationLayer.Properties.Resources.PhieuDangKyVe;
             this.barButtonItem_PhieuDangKyVe.Name = "barButtonItem_PhieuDangKyVe";
+            this.barButtonItem_PhieuDangKyVe.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem_PhieuDangKyVe_ItemClick);
             // 
             // barButtonItem_PhieuNhanVe
             // 
