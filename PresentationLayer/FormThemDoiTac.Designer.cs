@@ -106,16 +106,19 @@
             // 
             // checkedListCompany
             // 
+            this.checkedListCompany.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.checkedListCompany.Appearance.Options.UseFont = true;
             this.checkedListCompany.CheckOnClick = true;
             this.checkedListCompany.Items.AddRange(new DevExpress.XtraEditors.Controls.CheckedListBoxItem[] {
-            new DevExpress.XtraEditors.Controls.CheckedListBoxItem("DL", "Đại Lý"),
+            new DevExpress.XtraEditors.Controls.CheckedListBoxItem("DL", "Đại Lý", System.Windows.Forms.CheckState.Checked),
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem("CT", "Công Ty")});
-            this.checkedListCompany.Location = new System.Drawing.Point(323, 300);
+            this.checkedListCompany.Location = new System.Drawing.Point(461, 300);
             this.checkedListCompany.Name = "checkedListCompany";
             this.checkedListCompany.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.checkedListCompany.Size = new System.Drawing.Size(308, 44);
+            this.checkedListCompany.Size = new System.Drawing.Size(170, 44);
             this.checkedListCompany.StyleController = this.layoutControl1;
             this.checkedListCompany.TabIndex = 21;
+            this.checkedListCompany.ItemCheck += new DevExpress.XtraEditors.Controls.ItemCheckEventHandler(this.checkedListCompany_ItemCheck);
             // 
             // deDate
             // 
@@ -160,9 +163,14 @@
             this.teRate.Name = "teRate";
             this.teRate.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teRate.Properties.Appearance.Options.UseFont = true;
+            this.teRate.Properties.Mask.EditMask = "P";
+            this.teRate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.teRate.Size = new System.Drawing.Size(169, 40);
             this.teRate.StyleController = this.layoutControl1;
             this.teRate.TabIndex = 17;
+            this.teRate.InvalidValue += new DevExpress.XtraEditors.Controls.InvalidValueExceptionEventHandler(this.te_InvalidValue);
+            this.teRate.TextChanged += new System.EventHandler(this.te_TextChanged);
+            this.teRate.Validating += new System.ComponentModel.CancelEventHandler(this.te_Validating);
             // 
             // teEmail
             // 
@@ -173,6 +181,9 @@
             this.teEmail.Size = new System.Drawing.Size(481, 40);
             this.teEmail.StyleController = this.layoutControl1;
             this.teEmail.TabIndex = 16;
+            this.teEmail.InvalidValue += new DevExpress.XtraEditors.Controls.InvalidValueExceptionEventHandler(this.te_InvalidValue);
+            this.teEmail.TextChanged += new System.EventHandler(this.te_TextChanged);
+            this.teEmail.Validating += new System.ComponentModel.CancelEventHandler(this.te_Validating);
             // 
             // teDienThoai
             // 
@@ -180,9 +191,14 @@
             this.teDienThoai.Name = "teDienThoai";
             this.teDienThoai.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.teDienThoai.Properties.Appearance.Options.UseFont = true;
+            this.teDienThoai.Properties.Mask.EditMask = "\\d+";
+            this.teDienThoai.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.teDienThoai.Size = new System.Drawing.Size(481, 40);
             this.teDienThoai.StyleController = this.layoutControl1;
             this.teDienThoai.TabIndex = 15;
+            this.teDienThoai.InvalidValue += new DevExpress.XtraEditors.Controls.InvalidValueExceptionEventHandler(this.te_InvalidValue);
+            this.teDienThoai.TextChanged += new System.EventHandler(this.te_TextChanged);
+            this.teDienThoai.Validating += new System.ComponentModel.CancelEventHandler(this.te_Validating);
             // 
             // teDiaChi
             // 
@@ -193,6 +209,9 @@
             this.teDiaChi.Size = new System.Drawing.Size(481, 40);
             this.teDiaChi.StyleController = this.layoutControl1;
             this.teDiaChi.TabIndex = 14;
+            this.teDiaChi.InvalidValue += new DevExpress.XtraEditors.Controls.InvalidValueExceptionEventHandler(this.te_InvalidValue);
+            this.teDiaChi.TextChanged += new System.EventHandler(this.te_TextChanged);
+            this.teDiaChi.Validating += new System.ComponentModel.CancelEventHandler(this.te_Validating);
             // 
             // teTenDoiTac
             // 
@@ -203,6 +222,9 @@
             this.teTenDoiTac.Size = new System.Drawing.Size(481, 40);
             this.teTenDoiTac.StyleController = this.layoutControl1;
             this.teTenDoiTac.TabIndex = 5;
+            this.teTenDoiTac.InvalidValue += new DevExpress.XtraEditors.Controls.InvalidValueExceptionEventHandler(this.te_InvalidValue);
+            this.teTenDoiTac.TextChanged += new System.EventHandler(this.te_TextChanged);
+            this.teTenDoiTac.Validating += new System.ComponentModel.CancelEventHandler(this.te_Validating);
             // 
             // labelControl1
             // 
@@ -412,19 +434,25 @@
             // 
             // layoutControlItem4
             // 
+            this.layoutControlItem4.AppearanceItemCaption.Font = new System.Drawing.Font("Tahoma", 15F);
+            this.layoutControlItem4.AppearanceItemCaption.Options.UseFont = true;
             this.layoutControlItem4.Control = this.checkedListCompany;
             this.layoutControlItem4.Location = new System.Drawing.Point(311, 288);
+            this.layoutControlItem4.MaxSize = new System.Drawing.Size(0, 52);
+            this.layoutControlItem4.MinSize = new System.Drawing.Size(192, 4);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.OptionsTableLayoutItem.ColumnIndex = 1;
             this.layoutControlItem4.OptionsTableLayoutItem.RowIndex = 6;
             this.layoutControlItem4.Size = new System.Drawing.Size(312, 48);
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem4.TextVisible = false;
+            this.layoutControlItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlItem4.Text = "Loại đối tác";
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(135, 24);
             // 
             // FormThemDoiTac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.ClientSize = new System.Drawing.Size(643, 404);
             this.Controls.Add(this.layoutControl1);
             this.Name = "FormThemDoiTac";

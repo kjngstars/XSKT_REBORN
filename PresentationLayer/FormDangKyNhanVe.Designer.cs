@@ -104,6 +104,7 @@
             this.lookUpEditPublish.Size = new System.Drawing.Size(528, 36);
             this.lookUpEditPublish.StyleController = this.layoutControl1;
             this.lookUpEditPublish.TabIndex = 8;
+            this.lookUpEditPublish.EditValueChanged += new System.EventHandler(this.lookUpEditPublish_EditValueChanged);
             // 
             // lookUpEditDoiTac
             // 
@@ -244,6 +245,7 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.OptionsView.ShowIndicator = false;
+            this.gridView1.CellValueChanging += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView1_CellValueChanging);
             // 
             // gridColumn1
             // 

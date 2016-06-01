@@ -64,6 +64,7 @@
             this.gridColumn7});
             this.gridView1.GridControl = this.gcDanhSachDaiLy;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // gridColumn1
             // 

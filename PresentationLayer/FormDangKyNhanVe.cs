@@ -12,6 +12,8 @@ using BusinessLogicLayer;
 using DevExpress.XtraLayout;
 using DevExpress.XtraEditors.Controls;
 using System.Text.RegularExpressions;
+using DevExpress.XtraEditors.Repository;
+using DevExpress.XtraEditors.Mask;
 
 namespace PresentationLayer
 {
@@ -20,6 +22,8 @@ namespace PresentationLayer
         DoiTacBUS doiTacBUS = new DoiTacBUS();
         PhieuDangKyVeBUS registerTicket = new PhieuDangKyVeBUS();
         PublishBUS publish = new PublishBUS();
+
+        bool flag = false;
         public FormDangKyNhanVe()
         {
             InitializeComponent();
@@ -27,6 +31,8 @@ namespace PresentationLayer
 
         private void FormDangKyVe_Load(object sender, EventArgs e)
         {
+            btnThem.Enabled = false;
+
             deDate.DateTime = DateTime.Now;
             registerTicket.CreateProcedure();
 
@@ -47,6 +53,11 @@ namespace PresentationLayer
             {
                 FillDotPhatHanh(tableDotPhatHanh);
             }
+
+            var edit = new RepositoryItemTextEdit();
+            edit.Mask.MaskType = MaskType.RegEx;
+            edit.Mask.EditMask=@"\d+";
+            gridView1.Columns["SOLUONG"].ColumnEdit=edit;
         }
 
         private void FillGridControlLoaiVe(DataTable tableLoaiVe)
@@ -102,14 +113,14 @@ namespace PresentationLayer
                 var registerID = GenerateMaDangKy("REG", deDate.DateTime);
                 var partnerID = lookUpEditDoiTac.EditValue.ToString();
                 var publishID = lookUpEditPublish.EditValue.ToString();
-
+                
                 string[] str = { registerID, dateRegister, partnerID, publishID };
 
                 var succeed = registerTicket.RegisterTicket(str);
-
+                
                 if (succeed == 1)
                 {
-
+                    
                     List<RegisterDetailObject> registerDetail = new List<RegisterDetailObject>();
                     DataView dt = (DataView)gridView1.DataSource;
                     foreach (DataRow item in dt.Table.Rows)
@@ -126,6 +137,7 @@ namespace PresentationLayer
                     registerTicket.InsertTicketDetailRegister(registerDetail);
 
                     XtraMessageBox.Show(@"Đăng ký nhận thành công", @"Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Reset();
                 }
             }
             catch (Exception ex)
@@ -146,6 +158,7 @@ namespace PresentationLayer
             lookUpEditDoiTac.Properties.DataSource = table;
             lookUpEditDoiTac.Properties.DisplayMember = "TENDOITAC";
             lookUpEditDoiTac.Properties.ValueMember = "MADOITAC";
+            
 
             lookUpEditDoiTac.Properties.Columns.Add(new LookUpColumnInfo("TENDOITAC", 0, "Tên Đối Tác"));
             lookUpEditDoiTac.Properties.Columns.Add(new LookUpColumnInfo("MADOITAC", 0, "Mã Đối Tác"));
@@ -178,5 +191,62 @@ namespace PresentationLayer
             id += convert;
             return id;
         }
+
+        #region validation
+        
+        private void gridView1_CellValueChanging(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            if (e.Value.ToString() == "") 
+            {
+                return;
+            }
+            int entity = int.Parse(e.Value.ToString());
+            if (entity > 0) 
+            {
+                flag = true;
+            }
+            else
+            {
+                flag = false;
+            }
+            Validation();
+        }
+
+        void Validation()
+        {
+            var partner = lookUpEditDoiTac.EditValue != null ? true : false;
+            var publish = lookUpEditPublish.EditValue != null ? true : false;
+
+            if (partner && publish && flag)  
+            {
+                btnThem.Enabled = true;
+            }
+            else
+            {
+                btnThem.Enabled = false;
+            }
+
+        }
+        private void lookUpEditPublish_EditValueChanged(object sender, EventArgs e)
+        {
+            Validation();
+        }
+
+        void Reset()
+        {
+            btnThem.Enabled = false;
+            flag = false;
+            deDate.DateTime = DateTime.Now;
+            lookUpEditDoiTac.EditValue = null;
+            lookUpEditPublish.EditValue = null;
+
+            DataView dt = (DataView)gridView1.DataSource;
+            foreach (DataRow item in dt.Table.Rows)
+            {
+                item["SOLUONG"] = "0";                
+            }
+        }
+
+        #endregion
     }
 }

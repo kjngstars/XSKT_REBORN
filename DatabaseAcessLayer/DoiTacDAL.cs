@@ -41,7 +41,9 @@ namespace DatabaseAcessLayer
             command.Parameters.AddWithValue("@pEmail", str[5]);
             int rate = int.Parse(str[6]);
             float rateInterest = (float)rate / 100;
-            command.Parameters.AddWithValue("@pTyLeHoaHong", rateInterest);
+            rateInterest = (float)(Math.Round(rateInterest, 2));
+            var hoaHong = rateInterest.ToString();
+            command.Parameters.AddWithValue("@pTyLeHoaHong", hoaHong);
 
             var result = command.Parameters.Add("@Result", SqlDbType.VarChar);
             result.Direction = ParameterDirection.ReturnValue;
