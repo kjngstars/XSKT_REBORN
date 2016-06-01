@@ -16,6 +16,8 @@ namespace PresentationLayer
 {
     public partial class FormThemDoiTac : XtraForm
     {
+
+        bool flag = true;
         DoiTacBUS partnerBUS = new DoiTacBUS();
         public FormThemDoiTac()
         {
@@ -28,17 +30,26 @@ namespace PresentationLayer
             partnerBUS.CreateProcedure();
 
             deDate.EditValue = DateTime.Now;
-            btnThemDoiTac.Enabled = false;  
+            btnThemDoiTac.Enabled = false;
+            checkedListCompany.SetItemChecked(0, true);
         }
 
         private void btnThemDoiTac_Click(object sender, EventArgs e)
         {
             try
             {
-                
-                DoiTacObject partner = new DoiTacObject { TenDoiTac = teTenDoiTac.Text, NgayTiepNhan = deDate.DateTime, DiaChi = teDiaChi.Text, DienThoai = teDienThoai.Text, Email = teEmail.Text, Rate = int.Parse(teRate.Text) };
 
-                var prefix = (string)checkedListCompany.SelectedValue;
+                DoiTacObject partner = new DoiTacObject
+                {
+                    TenDoiTac = teTenDoiTac.Text,
+                    NgayTiepNhan = deDate.DateTime,
+                    DiaChi = teDiaChi.Text,
+                    DienThoai = teDienThoai.Text,
+                    Email = teEmail.Text,
+                    Rate = int.Parse(teRate.Text)
+                };
+
+                var prefix = GetValueCheckedBox();
                 var id = GenerateID(prefix, partner.NgayTiepNhan);
                 partner.MaDoiTac = id;
 
@@ -68,7 +79,8 @@ namespace PresentationLayer
         string GenerateID(string prefix,DateTime date)
         {
             string id = prefix;
-            var dt = date.ToString("yyyy-MM-dd HH:mm:ss");
+            //var dt = date.ToString("yyyy-MM-dd HH:mm:ss");
+            var dt = date.ToString("MM-dd-yy HH:mm:ss");
             var convert = Regex.Replace(dt, "[-: ]", "");
             id += convert;
             return id;
@@ -76,6 +88,7 @@ namespace PresentationLayer
 
         void Reset()
         {
+            flag = true;
             btnThemDoiTac.Enabled = false;
             deDate.DateTime = DateTime.Now;
             teTenDoiTac.Text = "";
@@ -83,6 +96,7 @@ namespace PresentationLayer
             teDienThoai.Text = "";
             teEmail.Text = "";
             teRate.Text = "";
+            checkedListCompany.SetItemChecked(0, true);
         }
 
         #endregion
@@ -94,6 +108,9 @@ namespace PresentationLayer
 
         private void checkedListCompany_ItemCheck(object sender, DevExpress.XtraEditors.Controls.ItemCheckEventArgs e)
         {
+            flag = SelectedCompanyType();
+            Validation();
+
             if (e.State != CheckState.Checked) return;
             CheckedListBoxControl lb = sender as CheckedListBoxControl;
             for (int i = 0; i < lb.ItemCount; i++)
@@ -130,9 +147,9 @@ namespace PresentationLayer
             bool address = teDiaChi.Text != "" ? true : false;
             bool phone = teDienThoai.Text != "" ? true : false;
             bool email = teEmail.Text != "" ? true : false;
-            bool commission = teRate.Text != "" ? true : false;
+            bool commission = teRate.Text != "" ? true : false;            
 
-            if (name && address && phone && email && commission) 
+            if (name && address && phone && email && commission && flag)
             {
                 btnThemDoiTac.Enabled = true;
             }
@@ -142,6 +159,27 @@ namespace PresentationLayer
             }
         }
 
+        bool SelectedCompanyType()
+        {
+            List<bool> check = new List<bool>();
+            for (int i = 0; i < checkedListCompany.ItemCount; i++)
+            {
+                check.Add(checkedListCompany.GetItemChecked(i));                
+            }
+            return check.Any(e => e == true);
+        }
+
+        string GetValueCheckedBox()
+        {
+            for (int i = 0; i < checkedListCompany.ItemCount; i++)
+            {
+               if(checkedListCompany.GetItemChecked(i))
+               {
+                   return (string)checkedListCompany.GetItemValue(i);
+               }
+            }
+            return "";
+        }
         private void te_TextChanged(object sender, EventArgs e)
         {
             Validation();
