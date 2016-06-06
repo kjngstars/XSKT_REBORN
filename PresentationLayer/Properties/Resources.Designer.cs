@@ -133,6 +133,26 @@ namespace PresentationLayer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DanhSachDotPHatHanh {
+            get {
+                object obj = ResourceManager.GetObject("DanhSachDotPHatHanh", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DanhSachKeHoachPhatHanh {
+            get {
+                object obj = ResourceManager.GetObject("DanhSachKeHoachPhatHanh", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DanhSachLoaiVe {
             get {
                 object obj = ResourceManager.GetObject("DanhSachLoaiVe", resourceCulture);
@@ -176,36 +196,6 @@ namespace PresentationLayer.Properties {
         internal static System.Drawing.Bitmap Icon {
             get {
                 object obj = ResourceManager.GetObject("Icon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap KeHoachPhanPhoi {
-            get {
-                object obj = ResourceManager.GetObject("KeHoachPhanPhoi", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap KeHoachPhatHanh {
-            get {
-                object obj = ResourceManager.GetObject("KeHoachPhatHanh", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap LapKeHoachPhanPhoi {
-            get {
-                object obj = ResourceManager.GetObject("LapKeHoachPhanPhoi", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -276,6 +266,16 @@ namespace PresentationLayer.Properties {
         internal static System.Drawing.Bitmap ThemCCGT {
             get {
                 object obj = ResourceManager.GetObject("ThemCCGT", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ThemDotPhatHanh {
+            get {
+                object obj = ResourceManager.GetObject("ThemDotPhatHanh", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

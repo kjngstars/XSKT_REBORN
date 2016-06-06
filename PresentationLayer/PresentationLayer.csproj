@@ -242,18 +242,6 @@
     <None Include="Resources\ThemCCGT.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\KeHoachPhatHanh.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\KeHoachPhanPhoi.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\LapKeHoachPhatHanh.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\LapKeHoachPhanPhoi.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\GhiNhanKQXS.png" />
   </ItemGroup>
   <ItemGroup>
@@ -283,7 +271,11 @@
     <Content Include="Procedure\GIAITHUONG_PROCEDURE.sql" />
     <Content Include="Procedure\LOAIVE_PROCEDURE.sql" />
     <Content Include="Procedure\PROCEDURE.sql" />
+    <Content Include="Resources\DanhSachDotPHatHanh.png" />
+    <None Include="Resources\DanhSachKeHoachPhatHanh.png" />
     <Content Include="Resources\Icon.png" />
+    <None Include="Resources\LapKeHoachPhatHanh.png" />
+    <None Include="Resources\ThemDotPhatHanh.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

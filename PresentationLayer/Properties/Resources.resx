@@ -139,12 +139,6 @@
   <data name="GhiNhanKQXS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GhiNhanKQXS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="KeHoachPhanPhoi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\KeHoachPhanPhoi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LapKeHoachPhanPhoi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LapKeHoachPhanPhoi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Thoat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Thoat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -159,9 +153,6 @@
   </data>
   <data name="DoiMatKhau" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DoiMatKhau.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="KeHoachPhatHanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\KeHoachPhatHanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PhieuThanhToan" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PhieuThanhToan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,13 +178,22 @@
   <data name="DanhSachCCGT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DanhSachCCGT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LapKeHoachPhatHanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LapKeHoachPhatHanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="DanhSachDoiTac" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DanhSachDoiTac.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DanhSachDotPHatHanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\danhsachdotphathanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DanhSachKeHoachPhatHanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DanhSachKeHoachPhatHanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LapKeHoachPhatHanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\lapkehoachphathanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ThemDotPhatHanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ThemDotPhatHanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
