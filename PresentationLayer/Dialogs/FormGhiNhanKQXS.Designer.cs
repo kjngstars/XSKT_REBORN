@@ -31,11 +31,11 @@
             this.simpleButton_Cancel = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton_OK = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl = new DevExpress.XtraEditors.PanelControl();
+            this.userControlGhiNhanKQXS = new PresentationLayer.UserControls.UserControlGhiNhanKQXS();
             this.labelControl_LoaiVe = new DevExpress.XtraEditors.LabelControl();
             this.labelControl_NgayMoThuong = new DevExpress.XtraEditors.LabelControl();
             this.comboBoxEdit_LoaiVe = new DevExpress.XtraEditors.ComboBoxEdit();
             this.dateEdit_NgayMoThuong = new DevExpress.XtraEditors.DateEdit();
-            this.userControlGhiNhanKQXS = new PresentationLayer.UserControls.UserControlGhiNhanKQXS();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl)).BeginInit();
             this.panelControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit_LoaiVe.Properties)).BeginInit();
@@ -46,7 +46,6 @@
             // simpleButton_Cancel
             // 
             this.simpleButton_Cancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.simpleButton_Cancel.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.simpleButton_Cancel.Image = global::PresentationLayer.Properties.Resources.Cancel;
             this.simpleButton_Cancel.Location = new System.Drawing.Point(442, 489);
             this.simpleButton_Cancel.Name = "simpleButton_Cancel";
@@ -58,7 +57,6 @@
             // simpleButton_OK
             // 
             this.simpleButton_OK.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.simpleButton_OK.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.simpleButton_OK.Image = global::PresentationLayer.Properties.Resources.Apply;
             this.simpleButton_OK.Location = new System.Drawing.Point(262, 489);
             this.simpleButton_OK.Name = "simpleButton_OK";
@@ -79,6 +77,16 @@
             this.panelControl.Name = "panelControl";
             this.panelControl.Size = new System.Drawing.Size(784, 415);
             this.panelControl.TabIndex = 18;
+            // 
+            // userControlGhiNhanKQXS
+            // 
+            this.userControlGhiNhanKQXS.AutoScroll = true;
+            this.userControlGhiNhanKQXS.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlGhiNhanKQXS.Location = new System.Drawing.Point(2, 2);
+            this.userControlGhiNhanKQXS.Name = "userControlGhiNhanKQXS";
+            this.userControlGhiNhanKQXS.Size = new System.Drawing.Size(780, 411);
+            this.userControlGhiNhanKQXS.TabIndex = 0;
+            this.userControlGhiNhanKQXS.TextEditWidth = 75;
             // 
             // labelControl_LoaiVe
             // 
@@ -125,16 +133,6 @@
             this.dateEdit_NgayMoThuong.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.dateEdit_NgayMoThuong.Size = new System.Drawing.Size(200, 22);
             this.dateEdit_NgayMoThuong.TabIndex = 22;
-            // 
-            // userControlGhiNhanKQXS
-            // 
-            this.userControlGhiNhanKQXS.AutoScroll = true;
-            this.userControlGhiNhanKQXS.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControlGhiNhanKQXS.Location = new System.Drawing.Point(2, 2);
-            this.userControlGhiNhanKQXS.Name = "userControlGhiNhanKQXS";
-            this.userControlGhiNhanKQXS.Size = new System.Drawing.Size(780, 411);
-            this.userControlGhiNhanKQXS.TabIndex = 0;
-            this.userControlGhiNhanKQXS.TextEditWidth = 75;
             // 
             // FormGhiNhanKQXS
             // 

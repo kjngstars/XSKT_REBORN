@@ -142,7 +142,6 @@
             // 
             // simpleButton_Cancel
             // 
-            this.simpleButton_Cancel.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.simpleButton_Cancel.Image = global::PresentationLayer.Properties.Resources.Cancel;
             this.simpleButton_Cancel.Location = new System.Drawing.Point(442, 489);
             this.simpleButton_Cancel.Name = "simpleButton_Cancel";
@@ -153,7 +152,6 @@
             // 
             // simpleButton_OK
             // 
-            this.simpleButton_OK.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.simpleButton_OK.Image = global::PresentationLayer.Properties.Resources.Apply;
             this.simpleButton_OK.Location = new System.Drawing.Point(262, 489);
             this.simpleButton_OK.Name = "simpleButton_OK";
