@@ -54,6 +54,7 @@
             this.barButtonItem_ThemDotPhatHanh = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem_DanhSachKeHoachPhatHanh = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem_LapKeHoachPhatHanh = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem_BaoCaoCongNo = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage_HeThong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup_TaiKhoan = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup_Khac = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -70,6 +71,7 @@
             this.ribbonPage_KetQuaXoSo = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup_KetQuaXoSo = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage_BaoCao = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup_BaoCao = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage_TroGiup = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.defaultLookAndFeel = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
@@ -106,9 +108,10 @@
             this.barButtonItem_DanhSachDotPhatHanh,
             this.barButtonItem_ThemDotPhatHanh,
             this.barButtonItem_DanhSachKeHoachPhatHanh,
-            this.barButtonItem_LapKeHoachPhatHanh});
+            this.barButtonItem_LapKeHoachPhatHanh,
+            this.barButtonItem_BaoCaoCongNo});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 27;
+            this.ribbon.MaxItemId = 28;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage_HeThong,
@@ -300,6 +303,13 @@
             this.barButtonItem_LapKeHoachPhatHanh.LargeGlyph = global::PresentationLayer.Properties.Resources.LapKeHoachPhatHanh;
             this.barButtonItem_LapKeHoachPhatHanh.Name = "barButtonItem_LapKeHoachPhatHanh";
             // 
+            // barButtonItem_BaoCaoCongNo
+            // 
+            this.barButtonItem_BaoCaoCongNo.Caption = "Báo Cáo Công Nợ";
+            this.barButtonItem_BaoCaoCongNo.Id = 27;
+            this.barButtonItem_BaoCaoCongNo.LargeGlyph = global::PresentationLayer.Properties.Resources.BaoCaoCongNo;
+            this.barButtonItem_BaoCaoCongNo.Name = "barButtonItem_BaoCaoCongNo";
+            // 
             // ribbonPage_HeThong
             // 
             this.ribbonPage_HeThong.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -424,8 +434,16 @@
             // 
             // ribbonPage_BaoCao
             // 
+            this.ribbonPage_BaoCao.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup_BaoCao});
             this.ribbonPage_BaoCao.Name = "ribbonPage_BaoCao";
             this.ribbonPage_BaoCao.Text = "Báo Cáo";
+            // 
+            // ribbonPageGroup_BaoCao
+            // 
+            this.ribbonPageGroup_BaoCao.ItemLinks.Add(this.barButtonItem_BaoCaoCongNo);
+            this.ribbonPageGroup_BaoCao.Name = "ribbonPageGroup_BaoCao";
+            this.ribbonPageGroup_BaoCao.Text = "Báo Cáo";
             // 
             // ribbonPage_TroGiup
             // 
@@ -519,5 +537,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup_KeHoachPhatHanh;
         private DevExpress.XtraBars.BarButtonItem barButtonItem_DanhSachKeHoachPhatHanh;
         private DevExpress.XtraBars.BarButtonItem barButtonItem_LapKeHoachPhatHanh;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup_BaoCao;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem_BaoCaoCongNo;
     }
 }

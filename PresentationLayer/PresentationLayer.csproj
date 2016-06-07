@@ -292,6 +292,7 @@
     <Content Include="Procedure\KETQUAXOSO_PROCEDURE.sql" />
     <Content Include="Procedure\LOAIVE_PROCEDURE.sql" />
     <Content Include="Procedure\PROCEDURE.sql" />
+    <None Include="Resources\BaoCaoCongNo.png" />
     <Content Include="Resources\DanhSachDotPHatHanh.png" />
     <None Include="Resources\DanhSachKeHoachPhatHanh.png" />
     <Content Include="Resources\Icon.png" />
