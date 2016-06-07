@@ -72,6 +72,7 @@ namespace PresentationLayer
                 if (form.Name == child.Name)
                 {
                     child.Activate();
+                    child.Show();
                     return true;
                 }
             }
@@ -175,6 +176,31 @@ namespace PresentationLayer
         {
             var f = new FormDangKyNhanVe();
             f.Show();
+        }
+
+        /// <summary>
+        /// Thêm tab danh sách đợt phát hành
+        /// </summary>
+        private void barButtonItem_DanhSachDotPhatHanh_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormDanhSachDotPhatHanh form = new FormDanhSachDotPhatHanh();
+
+            if (!this.CheckExist(form))
+            {
+                form.MdiParent = this;
+                form.Show();
+            }
+        }
+
+        /// <summary>
+        /// Mở form thêm đợt phát hành
+        /// </summary>
+        private void barButtonItem_ThemDotPhatHanh_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormEditDotPhatHanh form = new FormEditDotPhatHanh();
+
+            if (form.DialogResult != DialogResult.Abort)
+                form.ShowDialog();
         }
     }
 }

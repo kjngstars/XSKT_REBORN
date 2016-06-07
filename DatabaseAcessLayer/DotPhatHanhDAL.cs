@@ -8,16 +8,13 @@ using System.Threading.Tasks;
 
 namespace DatabaseAcessLayer
 {
-    public class LoaiVeDAL : DBConnection
+    public class DotPhatHanhDAL : DBConnection
     {
-        public LoaiVeDAL() : base() { }
+        public DotPhatHanhDAL() : base() { }
 
         public DataTable GetAll()
         {
-            string query = @"SELECT MALOAIVE, TENLOAIVE, NGAYLAP, MENHGIA, TENDOITAC, MACOCAUGIAITHUONG
-                            FROM LOAIVE AS loaive
-                            LEFT JOIN DOITAC AS doitac
-                            ON loaive.MADOITAC = doitac.MADOITAC";
+            string query = @"SELECT * FROM DOTPHATHANH";
 
             return this.getTable(query, string.Empty);
         }
@@ -31,21 +28,18 @@ namespace DatabaseAcessLayer
 
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = this.connection;
-            cmd.CommandText = @"LOAIVE_INSERT";
+            cmd.CommandText = @"DOTPHATHANH_INSERT";
 
-            cmd.Parameters.Add("@p_MALOAIVE", SqlDbType.VarChar, 15);
-            cmd.Parameters["@p_MALOAIVE"].Direction= ParameterDirection.Output;
-            cmd.Parameters.Add("@p_TENLOAIVE", parameters[0]);
+            cmd.Parameters.Add("@p_MADOTPHATHANH", SqlDbType.VarChar, 15);
+            cmd.Parameters["@p_MADOTPHATHANH"].Direction = ParameterDirection.Output;
+            cmd.Parameters.Add("@p_TENDOTPHATHANH", parameters[0]);
             cmd.Parameters.Add("@p_NGAYLAP", parameters[1]);
-            cmd.Parameters.Add("@p_MENHGIA", parameters[2]);
-            cmd.Parameters.Add("@p_MADOITAC", parameters[3]);
-            cmd.Parameters.Add("@p_MACOCAUGIAITHUONG", parameters[4]);
 
             cmd.ExecuteNonQuery();
 
             connection.Close();
 
-            return cmd.Parameters["@p_MALOAIVE"].Value.ToString();
+            return cmd.Parameters["@p_MADOTPHATHANH"].Value.ToString();
         }
 
         public void Update(string[] parameters)
@@ -56,21 +50,18 @@ namespace DatabaseAcessLayer
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = this.connection;
-            cmd.CommandText = @"LOAIVE_UPDATE";
+            cmd.CommandText = @"DOTPHATHANH_UPDATE";
 
-            cmd.Parameters.Add("@p_MALOAIVE", parameters[0]);
-            cmd.Parameters.Add("@p_TENLOAIVE", parameters[1]);
+            cmd.Parameters.Add("@p_MADOTPHATHANH", parameters[0]);
+            cmd.Parameters.Add("@p_TENDOTPHATHANH", parameters[1]);
             cmd.Parameters.Add("@p_NGAYLAP", parameters[2]);
-            cmd.Parameters.Add("@p_MENHGIA", parameters[3]);
-            cmd.Parameters.Add("@p_MADOITAC", parameters[4]);
-            cmd.Parameters.Add("@p_MACOCAUGIAITHUONG", parameters[5]);
 
             cmd.ExecuteNonQuery();
 
             connection.Close();
         }
 
-        public void Delete(string maLoaiVe)
+        public void Delete(string maDotPhatHanh)
         {
             if (connection.State != ConnectionState.Open)
                 connection.Open();
@@ -79,16 +70,16 @@ namespace DatabaseAcessLayer
 
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = this.connection;
-            cmd.CommandText = @"LOAIVE_DELETE";
+            cmd.CommandText = @"DOTPHATHANH_DELETE";
 
-            cmd.Parameters.Add("@p_MALOAIVE", maLoaiVe);
+            cmd.Parameters.Add("@p_MADOTPHATHANH", maDotPhatHanh);
 
             cmd.ExecuteNonQuery();
 
             connection.Close();
         }
 
-        public DataRow GetLoaiVeByMaLoaiVe(string maLoaiVe)
+        public DataRow GetByMaDotPhatHanh(string maDotPhatHanh)
         {
             if (connection.State != ConnectionState.Open)
                 connection.Open();
@@ -98,9 +89,9 @@ namespace DatabaseAcessLayer
 
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = this.connection;
-            cmd.CommandText = @"LOAIVE_SEARCHBYMALOAIVE";
+            cmd.CommandText = @"LOAIVE_SEARCHBYMADOTPHATHANH";
 
-            cmd.Parameters.Add("@p_MALOAIVE", maLoaiVe);
+            cmd.Parameters.Add("@p_MADOTPHATHANH", maDotPhatHanh);
 
             cmd.ExecuteNonQuery();
 
@@ -115,15 +106,6 @@ namespace DatabaseAcessLayer
                 return dataTable.Rows[0];
             else
                 return null;
-        }
-
-        public DataTable GetLoaiVeCT()
-        {
-            string query = @"SELECT *
-                            FROM LOAIVE
-                            WHERE MADOITAC IS NULL";
-
-            return this.getTable(query, string.Empty);
         }
     }
 }

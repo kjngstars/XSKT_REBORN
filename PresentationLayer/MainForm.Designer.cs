@@ -51,6 +51,9 @@
             this.barEditItem_Skin = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemComboBox_Skin = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.barButtonItem_DanhSachDotPhatHanh = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem_ThemDotPhatHanh = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem_DanhSachKeHoachPhatHanh = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem_LapKeHoachPhatHanh = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage_HeThong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup_TaiKhoan = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup_Khac = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -63,6 +66,7 @@
             this.ribbonPageGroup_CoCauGiaiThuong = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage_KeHoach = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup_DotPhatHanh = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup_KeHoachPhatHanh = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage_KetQuaXoSo = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup_KetQuaXoSo = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage_BaoCao = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -70,10 +74,6 @@
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.defaultLookAndFeel = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.xtraTabbedMdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.barButtonItem_ThemDotPhatHanh = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup_KeHoachPhatHanh = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem_DanhSachKeHoachPhatHanh = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem_LapKeHoachPhatHanh = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox_Skin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).BeginInit();
@@ -276,6 +276,29 @@
             this.barButtonItem_DanhSachDotPhatHanh.Id = 23;
             this.barButtonItem_DanhSachDotPhatHanh.LargeGlyph = global::PresentationLayer.Properties.Resources.DanhSachDotPHatHanh;
             this.barButtonItem_DanhSachDotPhatHanh.Name = "barButtonItem_DanhSachDotPhatHanh";
+            this.barButtonItem_DanhSachDotPhatHanh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem_DanhSachDotPhatHanh_ItemClick);
+            // 
+            // barButtonItem_ThemDotPhatHanh
+            // 
+            this.barButtonItem_ThemDotPhatHanh.Caption = "Thêm Đợt Phát Hành";
+            this.barButtonItem_ThemDotPhatHanh.Id = 24;
+            this.barButtonItem_ThemDotPhatHanh.LargeGlyph = global::PresentationLayer.Properties.Resources.ThemDotPhatHanh;
+            this.barButtonItem_ThemDotPhatHanh.Name = "barButtonItem_ThemDotPhatHanh";
+            this.barButtonItem_ThemDotPhatHanh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem_ThemDotPhatHanh_ItemClick);
+            // 
+            // barButtonItem_DanhSachKeHoachPhatHanh
+            // 
+            this.barButtonItem_DanhSachKeHoachPhatHanh.Caption = "Danh Sách Kế Hoạch Phát Hành";
+            this.barButtonItem_DanhSachKeHoachPhatHanh.Id = 25;
+            this.barButtonItem_DanhSachKeHoachPhatHanh.LargeGlyph = global::PresentationLayer.Properties.Resources.DanhSachKeHoachPhatHanh;
+            this.barButtonItem_DanhSachKeHoachPhatHanh.Name = "barButtonItem_DanhSachKeHoachPhatHanh";
+            // 
+            // barButtonItem_LapKeHoachPhatHanh
+            // 
+            this.barButtonItem_LapKeHoachPhatHanh.Caption = "Lập Kế Hoạch Phát Hành";
+            this.barButtonItem_LapKeHoachPhatHanh.Id = 26;
+            this.barButtonItem_LapKeHoachPhatHanh.LargeGlyph = global::PresentationLayer.Properties.Resources.LapKeHoachPhatHanh;
+            this.barButtonItem_LapKeHoachPhatHanh.Name = "barButtonItem_LapKeHoachPhatHanh";
             // 
             // ribbonPage_HeThong
             // 
@@ -376,6 +399,14 @@
             this.ribbonPageGroup_DotPhatHanh.ShowCaptionButton = false;
             this.ribbonPageGroup_DotPhatHanh.Text = "Đợt Phát Hành";
             // 
+            // ribbonPageGroup_KeHoachPhatHanh
+            // 
+            this.ribbonPageGroup_KeHoachPhatHanh.ItemLinks.Add(this.barButtonItem_DanhSachKeHoachPhatHanh);
+            this.ribbonPageGroup_KeHoachPhatHanh.ItemLinks.Add(this.barButtonItem_LapKeHoachPhatHanh);
+            this.ribbonPageGroup_KeHoachPhatHanh.Name = "ribbonPageGroup_KeHoachPhatHanh";
+            this.ribbonPageGroup_KeHoachPhatHanh.ShowCaptionButton = false;
+            this.ribbonPageGroup_KeHoachPhatHanh.Text = "Kế Hoạch Phát Hành";
+            // 
             // ribbonPage_KetQuaXoSo
             // 
             this.ribbonPage_KetQuaXoSo.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -418,35 +449,6 @@
             this.xtraTabbedMdiManager.HeaderButtons = DevExpress.XtraTab.TabButtons.Close;
             this.xtraTabbedMdiManager.MdiParent = this;
             this.xtraTabbedMdiManager.PinPageButtonShowMode = DevExpress.XtraTab.PinPageButtonShowMode.InAllTabPageHeaders;
-            // 
-            // barButtonItem_ThemDotPhatHanh
-            // 
-            this.barButtonItem_ThemDotPhatHanh.Caption = "Thêm Đợt Phát Hành";
-            this.barButtonItem_ThemDotPhatHanh.Id = 24;
-            this.barButtonItem_ThemDotPhatHanh.LargeGlyph = global::PresentationLayer.Properties.Resources.ThemDotPhatHanh;
-            this.barButtonItem_ThemDotPhatHanh.Name = "barButtonItem_ThemDotPhatHanh";
-            // 
-            // ribbonPageGroup_KeHoachPhatHanh
-            // 
-            this.ribbonPageGroup_KeHoachPhatHanh.ItemLinks.Add(this.barButtonItem_DanhSachKeHoachPhatHanh);
-            this.ribbonPageGroup_KeHoachPhatHanh.ItemLinks.Add(this.barButtonItem_LapKeHoachPhatHanh);
-            this.ribbonPageGroup_KeHoachPhatHanh.Name = "ribbonPageGroup_KeHoachPhatHanh";
-            this.ribbonPageGroup_KeHoachPhatHanh.ShowCaptionButton = false;
-            this.ribbonPageGroup_KeHoachPhatHanh.Text = "Kế Hoạch Phát Hành";
-            // 
-            // barButtonItem_DanhSachKeHoachPhatHanh
-            // 
-            this.barButtonItem_DanhSachKeHoachPhatHanh.Caption = "Danh Sách Kế Hoạch Phát Hành";
-            this.barButtonItem_DanhSachKeHoachPhatHanh.Id = 25;
-            this.barButtonItem_DanhSachKeHoachPhatHanh.LargeGlyph = global::PresentationLayer.Properties.Resources.DanhSachKeHoachPhatHanh;
-            this.barButtonItem_DanhSachKeHoachPhatHanh.Name = "barButtonItem_DanhSachKeHoachPhatHanh";
-            // 
-            // barButtonItem_LapKeHoachPhatHanh
-            // 
-            this.barButtonItem_LapKeHoachPhatHanh.Caption = "Lập Kế Hoạch Phát Hành";
-            this.barButtonItem_LapKeHoachPhatHanh.Id = 26;
-            this.barButtonItem_LapKeHoachPhatHanh.LargeGlyph = global::PresentationLayer.Properties.Resources.LapKeHoachPhatHanh;
-            this.barButtonItem_LapKeHoachPhatHanh.Name = "barButtonItem_LapKeHoachPhatHanh";
             // 
             // MainForm
             // 
