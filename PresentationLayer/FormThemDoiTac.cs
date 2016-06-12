@@ -185,5 +185,9 @@ namespace PresentationLayer
             Validation();
         }
 
+        public DoiTacBUS GetDoiTacBus()
+        {
+            return partnerBUS;
+        }
     }
 }

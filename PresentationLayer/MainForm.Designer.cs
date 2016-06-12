@@ -309,6 +309,7 @@
             this.barButtonItem_BaoCaoCongNo.Id = 27;
             this.barButtonItem_BaoCaoCongNo.LargeGlyph = global::PresentationLayer.Properties.Resources.BaoCaoCongNo;
             this.barButtonItem_BaoCaoCongNo.Name = "barButtonItem_BaoCaoCongNo";
+            this.barButtonItem_BaoCaoCongNo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem_BaoCaoCongNo_ItemClick);
             // 
             // ribbonPage_HeThong
             // 

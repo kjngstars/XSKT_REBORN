@@ -32,5 +32,10 @@ namespace BusinessLogicLayer
             string[] data = { partner.MaDoiTac, partner.TenDoiTac, partner.GetDateTime(), partner.DiaChi, partner.DienThoai, partner.Email, partner.Rate.ToString() };
             return doiTacDAL.Insert(data);
         }
+
+        public DataTable GetCongNoDoiTac()
+        {
+            return doiTacDAL.GetCongNoDoiTac();
+        }
     }
 }

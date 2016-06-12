@@ -11,11 +11,14 @@ using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
 using PresentationLayer.Dialogs;
 using DevExpress.Skins;
+using PresentationLayer.Reports;
+using BusinessLogicLayer;
 
 namespace PresentationLayer
 {
     public partial class MainForm : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        DoiTacBUS partner = null;
         public MainForm()
         {
             InitializeComponent();
@@ -25,6 +28,7 @@ namespace PresentationLayer
         {
             this.AddSkin();
             this.SetSkin(Properties.Settings.Default.SkinName);
+            partner = new DoiTacBUS();
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -202,5 +206,16 @@ namespace PresentationLayer
             if (form.DialogResult != DialogResult.Abort)
                 form.ShowDialog();
         }
+
+        private void barButtonItem_BaoCaoCongNo_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var dt = partner.GetCongNoDoiTac();
+
+            ReportingManager rp = new ReportingManager(new ReportCongNo(), dt);
+
+            rp.ShowReportPreview();
+        }
+
+        
     }
 }
