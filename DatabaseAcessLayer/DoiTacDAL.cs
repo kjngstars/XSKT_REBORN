@@ -21,8 +21,7 @@ namespace DatabaseAcessLayer
         }
         public DataTable GetAll()
         {
-            string query = @"SELECT * FROM DOITAC
-                            WHERE MADOITAC";
+            string query = @"SELECT * FROM DOITAC";
 
             return this.getTable(query, string.Empty);
         }
