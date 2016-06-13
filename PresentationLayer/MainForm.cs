@@ -11,11 +11,13 @@ using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
 using PresentationLayer.Dialogs;
 using DevExpress.Skins;
+using BusinessLogicLayer;
 
 namespace PresentationLayer
 {
     public partial class MainForm : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        public static TaiKhoan user = null;
         public MainForm()
         {
             InitializeComponent();
@@ -151,6 +153,104 @@ namespace PresentationLayer
             {
                 form.MdiParent = this;
                 form.Show();
+            }
+        }
+
+        /// <summary>
+        /// Thêm tab Danh sách tài khoản
+        /// </summary>
+        
+        private void barButtonItem_DanhSachTaiKhoan_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormDanhSachTaiKhoan form = new FormDanhSachTaiKhoan();
+
+            if (!this.CheckExist(form))
+            {
+                form.MdiParent = this;
+                form.Show();
+            }
+        }
+
+        /// <summary>
+        /// Mở form đổi mật khẩu
+        /// </summary>
+        private void barButtonItem_DoiMatKhau_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormEditMatKhau form = new FormEditMatKhau();
+            if (form.DialogResult != DialogResult.Abort)
+            {
+                form.ShowDialog();              
+            }
+        }
+
+        /// <summary>
+        /// Mở form đăng nhập
+        /// </summary>
+        private void barButtonItem_DangNhap_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormDangNhap form = new FormDangNhap();
+            if (form.DialogResult != DialogResult.Abort)
+            {
+                form.ShowDialog();
+            }
+        }
+
+        private void barButtonItem_PhieuNhanVe_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormPhieuNhanVe form = new FormPhieuNhanVe();
+            if (form.DialogResult != DialogResult.Abort)
+            {
+                form.ShowDialog();
+            }
+        }
+
+        private void barButtonItem_PhieuTraVe_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormPhieuTraVe form = new FormPhieuTraVe();
+            if (form.DialogResult != DialogResult.Abort)
+            {
+                form.ShowDialog();
+            }
+        }
+
+        private void barButtonItem_DanhSachDoiTac_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormDanhSachDaiLy f = new FormDanhSachDaiLy();
+
+            if (!this.CheckExist(f)) 
+            {
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void barButtonItem_TiepNhanDoiTac_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var f = new FormThemDoiTac();
+            f.Show();
+        }
+
+        private void barButtonItem_PhieuDangKyVe_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var f = new FormDangKyNhanVe();
+            f.Show();
+        }
+
+        private void barButtonItem_PhieuThanhToan_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var form = new FormPhieuThu();
+            if (form.DialogResult != DialogResult.Abort)
+            {
+                form.ShowDialog();
+            }
+        }
+
+        private void barButtonItem_LapKeHoachPhatHanh_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var form = new FormLapKeHoachPhatHanh();
+            if (form.DialogResult != DialogResult.Abort)
+            {
+                form.ShowDialog();
             }
         }
     }

@@ -41,12 +41,21 @@
   <ItemGroup>
     <Compile Include="ChiTietKetQuaXoSoDAL.cs" />
     <Compile Include="CoCauGiaiThuongDAL.cs" />
+    <Compile Include="DanhSachDaiLyDAL.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="DoiTacDAL.cs" />
     <Compile Include="GiaiThuongDAL.cs" />
+    <Compile Include="KeHoachPhatHanhDAL.cs" />
     <Compile Include="KetQuaXoSoDAL.cs" />
     <Compile Include="LoaiVeDAL.cs" />
+    <Compile Include="PhieuDangKyVeDAL.cs" />
+    <Compile Include="PhieuThu_DAL.cs" />
+    <Compile Include="PhieuTraVe_DAL.cs" />
+    <Compile Include="PhieuNhanVe_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublishBUS.cs" />
+    <Compile Include="PublishDAL.cs" />
+    <Compile Include="TaiKhoanDAL.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -50,6 +50,8 @@
     <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -62,6 +64,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dialogs\EditValueChanged.cs" />
+    <Compile Include="Dialogs\FormDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FormDangNhap.Designer.cs">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dialogs\FormEditCCGT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,11 +83,53 @@
     <Compile Include="Dialogs\FormEditLoaiVe.Designer.cs">
       <DependentUpon>FormEditLoaiVe.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dialogs\FormEditMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FormEditMatKhau.Designer.cs">
+      <DependentUpon>FormEditMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FormEditThongTinTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FormEditThongTinTaiKhoan.Designer.cs">
+      <DependentUpon>FormEditThongTinTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FormLapKeHoachPhatHanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FormLapKeHoachPhatHanh.Designer.cs">
+      <DependentUpon>FormLapKeHoachPhatHanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FormPhieuThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FormPhieuThu.Designer.cs">
+      <DependentUpon>FormPhieuThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDangKyNhanVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDangKyNhanVe.Designer.cs">
+      <DependentUpon>FormDangKyNhanVe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dialogs\FormGhiNhanKQXS.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dialogs\FormGhiNhanKQXS.Designer.cs">
       <DependentUpon>FormGhiNhanKQXS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FormPhieuNhanVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FormPhieuNhanVe.Designer.cs">
+      <DependentUpon>FormPhieuNhanVe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FormPhieuTraVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FormPhieuTraVe.Designer.cs">
+      <DependentUpon>FormPhieuTraVe.cs</DependentUpon>
     </Compile>
     <Compile Include="FormDanhSachCCGT.cs">
       <SubType>Form</SubType>
@@ -86,11 +137,29 @@
     <Compile Include="FormDanhSachCCGT.Designer.cs">
       <DependentUpon>FormDanhSachCCGT.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDanhSachDaiLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDanhSachDaiLy.Designer.cs">
+      <DependentUpon>FormDanhSachDaiLy.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDanhSachLoaiVe.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormDanhSachLoaiVe.Designer.cs">
       <DependentUpon>FormDanhSachLoaiVe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDanhSachTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDanhSachTaiKhoan.Designer.cs">
+      <DependentUpon>FormDanhSachTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThemDoiTac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThemDoiTac.Designer.cs">
+      <DependentUpon>FormThemDoiTac.cs</DependentUpon>
     </Compile>
     <Compile Include="FormTraCuuKQXS.cs">
       <SubType>Form</SubType>
@@ -118,20 +187,53 @@
     <Compile Include="UserControls\UserControlTraCuuKQXS.Designer.cs">
       <DependentUpon>UserControlTraCuuKQXS.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Dialogs\FormDangNhap.resx">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\FormEditCCGT.resx">
       <DependentUpon>FormEditCCGT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\FormEditLoaiVe.resx">
       <DependentUpon>FormEditLoaiVe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormEditMatKhau.resx">
+      <DependentUpon>FormEditMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormEditThongTinTaiKhoan.resx">
+      <DependentUpon>FormEditThongTinTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormLapKeHoachPhatHanh.resx">
+      <DependentUpon>FormLapKeHoachPhatHanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormPhieuThu.resx">
+      <DependentUpon>FormPhieuThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDangKyNhanVe.resx">
+      <DependentUpon>FormDangKyNhanVe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\FormGhiNhanKQXS.resx">
       <DependentUpon>FormGhiNhanKQXS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormPhieuNhanVe.resx">
+      <DependentUpon>FormPhieuNhanVe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormPhieuTraVe.resx">
+      <DependentUpon>FormPhieuTraVe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDanhSachCCGT.resx">
       <DependentUpon>FormDanhSachCCGT.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormDanhSachDaiLy.resx">
+      <DependentUpon>FormDanhSachDaiLy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDanhSachLoaiVe.resx">
       <DependentUpon>FormDanhSachLoaiVe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDanhSachTaiKhoan.resx">
+      <DependentUpon>FormDanhSachTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThemDoiTac.resx">
+      <DependentUpon>FormThemDoiTac.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTraCuuKQXS.resx">
       <DependentUpon>FormTraCuuKQXS.cs</DependentUpon>
@@ -213,18 +315,6 @@
     <None Include="Resources\ThemCCGT.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\KeHoachPhatHanh.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\KeHoachPhanPhoi.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\LapKeHoachPhatHanh.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\LapKeHoachPhanPhoi.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\GhiNhanKQXS.png" />
   </ItemGroup>
   <ItemGroup>
@@ -250,11 +340,23 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icon.ico" />
+    <Content Include="Procedure\CHITIETKETQUAXOSO_PROCEDURE.sql" />
     <Content Include="Procedure\COCAUGIAITHUONG_PROCEDURE.sql" />
     <Content Include="Procedure\GIAITHUONG_PROCEDURE.sql" />
+    <Content Include="Procedure\KETQUAXOSO_PROCEDURE.sql" />
+    <Content Include="Procedure\CHITIETDOTPHATHANH_PROCEDURE.sql" />
     <Content Include="Procedure\LOAIVE_PROCEDURE.sql" />
+    <Content Include="Procedure\PHIEUTRAVE_PROCEDURE.sql" />
     <Content Include="Procedure\PROCEDURE.sql" />
+    <Content Include="Procedure\PHIEUNHANVE_PROCEDURE.sql" />
+    <Content Include="Procedure\DOITAC_PROCEDURE.sql" />
+    <Content Include="Procedure\TAIKHOAN_PROCEDURE.sql" />
+    <Content Include="Resources\DanhSachDotPHatHanh.png" />
+    <None Include="Resources\DanhSachKeHoachPhatHanh.png" />
     <Content Include="Resources\Icon.png" />
+    <None Include="Resources\LapKeHoachPhatHanh.png" />
+    <None Include="Resources\ThemDotPhatHanh.png" />
+    <None Include="Resources\users.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

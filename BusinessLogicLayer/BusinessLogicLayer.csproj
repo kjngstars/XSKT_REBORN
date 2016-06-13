@@ -41,6 +41,19 @@
   <ItemGroup>
     <Compile Include="ChiTietKetQuaXoSo.cs" />
     <Compile Include="ChiTietKetQuaXoSoBUS.cs" />
+    <Compile Include="DanhSachDaiLyBUS.cs" />
+    <Compile Include="DoiTacObject.cs" />
+    <Compile Include="KeHoachPhatHanh.cs" />
+    <Compile Include="KeHoachPhatHanhBUS.cs" />
+    <Compile Include="PhieuDangKyVeBUS.cs" />
+    <Compile Include="PhieuNhanVe.cs" />
+    <Compile Include="PhieuThu_BUS.cs" />
+    <Compile Include="PhieuTraVe_BUS.cs" />
+    <Compile Include="PhieuNhanVe_BUS.cs" />
+    <Compile Include="PublishBUS.cs" />
+    <Compile Include="RegisterDetailObject.cs" />
+    <Compile Include="TaiKhoanBUS.cs" />
+    <Compile Include="TaiKhoan.cs" />
     <Compile Include="GiaiThuong.cs" />
     <Compile Include="CoCauGiaiThuong.cs" />
     <Compile Include="CoCauGiaiThuongBUS.cs" />
@@ -52,6 +65,7 @@
     <Compile Include="LoaiVe.cs" />
     <Compile Include="LoaiVeBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThamSo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DatabaseAcessLayer\DatabaseAcessLayer.csproj">

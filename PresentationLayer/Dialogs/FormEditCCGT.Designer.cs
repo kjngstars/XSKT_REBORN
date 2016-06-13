@@ -73,7 +73,7 @@
             this.barButtonItem_Them,
             this.barButtonItem_Xoa});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 6;
+            this.ribbonControl.MaxItemId = 7;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage});
@@ -142,7 +142,6 @@
             // 
             // simpleButton_Cancel
             // 
-            this.simpleButton_Cancel.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.simpleButton_Cancel.Image = global::PresentationLayer.Properties.Resources.Cancel;
             this.simpleButton_Cancel.Location = new System.Drawing.Point(442, 489);
             this.simpleButton_Cancel.Name = "simpleButton_Cancel";
@@ -153,7 +152,6 @@
             // 
             // simpleButton_OK
             // 
-            this.simpleButton_OK.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.simpleButton_OK.Image = global::PresentationLayer.Properties.Resources.Apply;
             this.simpleButton_OK.Location = new System.Drawing.Point(262, 489);
             this.simpleButton_OK.Name = "simpleButton_OK";
@@ -192,8 +190,6 @@
             this.SOLANQUAY});
             this.gridView.GridControl = this.gridControl;
             this.gridView.Name = "gridView";
-            this.gridView.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.True;
-            this.gridView.OptionsView.ShowGroupPanel = false;
             // 
             // MAGIAITHUONG
             // 

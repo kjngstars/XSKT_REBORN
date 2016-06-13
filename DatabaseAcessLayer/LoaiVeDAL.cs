@@ -12,12 +12,35 @@ namespace DatabaseAcessLayer
     {
         public LoaiVeDAL() : base() { }
 
+        //public DataTable GetAll()
+        //{
+        //    string query = @"SELECT MALOAIVE, TENLOAIVE, NGAYLAP, MENHGIA, TENDOITAC, MACOCAUGIAITHUONG
+        //                    FROM LOAIVE AS loaive
+        //                    LEFT JOIN DOITAC AS doitac
+        //                    ON loaive.MADOITAC = doitac.MADOITAC";
+
+        //    return this.getTable(query, string.Empty);
+        //}
         public DataTable GetAll()
         {
-            string query = @"SELECT MALOAIVE, TENLOAIVE, NGAYLAP, MENHGIA, TENDOITAC, MACOCAUGIAITHUONG
-                            FROM LOAIVE AS loaive
-                            LEFT JOIN DOITAC AS doitac
-                            ON loaive.MADOITAC = doitac.MADOITAC";
+            string query = @"SELECT*
+                            FROM LOAIVE";
+
+            return this.getTable(query, string.Empty);
+        }
+        public DataTable GetByMaDotPhatHanh(string maDotPhatHanh)
+        {
+            string query = @"select distinct  lv.MALOAIVE,lv.TENLOAIVE, lv.MENHGIA 
+                            from CHITIETDOTPHATHANH ctph,LOAIVE lv
+                            where lv.MALOAIVE=ctph.MALOAIVE and ctph.MADOTPHATHANH = '"+ maDotPhatHanh+ "'";
+
+            return this.getTable(query, string.Empty);
+        }
+        public DataTable GetByMaDotPhatHanhMaDoiTac(string maDotPhatHanh, string maDoiTac)
+        {
+            string query = @"select distinct  lv.MALOAIVE,lv.TENLOAIVE, lv.MENHGIA, ctph.SOVEPHATHANH
+                            from CHITIETDOTPHATHANH ctph,LOAIVE lv
+                            where lv.MALOAIVE=ctph.MALOAIVE and ctph.MADOTPHATHANH = '" + maDotPhatHanh + "' and ctph.MADOITAC = '"+ maDoiTac +"'";
 
             return this.getTable(query, string.Empty);
         }

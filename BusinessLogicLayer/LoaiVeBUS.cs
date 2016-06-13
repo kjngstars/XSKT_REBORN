@@ -23,6 +23,14 @@ namespace BusinessLogicLayer
             return this.loaiVeDAL.GetAll();
         }
 
+        public DataTable GetByMaDotPhatHanh(string maDotPhatHanh)
+        {
+            return this.loaiVeDAL.GetByMaDotPhatHanh(maDotPhatHanh);
+        }
+        public DataTable GetByMaDotPhatHanhMaDoiTac(string maDotPhatHanh, string maDoiTac)
+        {
+            return this.loaiVeDAL.GetByMaDotPhatHanhMaDoiTac(maDotPhatHanh,maDoiTac);
+        }
 
         public string Insert(LoaiVe loaiVe)
         {

@@ -34,7 +34,7 @@ namespace DatabaseAcessLayer
             cmd.Parameters.Add("@p_NGAYLAP", parameters);
 
             cmd.ExecuteNonQuery();
-
+            
             connection.Close();
 
             return cmd.Parameters["@p_MACOCAUGIAITHUONG"].Value.ToString();
