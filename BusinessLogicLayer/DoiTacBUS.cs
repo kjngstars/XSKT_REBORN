@@ -22,7 +22,10 @@ namespace BusinessLogicLayer
         {
             return this.doiTacDAL.GetAllCT();
         }
-
+        public DataTable GetAll()
+        {
+            return this.doiTacDAL.GetAll();
+        }
         public DataTable GetDoiTacByMaDotPhatHanh(string maDotPhatHanh)
         {
             return this.doiTacDAL.GetDoiTacByMaDotPhatHanh(maDotPhatHanh);

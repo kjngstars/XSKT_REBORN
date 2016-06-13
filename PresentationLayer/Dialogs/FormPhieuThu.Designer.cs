@@ -42,10 +42,10 @@
             this.textEdit_Email = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit_CongNo = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit_HoaHong = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit_ThanhTien = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit_TongVe = new DevExpress.XtraEditors.TextEdit();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
@@ -85,10 +85,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_Email.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit_CongNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit_HoaHong.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit_ThanhTien.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit_TongVe.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit5)).BeginInit();
@@ -234,10 +234,10 @@
             // 
             this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 15F);
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
-            this.groupControl1.Controls.Add(this.textEdit4);
-            this.groupControl1.Controls.Add(this.textEdit3);
-            this.groupControl1.Controls.Add(this.textEdit2);
-            this.groupControl1.Controls.Add(this.textEdit1);
+            this.groupControl1.Controls.Add(this.textEdit_CongNo);
+            this.groupControl1.Controls.Add(this.textEdit_HoaHong);
+            this.groupControl1.Controls.Add(this.textEdit_ThanhTien);
+            this.groupControl1.Controls.Add(this.textEdit_TongVe);
             this.groupControl1.Controls.Add(this.labelControl14);
             this.groupControl1.Controls.Add(this.labelControl13);
             this.groupControl1.Controls.Add(this.labelControl12);
@@ -254,74 +254,74 @@
             this.groupControl1.TabIndex = 17;
             this.groupControl1.Text = "Phiếu Thanh Toán";
             // 
-            // textEdit4
+            // textEdit_CongNo
             // 
-            this.textEdit4.Enabled = false;
-            this.textEdit4.Location = new System.Drawing.Point(680, 418);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.textEdit4.Properties.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.textEdit4.Properties.Appearance.Options.UseFont = true;
-            this.textEdit4.Properties.Appearance.Options.UseForeColor = true;
-            this.textEdit4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textEdit4.Size = new System.Drawing.Size(119, 22);
-            this.textEdit4.TabIndex = 9;
+            this.textEdit_CongNo.Enabled = false;
+            this.textEdit_CongNo.Location = new System.Drawing.Point(680, 418);
+            this.textEdit_CongNo.Name = "textEdit_CongNo";
+            this.textEdit_CongNo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.textEdit_CongNo.Properties.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.textEdit_CongNo.Properties.Appearance.Options.UseFont = true;
+            this.textEdit_CongNo.Properties.Appearance.Options.UseForeColor = true;
+            this.textEdit_CongNo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textEdit_CongNo.Size = new System.Drawing.Size(119, 22);
+            this.textEdit_CongNo.TabIndex = 9;
             // 
-            // textEdit3
+            // textEdit_HoaHong
             // 
-            this.textEdit3.Enabled = false;
-            this.textEdit3.Location = new System.Drawing.Point(680, 384);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.textEdit3.Properties.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.textEdit3.Properties.Appearance.Options.UseFont = true;
-            this.textEdit3.Properties.Appearance.Options.UseForeColor = true;
-            this.textEdit3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textEdit3.Size = new System.Drawing.Size(119, 22);
-            this.textEdit3.TabIndex = 9;
+            this.textEdit_HoaHong.Enabled = false;
+            this.textEdit_HoaHong.Location = new System.Drawing.Point(680, 384);
+            this.textEdit_HoaHong.Name = "textEdit_HoaHong";
+            this.textEdit_HoaHong.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.textEdit_HoaHong.Properties.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.textEdit_HoaHong.Properties.Appearance.Options.UseFont = true;
+            this.textEdit_HoaHong.Properties.Appearance.Options.UseForeColor = true;
+            this.textEdit_HoaHong.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textEdit_HoaHong.Size = new System.Drawing.Size(119, 22);
+            this.textEdit_HoaHong.TabIndex = 9;
             // 
-            // textEdit2
+            // textEdit_ThanhTien
             // 
-            this.textEdit2.Enabled = false;
-            this.textEdit2.Location = new System.Drawing.Point(680, 356);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.textEdit2.Properties.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.textEdit2.Properties.Appearance.Options.UseFont = true;
-            this.textEdit2.Properties.Appearance.Options.UseForeColor = true;
-            this.textEdit2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textEdit2.Size = new System.Drawing.Size(119, 22);
-            this.textEdit2.TabIndex = 10;
+            this.textEdit_ThanhTien.Enabled = false;
+            this.textEdit_ThanhTien.Location = new System.Drawing.Point(680, 356);
+            this.textEdit_ThanhTien.Name = "textEdit_ThanhTien";
+            this.textEdit_ThanhTien.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.textEdit_ThanhTien.Properties.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.textEdit_ThanhTien.Properties.Appearance.Options.UseFont = true;
+            this.textEdit_ThanhTien.Properties.Appearance.Options.UseForeColor = true;
+            this.textEdit_ThanhTien.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textEdit_ThanhTien.Size = new System.Drawing.Size(119, 22);
+            this.textEdit_ThanhTien.TabIndex = 10;
             // 
-            // textEdit1
+            // textEdit_TongVe
             // 
-            this.textEdit1.EditValue = "";
-            this.textEdit1.Enabled = false;
-            this.textEdit1.Location = new System.Drawing.Point(680, 328);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.textEdit1.Properties.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Properties.Appearance.Options.UseForeColor = true;
-            this.textEdit1.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.Transparent;
-            this.textEdit1.Properties.AppearanceReadOnly.Options.UseBackColor = true;
-            this.textEdit1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textEdit1.Size = new System.Drawing.Size(119, 22);
-            this.textEdit1.TabIndex = 11;
+            this.textEdit_TongVe.EditValue = "";
+            this.textEdit_TongVe.Enabled = false;
+            this.textEdit_TongVe.Location = new System.Drawing.Point(680, 328);
+            this.textEdit_TongVe.Name = "textEdit_TongVe";
+            this.textEdit_TongVe.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.textEdit_TongVe.Properties.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.textEdit_TongVe.Properties.Appearance.Options.UseFont = true;
+            this.textEdit_TongVe.Properties.Appearance.Options.UseForeColor = true;
+            this.textEdit_TongVe.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.Transparent;
+            this.textEdit_TongVe.Properties.AppearanceReadOnly.Options.UseBackColor = true;
+            this.textEdit_TongVe.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textEdit_TongVe.Size = new System.Drawing.Size(119, 22);
+            this.textEdit_TongVe.TabIndex = 11;
             // 
             // labelControl14
             // 
             this.labelControl14.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelControl14.Location = new System.Drawing.Point(597, 421);
+            this.labelControl14.Location = new System.Drawing.Point(592, 421);
             this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(54, 17);
+            this.labelControl14.Size = new System.Drawing.Size(73, 17);
             this.labelControl14.TabIndex = 6;
-            this.labelControl14.Text = "Công Nợ";
+            this.labelControl14.Text = "Số Tiền Thu";
             // 
             // labelControl13
             // 
             this.labelControl13.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelControl13.Location = new System.Drawing.Point(597, 387);
+            this.labelControl13.Location = new System.Drawing.Point(592, 387);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Size = new System.Drawing.Size(61, 17);
             this.labelControl13.TabIndex = 6;
@@ -330,7 +330,7 @@
             // labelControl12
             // 
             this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelControl12.Location = new System.Drawing.Point(597, 359);
+            this.labelControl12.Location = new System.Drawing.Point(592, 359);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(68, 17);
             this.labelControl12.TabIndex = 7;
@@ -339,7 +339,7 @@
             // labelControl11
             // 
             this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelControl11.Location = new System.Drawing.Point(597, 331);
+            this.labelControl11.Location = new System.Drawing.Point(592, 331);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(51, 17);
             this.labelControl11.TabIndex = 8;
@@ -610,10 +610,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit_CongNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit_HoaHong.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit_ThanhTien.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit_TongVe.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit5)).EndInit();
@@ -673,13 +673,13 @@
         private DevExpress.XtraEditors.TextEdit textEdit_SoPhieu;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraGrid.Columns.GridColumn SOLUONGTRA;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit textEdit_HoaHong;
+        private DevExpress.XtraEditors.TextEdit textEdit_ThanhTien;
+        private DevExpress.XtraEditors.TextEdit textEdit_TongVe;
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private DevExpress.XtraEditors.LabelControl labelControl12;
         private DevExpress.XtraEditors.LabelControl labelControl11;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
+        private DevExpress.XtraEditors.TextEdit textEdit_CongNo;
         private DevExpress.XtraEditors.LabelControl labelControl14;
     }
 }

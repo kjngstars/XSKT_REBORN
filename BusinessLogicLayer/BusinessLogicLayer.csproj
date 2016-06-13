@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoID.cs" />
     <Compile Include="ChiTietKetQuaXoSo.cs" />
     <Compile Include="ChiTietKetQuaXoSoBUS.cs" />
     <Compile Include="DanhSachDaiLyBUS.cs" />

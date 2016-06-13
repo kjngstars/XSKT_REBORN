@@ -29,6 +29,11 @@ namespace PresentationLayer.Dialogs
 
         private DataTable dt_loaive;
 
+        private int TongVe;
+        private decimal ThanhTien;
+        private decimal HoaHong;
+        private decimal CongNo;
+
         public FormPhieuThu()
         {
             InitializeComponent();
@@ -85,9 +90,30 @@ namespace PresentationLayer.Dialogs
             textEdit_TiLeHoaHong.Text = _DoiTac.Rate.ToString();
 
             dt_loaive = _PhieuThu_BUS.getDSVe(lookUpEdit_DotPhatHanh.EditValue.ToString(), _DoiTac.MaDoiTac);
-            //DataTable dt_loaive = _PhieuNhanVe_BUS.get_CTPhieuNhanVe(lookUpEdit_DotPhatHanh.EditValue.ToString(), _DoiTac.MaDoiTac);
-            //dt_loaive.Columns.Add("SOLUONGTRA");
             this.gridControl1.DataSource = dt_loaive;
+            int slNhan, slTra;
+            decimal DonGia;
+            float hhong;
+            for (int i = 0; i < dt_loaive.Rows.Count; i++)
+            {
+                slNhan = int.Parse(dt_loaive.Rows[i]["SOLUONGNHAN"].ToString());
+                DonGia = decimal.Parse(dt_loaive.Rows[i]["MENHGIA"].ToString());
+                hhong = float.Parse(textEdit_TiLeHoaHong.Text);
+                if (dt_loaive.Rows[i]["SOLUONGTRA"].ToString() == "")
+                    slTra = 0;
+                else
+                    slTra = int.Parse(dt_loaive.Rows[i]["SOLUONGTRA"].ToString());
+                TongVe += slNhan - slTra;
+                ThanhTien = (long)((slNhan - slTra) * DonGia);
+                HoaHong = (long)((long)ThanhTien * hhong);
+                CongNo = (long)(ThanhTien - (long)HoaHong);
+
+                textEdit_TongVe.Text = TongVe.ToString();
+                textEdit_HoaHong.Text = HoaHong.ToString();
+                textEdit_ThanhTien.Text = ThanhTien.ToString();
+                textEdit_CongNo.Text = CongNo.ToString();
+
+            }
         }
 
         private void lookUpEdit_DotPhatHanh_EditValueChanged(object sender, EventArgs e)
@@ -102,37 +128,25 @@ namespace PresentationLayer.Dialogs
 
         private void simpleButton_OK_Click(object sender, EventArgs e)
         {
-            XtraMessageBox.Show(@"chưa xử lý!");
-            //try
-            //{
-            //   // DataTable doitac = _PhieuThu_BUS.seachPhieuThuByMaDotPhatHanhMaDoiTac(lookUpEdit_DotPhatHanh.EditValue.ToString(), lookUpEdit_MaDoiTac.EditValue.ToString());
-            //  //  if (doitac.Rows.Count == 0)
-            //    {
-            //       // _PhieuThu_BUS.Insert_PhieuThu(textEdit_SoPhieu.Text, dateEdit_NgayLap.DateTime.ToString(), _DoiTac.MaDoiTac, lookUpEdit_DotPhatHanh.EditValue.ToString());
-            //        DataView dt = (DataView)gridView1.DataSource;
-            //        foreach (DataRow row in dt.Table.Rows)
-            //        {
-            //            var value = int.Parse(row["SOLUONGTRA"].ToString());
-            //            if (value > 0)
-            //            {
-            //                var maLoaiVe = row["MALOAIVE"].ToString();
-            //                //_PhieuThu_BUS.Insert_chiTietPhieuThu(textEdit_SoPhieu.Text, maLoaiVe, value);
-
-            //            }
-            //        }
-            //        XtraMessageBox.Show(@"Thêm Thành Công!");
-            //        reset();
-            //    }
-            //   // else
-            //    {
-            //        XtraMessageBox.Show(textEdit_TenDoiTac.Text + " Đã Trả Vé!");
-            //        reset();
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    XtraMessageBox.Show(@"Lỗi " + ex.Message, @"Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+            try
+            {
+                DataTable phieuthu = _PhieuThu_BUS.seachPhieuThuByMaDotPhatHanhMaDoiTac(lookUpEdit_DotPhatHanh.EditValue.ToString(), lookUpEdit_MaDoiTac.EditValue.ToString());
+                if (phieuthu.Rows.Count == 0)
+                {
+                    _PhieuThu_BUS.Insert(dateEdit_NgayLap.DateTime, lookUpEdit_MaDoiTac.EditValue.ToString(), lookUpEdit_DotPhatHanh.EditValue.ToString(), CongNo);
+                    XtraMessageBox.Show(@"Thêm Thành Công!");
+                    reset();
+                }
+               else
+                {
+                    XtraMessageBox.Show(textEdit_TenDoiTac.Text + " Đã Thanh Toán!");
+                    reset();
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(@"Lỗi " + ex.Message, @"Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
         String GenerateMaDangKy(string prefix, DateTime dt)
@@ -147,7 +161,7 @@ namespace PresentationLayer.Dialogs
 
         private void dateEdit_NgayLap_EditValueChanged(object sender, EventArgs e)
         {
-            textEdit_SoPhieu.Text = GenerateMaDangKy("PTV", dateEdit_NgayLap.DateTime);
+            textEdit_SoPhieu.Text = GenerateMaDangKy("PT", dateEdit_NgayLap.DateTime);
         }
 
         private void reset()

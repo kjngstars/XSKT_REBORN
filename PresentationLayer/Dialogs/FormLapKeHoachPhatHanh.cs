@@ -76,7 +76,7 @@ namespace PresentationLayer.Dialogs
         private void FormLapKeHoachPhatHanh_Load(object sender, System.EventArgs e)
         {
             DataTable table;
-            table = _DoiTacBUS.GetAll_CT();
+            table = _DoiTacBUS.GetAll();
             FillDanhSachDoiTac(table);
 
             table = _LoaiVeBUS.GetAll();

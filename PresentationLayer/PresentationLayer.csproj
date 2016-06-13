@@ -360,6 +360,7 @@
     <Content Include="Icon.ico" />
     <Content Include="Procedure\CHITIETKETQUAXOSO_PROCEDURE.sql" />
     <Content Include="Procedure\COCAUGIAITHUONG_PROCEDURE.sql" />
+    <Content Include="Procedure\DOTPHATHANH_PROCEDURE.sql" />
     <Content Include="Procedure\GIAITHUONG_PROCEDURE.sql" />
     <Content Include="Procedure\KETQUAXOSO_PROCEDURE.sql" />
     <Content Include="Procedure\CHITIETDOTPHATHANH_PROCEDURE.sql" />
@@ -368,6 +369,7 @@
     <Content Include="Procedure\PROCEDURE.sql" />
     <Content Include="Procedure\PHIEUNHANVE_PROCEDURE.sql" />
     <Content Include="Procedure\DOITAC_PROCEDURE.sql" />
+    <Content Include="Procedure\PHIEUTHU_PROCEDURE.sql" />
     <Content Include="Procedure\TAIKHOAN_PROCEDURE.sql" />
     <Content Include="Resources\DanhSachDotPHatHanh.png" />
     <None Include="Resources\DanhSachKeHoachPhatHanh.png" />

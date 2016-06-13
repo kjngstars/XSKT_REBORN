@@ -17,7 +17,7 @@ namespace PresentationLayer
 {
     public partial class MainForm : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        public static TaiKhoan user = null;
+        public static TaiKhoan user = new TaiKhoan();
         DoiTacBUS partner = null;
         public MainForm()
         {
@@ -163,7 +163,7 @@ namespace PresentationLayer
         {
             FormDanhSachDaiLy f = new FormDanhSachDaiLy();
 
-            if (!this.CheckExist(f)) 
+            if (!this.CheckExist(f))
             {
                 f.MdiParent = this;
                 f.Show();
@@ -219,7 +219,7 @@ namespace PresentationLayer
         /// <summary>
         /// Thêm tab Danh sách tài khoản
         /// </summary>
-        
+
         private void barButtonItem_DanhSachTaiKhoan_ItemClick(object sender, ItemClickEventArgs e)
         {
             FormDanhSachTaiKhoan form = new FormDanhSachTaiKhoan();
@@ -239,7 +239,7 @@ namespace PresentationLayer
             FormEditMatKhau form = new FormEditMatKhau();
             if (form.DialogResult != DialogResult.Abort)
             {
-                form.ShowDialog();              
+                form.ShowDialog();
             }
         }
 
@@ -273,7 +273,7 @@ namespace PresentationLayer
             }
         }
 
-       
+
 
         private void barButtonItem_PhieuThanhToan_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -291,6 +291,105 @@ namespace PresentationLayer
             {
                 form.ShowDialog();
             }
+        }
+        private void PhanQuyen()
+        {
+            switch (user.quyenHan)
+            {
+                case QuyenHan.Admin:
+                    barButtonItem_DangNhap.Enabled = false;
+                    barButtonItem_DangXuat.Enabled = true;
+                    barButtonItem_DoiMatKhau.Enabled = true;
+                    barButtonItem_ThayDoiQuyDinh.Enabled = true;
+                    barButtonItem_Thoat.Enabled = true;
+                    barButtonItem_DanhSachDoiTac.Enabled = true;
+                    barButtonItem_TiepNhanDoiTac.Enabled = false;
+                    barButtonItem_PhieuDangKyVe.Enabled = false;
+                    barButtonItem_PhieuNhanVe.Enabled = false;
+                    barButtonItem_PhieuTraVe.Enabled = false;
+                    barButtonItem_PhieuThanhToan.Enabled = false;
+                    barButtonItem_DanhSachLoaiVe.Enabled = true;
+                    barButtonItem_ThemLoaiVe.Enabled = true;
+                    barButtonItem_DanhSachCCGT.Enabled = true;
+                    barButtonItem_ThemCCGT.Enabled = true;
+                    barButtonItem_GhiNhanKQXS.Enabled = false;
+                    barButtonItem_TraCuuKQXS.Enabled = true;
+                    barButtonItem_DanhSachDotPhatHanh.Enabled = true;
+                    barButtonItem_ThemDotPhatHanh.Enabled = false;
+                    barButtonItem_DanhSachKeHoachPhatHanh.Enabled = true;
+                    barButtonItem_LapKeHoachPhatHanh.Enabled = false;
+                    barButtonItem_DanhSachTaiKhoan.Enabled = true;
+                    barButtonItem_BaoCaoCongNo.Enabled = false;
+                    break;
+                case QuyenHan.User:
+
+                    barButtonItem_DangNhap.Enabled = false;
+                    barButtonItem_DangXuat.Enabled = true;
+                    barButtonItem_DoiMatKhau.Enabled = true;
+                    barButtonItem_ThayDoiQuyDinh.Enabled = false;
+                    barButtonItem_Thoat.Enabled = true;
+                    barButtonItem_DanhSachDoiTac.Enabled = true;
+                    barButtonItem_TiepNhanDoiTac.Enabled = true;
+                    barButtonItem_PhieuDangKyVe.Enabled = true;
+                    barButtonItem_PhieuNhanVe.Enabled = true;
+                    barButtonItem_PhieuTraVe.Enabled = true;
+                    barButtonItem_PhieuThanhToan.Enabled = true;
+                    barButtonItem_DanhSachLoaiVe.Enabled = true;
+                    barButtonItem_ThemLoaiVe.Enabled = false;
+                    barButtonItem_DanhSachCCGT.Enabled = false;
+                    barButtonItem_ThemCCGT.Enabled = false;
+                    barButtonItem_GhiNhanKQXS.Enabled = true;
+                    barButtonItem_TraCuuKQXS.Enabled = true;
+                    barButtonItem_DanhSachDotPhatHanh.Enabled = true;
+                    barButtonItem_ThemDotPhatHanh.Enabled = true;
+                    barButtonItem_DanhSachKeHoachPhatHanh.Enabled = true;
+                    barButtonItem_LapKeHoachPhatHanh.Enabled = true;
+                    barButtonItem_DanhSachTaiKhoan.Enabled = false;
+                    barButtonItem_BaoCaoCongNo.Enabled = true;
+                    break;
+                case QuyenHan.Anonymous:
+
+                    barButtonItem_DangNhap.Enabled = true;
+                    barButtonItem_DangXuat.Enabled = false;
+                    barButtonItem_DoiMatKhau.Enabled = false;
+                    barButtonItem_ThayDoiQuyDinh.Enabled = false;
+                    barButtonItem_Thoat.Enabled = true;
+                    barButtonItem_DanhSachDoiTac.Enabled = false;
+                    barButtonItem_TiepNhanDoiTac.Enabled = false;
+                    barButtonItem_PhieuDangKyVe.Enabled = false;
+                    barButtonItem_PhieuNhanVe.Enabled = false;
+                    barButtonItem_PhieuTraVe.Enabled = false;
+                    barButtonItem_PhieuThanhToan.Enabled = false;
+                    barButtonItem_DanhSachLoaiVe.Enabled = false;
+                    barButtonItem_ThemLoaiVe.Enabled = false;
+                    barButtonItem_DanhSachCCGT.Enabled = false;
+                    barButtonItem_ThemCCGT.Enabled = false;
+                    barButtonItem_GhiNhanKQXS.Enabled = false;
+                    barButtonItem_TraCuuKQXS.Enabled = true;
+                    barButtonItem_DanhSachDotPhatHanh.Enabled = false;
+                    barButtonItem_ThemDotPhatHanh.Enabled = false;
+                    barButtonItem_DanhSachKeHoachPhatHanh.Enabled = false;
+                    barButtonItem_LapKeHoachPhatHanh.Enabled = false;
+                    barButtonItem_DanhSachTaiKhoan.Enabled = false;
+                    barButtonItem_BaoCaoCongNo.Enabled = false;
+                    break;
+            }
+        }
+
+        private void MainForm_Activated(object sender, EventArgs e)
+        {
+            PhanQuyen();
+        }
+
+        private void barButtonItem_DangXuat_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            user = new TaiKhoan();
+            XtraMessageBox.Show("Đăng Xuất Thành Công!", @"Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void barButtonItem_Thoat_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

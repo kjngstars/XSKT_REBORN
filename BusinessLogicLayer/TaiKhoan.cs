@@ -13,6 +13,11 @@ namespace BusinessLogicLayer
         public string TenDangNhap { get; set; }
         public string MatKhau { get; set; }
         public QuyenHan quyenHan { get; set; }
+
+        public TaiKhoan()
+        {
+            this.quyenHan = QuyenHan.Anonymous;
+        }
         public TaiKhoan(string MaTaiKhoan,
             string TenDangNhap,
             string MatKhau,

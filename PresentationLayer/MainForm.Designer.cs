@@ -54,8 +54,8 @@
             this.barButtonItem_ThemDotPhatHanh = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem_DanhSachKeHoachPhatHanh = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem_LapKeHoachPhatHanh = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem_DanhSachTaiKhoan = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem_BaoCaoCongNo = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem_DanhSachTaiKhoan = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage_HeThong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup_TaiKhoan = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup_Khac = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -145,6 +145,7 @@
             this.barButtonItem_DangXuat.Id = 2;
             this.barButtonItem_DangXuat.LargeGlyph = global::PresentationLayer.Properties.Resources.DangXuat;
             this.barButtonItem_DangXuat.Name = "barButtonItem_DangXuat";
+            this.barButtonItem_DangXuat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem_DangXuat_ItemClick);
             // 
             // barButtonItem_DoiMatKhau
             // 
@@ -167,6 +168,7 @@
             this.barButtonItem_Thoat.Id = 5;
             this.barButtonItem_Thoat.LargeGlyph = global::PresentationLayer.Properties.Resources.Thoat;
             this.barButtonItem_Thoat.Name = "barButtonItem_Thoat";
+            this.barButtonItem_Thoat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem_Thoat_ItemClick);
             // 
             // barButtonItem_DanhSachDoiTac
             // 
@@ -327,7 +329,6 @@
             this.barButtonItem_DanhSachTaiKhoan.LargeGlyph = global::PresentationLayer.Properties.Resources.users;
             this.barButtonItem_DanhSachTaiKhoan.Name = "barButtonItem_DanhSachTaiKhoan";
             this.barButtonItem_DanhSachTaiKhoan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem_DanhSachTaiKhoan_ItemClick);
-
             // 
             // ribbonPage_HeThong
             // 
@@ -501,6 +502,7 @@
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "Quản Lý Xổ Số";
+            this.Activated += new System.EventHandler(this.MainForm_Activated);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();

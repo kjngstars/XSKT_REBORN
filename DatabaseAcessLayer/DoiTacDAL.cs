@@ -19,6 +19,13 @@ namespace DatabaseAcessLayer
 
             return this.getTable(query, string.Empty);
         }
+        public DataTable GetAll()
+        {
+            string query = @"SELECT * FROM DOITAC
+                            WHERE MADOITAC";
+
+            return this.getTable(query, string.Empty);
+        }
 
         #region thêm đối tác
         public int Insert(string[] str)
