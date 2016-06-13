@@ -54,6 +54,11 @@ namespace BusinessLogicLayer
             return new DoiTac(dataRow);
         }
 
+        public DataTable GetCongNoDoiTac()
+        {
+            return doiTacDAL.GetCongNoDoiTac();
+        }
+
         public string GetTongCongNo()
         {
             return doiTacDAL.SumaryCongNo();

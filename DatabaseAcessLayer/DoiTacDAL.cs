@@ -133,6 +133,12 @@ namespace DatabaseAcessLayer
 
         }
 
+        public DataTable GetCongNoDoiTac()
+        {
+            string query = "SELECT MADOITAC AS \"MÃ ĐỐI TÁC\" , TENDOITAC AS \"TÊN ĐỐI TÁC\" , CONGNO AS \"CÔNG NỢ\" FROM DOITAC";
+            var dt = getTable(query, "");
+            return dt;
+        }
 
         public string SumaryCongNo()
         {

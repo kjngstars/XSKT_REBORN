@@ -12,6 +12,7 @@ using DevExpress.XtraEditors;
 using PresentationLayer.Dialogs;
 using DevExpress.Skins;
 using BusinessLogicLayer;
+using PresentationLayer.Reports;
 
 namespace PresentationLayer
 {
@@ -209,11 +210,11 @@ namespace PresentationLayer
 
         private void barButtonItem_BaoCaoCongNo_ItemClick(object sender, ItemClickEventArgs e)
         {
-            //var dt = partner.GetCongNoDoiTac();
+            var dt = partner.GetCongNoDoiTac();
 
-            //ReportingManager rp = new ReportingManager(new ReportCongNo(), dt);
+            ReportingManager rp = new ReportingManager(new ReportCongNo(), dt);
 
-            //rp.ShowReportPreview();
+            rp.ShowReportPreview();
         }
 
         /// <summary>
