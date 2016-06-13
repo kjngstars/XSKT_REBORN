@@ -26,7 +26,7 @@ namespace PresentationLayer
             InitBands(rep);
             InitStyles(rep);
             InitDetailsBasedonXRTable();
-
+            
         }
 
         public void ShowReportPreview()
@@ -74,7 +74,7 @@ namespace PresentationLayer
             DataSet ds = ((DataSet)rep.DataSource);
             int colCount = ds.Tables[0].Columns.Count;
             int colWidth = (rep.PageWidth - (rep.Margins.Left + rep.Margins.Right)) / colCount;
-
+            
             // Create a table to represent headers
             XRTable tableHeader = new XRTable();
             tableHeader.Height = 25;
@@ -86,7 +86,7 @@ namespace PresentationLayer
             tableHeader.Rows.Add(headerRow);
 
             tableHeader.BeginInit();
-
+            
             // Create a table to display data
             XRTable tableDetail = new XRTable();
             tableDetail.Height = 50;
@@ -138,6 +138,7 @@ namespace PresentationLayer
             // Place the table onto a report's Detail band
             rep.Bands[BandKind.PageHeader].Controls.Add(tableHeader);
             rep.Bands[BandKind.Detail].Controls.Add(tableDetail);
+            
         }
   
     }

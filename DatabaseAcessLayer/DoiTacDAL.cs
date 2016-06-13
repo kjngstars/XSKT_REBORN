@@ -79,6 +79,14 @@ namespace DatabaseAcessLayer
             return dt;
         }
 
+        public string SumaryCongNo()
+        {
+            string query = "SELECT SUM(CONGNO) from DOITAC";
+            var sum = getSingleValueFromColumn(query, "");
+
+            return sum.ToString();
+        }
+
         #endregion 
     }
 }

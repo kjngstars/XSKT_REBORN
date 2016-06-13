@@ -37,5 +37,10 @@ namespace BusinessLogicLayer
         {
             return doiTacDAL.GetCongNoDoiTac();
         }
+
+        public string GetTongCongNo()
+        {
+            return doiTacDAL.SumaryCongNo();
+        }
     }
 }

@@ -34,6 +34,8 @@
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
+            this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
+            this.SumaryLabel = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
@@ -88,13 +90,35 @@
             this.ReportHeader.HeightF = 105.2083F;
             this.ReportHeader.Name = "ReportHeader";
             // 
+            // ReportFooter
+            // 
+            this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.SumaryLabel});
+            this.ReportFooter.HeightF = 100F;
+            this.ReportFooter.Name = "ReportFooter";
+            // 
+            // SumaryLabel
+            // 
+            this.SumaryLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.SumaryLabel.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
+            this.SumaryLabel.LocationFloat = new DevExpress.Utils.PointFloat(0F, 32.24999F);
+            this.SumaryLabel.Name = "SumaryLabel";
+            this.SumaryLabel.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.SumaryLabel.SizeF = new System.Drawing.SizeF(650F, 23F);
+            this.SumaryLabel.StylePriority.UseBackColor = false;
+            this.SumaryLabel.StylePriority.UseFont = false;
+            this.SumaryLabel.StylePriority.UseTextAlignment = false;
+            this.SumaryLabel.Text = "SumaryLabel";
+            this.SumaryLabel.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            // 
             // ReportCongNo
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
             this.Detail,
             this.TopMargin,
             this.BottomMargin,
-            this.ReportHeader});
+            this.ReportHeader,
+            this.ReportFooter});
             this.Version = "15.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -108,5 +132,7 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel1;
         private DevExpress.XtraReports.UI.XRPageInfo xrPageInfo1;
         private DevExpress.XtraReports.UI.ReportHeaderBand ReportHeader;
+        private DevExpress.XtraReports.UI.ReportFooterBand ReportFooter;
+        private DevExpress.XtraReports.UI.XRLabel SumaryLabel;
     }
 }
