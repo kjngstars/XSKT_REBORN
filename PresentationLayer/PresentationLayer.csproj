@@ -77,6 +77,12 @@
     <Compile Include="Dialogs\FormEditCCGT.Designer.cs">
       <DependentUpon>FormEditCCGT.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dialogs\FormEditDotPhatHanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FormEditDotPhatHanh.Designer.cs">
+      <DependentUpon>FormEditDotPhatHanh.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dialogs\FormEditLoaiVe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,12 @@
     </Compile>
     <Compile Include="Dialogs\FormPhieuTraVe.Designer.cs">
       <DependentUpon>FormPhieuTraVe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDanhDotPhatHanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDanhDotPhatHanh.Designer.cs">
+      <DependentUpon>FormDanhDotPhatHanh.cs</DependentUpon>
     </Compile>
     <Compile Include="FormDanhSachCCGT.cs">
       <SubType>Form</SubType>
@@ -193,6 +205,9 @@
     <EmbeddedResource Include="Dialogs\FormEditCCGT.resx">
       <DependentUpon>FormEditCCGT.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormEditDotPhatHanh.resx">
+      <DependentUpon>FormEditDotPhatHanh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\FormEditLoaiVe.resx">
       <DependentUpon>FormEditLoaiVe.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,6 +234,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\FormPhieuTraVe.resx">
       <DependentUpon>FormPhieuTraVe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDanhDotPhatHanh.resx">
+      <DependentUpon>FormDanhDotPhatHanh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDanhSachCCGT.resx">
       <DependentUpon>FormDanhSachCCGT.cs</DependentUpon>

@@ -8,9 +8,16 @@ using System.Threading.Tasks;
 
 namespace DatabaseAcessLayer
 {
-    public class GiaiThuongDAL : DBConnection
+    public class DotPhatHanhDAL : DBConnection
     {
-        public GiaiThuongDAL() : base() { }
+        public DotPhatHanhDAL() : base() { }
+
+        public DataTable GetAll()
+        {
+            string query = @"SELECT * FROM DOTPHATHANH";
+
+            return this.getTable(query, string.Empty);
+        }
 
         public string Insert(string[] parameters)
         {
@@ -21,22 +28,18 @@ namespace DatabaseAcessLayer
 
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = this.connection;
-            cmd.CommandText = @"GIAITHUONG_INSERT";
+            cmd.CommandText = @"DOTPHATHANH_INSERT";
 
-            cmd.Parameters.Add("@p_MAGIAITHUONG", SqlDbType.VarChar, 15);
-            cmd.Parameters["@p_MAGIAITHUONG"].Direction = ParameterDirection.Output;
-            cmd.Parameters.Add("@p_TENGIAITHUONG", parameters[0]);
-            cmd.Parameters.Add("@p_MACOCAUGIAITHUONG", parameters[1]);
-            cmd.Parameters.Add("@p_TRIGIA", parameters[2]);
-            cmd.Parameters.Add("@p_SOLUONG", parameters[3]);
-            cmd.Parameters.Add("@p_SOCHUSOTRUNG", parameters[4]);
-            cmd.Parameters.Add("@p_SOLANQUAY", parameters[5]);
+            cmd.Parameters.Add("@p_MADOTPHATHANH", SqlDbType.VarChar, 15);
+            cmd.Parameters["@p_MADOTPHATHANH"].Direction = ParameterDirection.Output;
+            cmd.Parameters.Add("@p_TENDOTPHATHANH", parameters[0]);
+            cmd.Parameters.Add("@p_NGAYLAP", parameters[1]);
 
             cmd.ExecuteNonQuery();
 
             connection.Close();
 
-            return cmd.Parameters["@p_MAGIAITHUONG"].Value.ToString();
+            return cmd.Parameters["@p_MADOTPHATHANH"].Value.ToString();
         }
 
         public void Update(string[] parameters)
@@ -47,22 +50,18 @@ namespace DatabaseAcessLayer
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = this.connection;
-            cmd.CommandText = @"GIAITHUONG_UPDATE";
+            cmd.CommandText = @"DOTPHATHANH_UPDATE";
 
-            cmd.Parameters.Add("@p_MAGIAITHUONG", parameters[0]);
-            cmd.Parameters.Add("@p_TENGIAITHUONG", parameters[1]);
-            cmd.Parameters.Add("@p_MACOCAUGIAITHUONG", parameters[2]);
-            cmd.Parameters.Add("@p_TRIGIA", parameters[3]);
-            cmd.Parameters.Add("@p_SOLUONG", parameters[4]);
-            cmd.Parameters.Add("@p_SOCHUSOTRUNG", parameters[5]);
-            cmd.Parameters.Add("@p_SOLANQUAY", parameters[6]);
+            cmd.Parameters.Add("@p_MADOTPHATHANH", parameters[0]);
+            cmd.Parameters.Add("@p_TENDOTPHATHANH", parameters[1]);
+            cmd.Parameters.Add("@p_NGAYLAP", parameters[2]);
 
             cmd.ExecuteNonQuery();
 
             connection.Close();
         }
 
-        public void Delete(string maGiaiThuong)
+        public void Delete(string maDotPhatHanh)
         {
             if (connection.State != ConnectionState.Open)
                 connection.Open();
@@ -71,16 +70,16 @@ namespace DatabaseAcessLayer
 
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = this.connection;
-            cmd.CommandText = @"GIAITHUONG_DELETE";
+            cmd.CommandText = @"DOTPHATHANH_DELETE";
 
-            cmd.Parameters.Add("@p_MAGIAITHUONG", maGiaiThuong);
+            cmd.Parameters.Add("@p_MADOTPHATHANH", maDotPhatHanh);
 
             cmd.ExecuteNonQuery();
 
             connection.Close();
         }
 
-        public DataTable GetByMaCoCauGiaiThuong(string maCoCauGiaiThuong)
+        public DataRow GetByMaDotPhatHanh(string maDotPhatHanh)
         {
             if (connection.State != ConnectionState.Open)
                 connection.Open();
@@ -90,9 +89,9 @@ namespace DatabaseAcessLayer
 
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = this.connection;
-            cmd.CommandText = @"GIAITHUONG_SEARCHBYMACOCAUGIAITHUONG";
+            cmd.CommandText = @"LOAIVE_SEARCHBYMADOTPHATHANH";
 
-            cmd.Parameters.Add("@p_MACOCAUGIAITHUONG", maCoCauGiaiThuong);
+            cmd.Parameters.Add("@p_MADOTPHATHANH", maDotPhatHanh);
 
             cmd.ExecuteNonQuery();
 
@@ -103,7 +102,10 @@ namespace DatabaseAcessLayer
 
             connection.Close();
 
-            return dataTable;
+            if (dataTable.Rows.Count > 0)
+                return dataTable.Rows[0];
+            else
+                return null;
         }
     }
 }

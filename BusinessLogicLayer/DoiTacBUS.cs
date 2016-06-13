@@ -43,7 +43,7 @@ namespace BusinessLogicLayer
             DataRow dataRow = this.doiTacDAL.GetDoiTacByMaDoiTac(maDoiTac);
 
             return new DoiTac(dataRow);
-        }
+    }
         public DoiTac GetDoiTacByMaDoiTacMaDotPhatHanh(string maDoiTac,string maDotPhatHanh)
         {
             DataRow dataRow = this.doiTacDAL.GetDoiTacByMaDoiTacMaDotPhatHanh(maDoiTac,maDotPhatHanh);

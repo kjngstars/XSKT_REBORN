@@ -99,7 +99,6 @@ namespace DatabaseAcessLayer
                 connection.Open();
 
             SqlCommand cmd = new SqlCommand();
-            DataTable dataTable = new DataTable();
 
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = this.connection;

@@ -18,6 +18,7 @@ namespace PresentationLayer
     public partial class MainForm : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         public static TaiKhoan user = null;
+        DoiTacBUS partner = null;
         public MainForm()
         {
             InitializeComponent();
@@ -27,6 +28,7 @@ namespace PresentationLayer
         {
             this.AddSkin();
             this.SetSkin(Properties.Settings.Default.SkinName);
+            partner = new DoiTacBUS();
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -74,6 +76,7 @@ namespace PresentationLayer
                 if (form.Name == child.Name)
                 {
                     child.Activate();
+                    child.Show();
                     return true;
                 }
             }
@@ -156,6 +159,63 @@ namespace PresentationLayer
             }
         }
 
+        private void barButtonItem_DanhSachDoiTac_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormDanhSachDaiLy f = new FormDanhSachDaiLy();
+
+            if (!this.CheckExist(f)) 
+            {
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void barButtonItem_TiepNhanDoiTac_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var f = new FormThemDoiTac();
+            f.Show();
+        }
+
+        private void barButtonItem_PhieuDangKyVe_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var f = new FormDangKyNhanVe();
+            f.Show();
+        }
+
+        /// <summary>
+        /// Thêm tab danh sách đợt phát hành
+        /// </summary>
+        private void barButtonItem_DanhSachDotPhatHanh_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormDanhSachDotPhatHanh form = new FormDanhSachDotPhatHanh();
+
+            if (!this.CheckExist(form))
+            {
+                form.MdiParent = this;
+                form.Show();
+            }
+        }
+
+        /// <summary>
+        /// Mở form thêm đợt phát hành
+        /// </summary>
+        private void barButtonItem_ThemDotPhatHanh_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FormEditDotPhatHanh form = new FormEditDotPhatHanh();
+
+            if (form.DialogResult != DialogResult.Abort)
+                form.ShowDialog();
+        }
+
+        private void barButtonItem_BaoCaoCongNo_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            //var dt = partner.GetCongNoDoiTac();
+
+            //ReportingManager rp = new ReportingManager(new ReportCongNo(), dt);
+
+            //rp.ShowReportPreview();
+        }
+
         /// <summary>
         /// Thêm tab Danh sách tài khoản
         /// </summary>
@@ -213,28 +273,7 @@ namespace PresentationLayer
             }
         }
 
-        private void barButtonItem_DanhSachDoiTac_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            FormDanhSachDaiLy f = new FormDanhSachDaiLy();
-
-            if (!this.CheckExist(f)) 
-            {
-                f.MdiParent = this;
-                f.Show();
-            }
-        }
-
-        private void barButtonItem_TiepNhanDoiTac_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            var f = new FormThemDoiTac();
-            f.Show();
-        }
-
-        private void barButtonItem_PhieuDangKyVe_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            var f = new FormDangKyNhanVe();
-            f.Show();
-        }
+       
 
         private void barButtonItem_PhieuThanhToan_ItemClick(object sender, ItemClickEventArgs e)
         {

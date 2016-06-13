@@ -43,6 +43,8 @@
     <Compile Include="ChiTietKetQuaXoSoBUS.cs" />
     <Compile Include="DanhSachDaiLyBUS.cs" />
     <Compile Include="DoiTacObject.cs" />
+    <Compile Include="DotPhatHanh.cs" />
+    <Compile Include="DotPhatHanhBUS.cs" />
     <Compile Include="KeHoachPhatHanh.cs" />
     <Compile Include="KeHoachPhatHanhBUS.cs" />
     <Compile Include="PhieuDangKyVeBUS.cs" />
