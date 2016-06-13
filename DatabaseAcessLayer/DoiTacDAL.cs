@@ -30,7 +30,7 @@ namespace DatabaseAcessLayer
         #region thêm đối tác
         public int Insert(string[] str)
         {
-            if (connection.State != ConnectionState.Open)
+            if (connection.State != ConnectionState.Open) 
             {
                 connection.Open();
             }
@@ -128,11 +128,18 @@ namespace DatabaseAcessLayer
                 "IF(@pErrorCode <> 0) " +
                  "BEGIN ROLLBACK TRAN RETURN -1 END " +
                 "ELSE BEGIN COMMIT TRAN RETURN 1 END";
-
+                                
             ExistOrCreateProcedure(spDoiTac, procedureInsertDoiTac);
 
         }
 
 
+        public string SumaryCongNo()
+        {
+            string query = "SELECT SUM(CONGNO) from DOITAC";
+            var sum = getSingleValueFromColumn(query, "");
+
+            return sum.ToString();
+        }
     }
 }
