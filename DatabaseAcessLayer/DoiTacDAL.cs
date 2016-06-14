@@ -50,7 +50,7 @@ namespace DatabaseAcessLayer
             rateInterest = (float)(Math.Round(rateInterest, 2));
             var hoaHong = rateInterest.ToString();
             command.Parameters.AddWithValue("@pTyLeHoaHong", hoaHong);
-            command.Parameters.AddWithValue("@pCONGNO", str[7]);
+            
 
             var result = command.Parameters.Add("@Result", SqlDbType.VarChar);
             result.Direction = ParameterDirection.ReturnValue;
