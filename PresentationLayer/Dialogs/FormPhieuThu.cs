@@ -176,5 +176,6 @@ namespace PresentationLayer.Dialogs
             lookUpEdit_MaDoiTac.Text = "";
             this.gridControl1.DataSource = null;
         }
+       
     }
 }

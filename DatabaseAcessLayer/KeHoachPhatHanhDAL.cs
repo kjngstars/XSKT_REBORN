@@ -18,6 +18,13 @@ namespace DatabaseAcessLayer
 
             return this.getTable(query, string.Empty);
         }
+        public DataTable seachByMaDotPhatHanhMaDoiTac(string maDotPhatHanh)
+        {
+            string query = @"SELECT * FROM ChiTietDotPhatHanh
+                                      WHERE MADOTPHATHANH = '" + maDotPhatHanh + "'";
+
+            return this.getTable(query, string.Empty);
+        }
 
         public string Insert(string[] parameters)
         {
@@ -82,6 +89,6 @@ namespace DatabaseAcessLayer
             cmd.ExecuteNonQuery();
 
             connection.Close();
-        }       
+        }
     }
 }

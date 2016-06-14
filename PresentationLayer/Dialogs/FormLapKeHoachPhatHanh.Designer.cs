@@ -43,6 +43,7 @@
             this.gridColumn_SoLuong = new DevExpress.XtraGrid.Columns.GridColumn();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.repositoryItemTextEdit_SoLuong = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit_DotPhatHanh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
@@ -50,6 +51,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit_DoiTac)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit_MaLoaiVe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit_SoLuong)).BeginInit();
             this.SuspendLayout();
             // 
             // simpleButton_Cancel
@@ -108,7 +110,8 @@
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemLookUpEdit_DoiTac,
-            this.repositoryItemLookUpEdit_MaLoaiVe});
+            this.repositoryItemLookUpEdit_MaLoaiVe,
+            this.repositoryItemTextEdit_SoLuong});
             this.gridControl1.Size = new System.Drawing.Size(750, 336);
             this.gridControl1.TabIndex = 23;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -182,6 +185,7 @@
             // gridColumn_SoLuong
             // 
             this.gridColumn_SoLuong.Caption = "Số Lượng";
+            this.gridColumn_SoLuong.ColumnEdit = this.repositoryItemTextEdit_SoLuong;
             this.gridColumn_SoLuong.FieldName = "SOVEPHATHANH";
             this.gridColumn_SoLuong.Name = "gridColumn_SoLuong";
             this.gridColumn_SoLuong.Visible = true;
@@ -207,6 +211,12 @@
             this.simpleButton4.Text = "Thêm";
             this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
             // 
+            // repositoryItemTextEdit_SoLuong
+            // 
+            this.repositoryItemTextEdit_SoLuong.AutoHeight = false;
+            this.repositoryItemTextEdit_SoLuong.Name = "repositoryItemTextEdit_SoLuong";
+            this.repositoryItemTextEdit_SoLuong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.repositoryItemTextEdit_SoLuong_KeyPress);
+            // 
             // FormLapKeHoachPhatHanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -230,6 +240,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit_DoiTac)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit_MaLoaiVe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit_SoLuong)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,5 +263,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn_SoLuong;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit_DoiTac;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit_MaLoaiVe;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit_SoLuong;
     }
 }

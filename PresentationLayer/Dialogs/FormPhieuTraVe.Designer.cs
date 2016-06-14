@@ -52,6 +52,7 @@
             this.repositoryItemTextEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.SOLUONGNHAN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemTextEdit_SoLuong = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.SOLUONGTRA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemTextEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.textEdit_TiLeHoaHong = new DevExpress.XtraEditors.TextEdit();
@@ -66,7 +67,7 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit_SoPhieu = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.SOLUONGTRA = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemTextEdit_SoLuongTra = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit_DotPhatHanh.Properties)).BeginInit();
@@ -90,6 +91,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_TenDoiTac.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_DiaChi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_SoPhieu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit_SoLuongTra)).BeginInit();
             this.SuspendLayout();
             // 
             // simpleButton_OK
@@ -244,7 +246,8 @@
             this.repositoryItemTextEdit2,
             this.repositoryItemTextEdit_SoLuong,
             this.repositoryItemTextEdit4,
-            this.repositoryItemTextEdit5});
+            this.repositoryItemTextEdit5,
+            this.repositoryItemTextEdit_SoLuongTra});
             this.gridControl1.Size = new System.Drawing.Size(798, 265);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -325,6 +328,15 @@
             this.repositoryItemTextEdit_SoLuong.Mask.UseMaskAsDisplayFormat = true;
             this.repositoryItemTextEdit_SoLuong.Name = "repositoryItemTextEdit_SoLuong";
             this.repositoryItemTextEdit_SoLuong.NullText = "0";
+            // 
+            // SOLUONGTRA
+            // 
+            this.SOLUONGTRA.Caption = "Số Lượng Trả";
+            this.SOLUONGTRA.ColumnEdit = this.repositoryItemTextEdit_SoLuongTra;
+            this.SOLUONGTRA.FieldName = "SOLUONGTRA";
+            this.SOLUONGTRA.Name = "SOLUONGTRA";
+            this.SOLUONGTRA.Visible = true;
+            this.SOLUONGTRA.VisibleIndex = 4;
             // 
             // repositoryItemTextEdit4
             // 
@@ -468,13 +480,11 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Số Phiếu";
             // 
-            // SOLUONGTRA
+            // repositoryItemTextEdit_SoLuongTra
             // 
-            this.SOLUONGTRA.Caption = "Số Lượng Trả";
-            this.SOLUONGTRA.FieldName = "SOLUONGTRA";
-            this.SOLUONGTRA.Name = "SOLUONGTRA";
-            this.SOLUONGTRA.Visible = true;
-            this.SOLUONGTRA.VisibleIndex = 4;
+            this.repositoryItemTextEdit_SoLuongTra.AutoHeight = false;
+            this.repositoryItemTextEdit_SoLuongTra.Name = "repositoryItemTextEdit_SoLuongTra";
+            this.repositoryItemTextEdit_SoLuongTra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.repositoryItemTextEdit_SoLuongTra_KeyPress);
             // 
             // FormPhieuTraVe
             // 
@@ -512,6 +522,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_TenDoiTac.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_DiaChi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_SoPhieu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit_SoLuongTra)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -557,5 +568,6 @@
         private DevExpress.XtraEditors.TextEdit textEdit_SoPhieu;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraGrid.Columns.GridColumn SOLUONGTRA;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit_SoLuongTra;
     }
 }

@@ -45,7 +45,10 @@ namespace BusinessLogicLayer
             parameters[4] = KeHoachPhatHanh.SoVePhatHanh.ToString();
             this.KeHoachPhatHanhDAL.Update(parameters);
         }
-
+        public DataTable seachByMaDotPhatHanhMaDoiTac(string maDotPhatHanh)
+        {
+            return this.KeHoachPhatHanhDAL.seachByMaDotPhatHanhMaDoiTac(maDotPhatHanh);
+        }
         public void Delete(string maKeHoachPhatHanh)
         {
             this.KeHoachPhatHanhDAL.Delete(maKeHoachPhatHanh);

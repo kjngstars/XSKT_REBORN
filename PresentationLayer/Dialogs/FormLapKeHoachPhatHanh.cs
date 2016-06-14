@@ -123,13 +123,20 @@ namespace PresentationLayer.Dialogs
         {
             try
             {
-                
-                for (int i = 0; i < this.gridView1.RowCount; i++)
-                    this.InsertCTDPH(this.gridView1.GetDataRow(i));
+                DataTable dt = _KeHoachPhatHanhBUS.seachByMaDotPhatHanhMaDoiTac(lookUpEdit_DotPhatHanh.EditValue.ToString());
+                if (dt.Rows.Count == 0)
+                {
+                    for (int i = 0; i < this.gridView1.RowCount; i++)
+                        this.InsertCTDPH(this.gridView1.GetDataRow(i));
 
-                this.DialogResult = DialogResult.OK;
+                    this.DialogResult = DialogResult.OK;
 
-                XtraMessageBox.Show("Thêm Thành Công", @"Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    XtraMessageBox.Show("Thêm Thành Công", @"Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    XtraMessageBox.Show("Đợt Phát Hành Đã Được Tạo!", @"Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             catch (Exception ex)
             {
@@ -141,6 +148,14 @@ namespace PresentationLayer.Dialogs
         {
             row["MADOTPHATHANH"] = lookUpEdit_DotPhatHanh.EditValue;
             _KeHoachPhatHanhBUS.Insert(new KeHoachPhatHanh(row));
+        }
+
+        private void repositoryItemTextEdit_SoLuong_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

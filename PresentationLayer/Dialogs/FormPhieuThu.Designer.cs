@@ -61,7 +61,7 @@
             this.SOLUONGNHAN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemTextEdit_SoLuong = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.SOLUONGTRA = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemTextEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.repositoryItemTextEdit_SoLuongTra = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.textEdit_TiLeHoaHong = new DevExpress.XtraEditors.TextEdit();
             this.textEdit_TenDoiTac = new DevExpress.XtraEditors.TextEdit();
@@ -95,7 +95,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit_SoLuong)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit_SoLuongTra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_TiLeHoaHong.Properties)).BeginInit();
@@ -354,8 +354,8 @@
             this.repositoryItemTextEdit1,
             this.repositoryItemTextEdit2,
             this.repositoryItemTextEdit_SoLuong,
-            this.repositoryItemTextEdit4,
-            this.repositoryItemTextEdit5});
+            this.repositoryItemTextEdit5,
+            this.repositoryItemTextEdit_SoLuongTra});
             this.gridControl1.Size = new System.Drawing.Size(798, 134);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -440,16 +440,17 @@
             // SOLUONGTRA
             // 
             this.SOLUONGTRA.Caption = "Số Lượng Trả";
+            this.SOLUONGTRA.ColumnEdit = this.repositoryItemTextEdit_SoLuongTra;
             this.SOLUONGTRA.FieldName = "SOLUONGTRA";
             this.SOLUONGTRA.Name = "SOLUONGTRA";
             this.SOLUONGTRA.OptionsColumn.AllowEdit = false;
             this.SOLUONGTRA.Visible = true;
             this.SOLUONGTRA.VisibleIndex = 4;
             // 
-            // repositoryItemTextEdit4
+            // repositoryItemTextEdit_SoLuongTra
             // 
-            this.repositoryItemTextEdit4.AutoHeight = false;
-            this.repositoryItemTextEdit4.Name = "repositoryItemTextEdit4";
+            this.repositoryItemTextEdit_SoLuongTra.AutoHeight = false;
+            this.repositoryItemTextEdit_SoLuongTra.Name = "repositoryItemTextEdit_SoLuongTra";
             // 
             // groupControl2
             // 
@@ -620,7 +621,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit_SoLuong)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit_SoLuongTra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
@@ -658,7 +659,6 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit2;
         private DevExpress.XtraGrid.Columns.GridColumn SOLUONGNHAN;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit_SoLuong;
-        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit4;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.TextEdit textEdit_TiLeHoaHong;
         private DevExpress.XtraEditors.TextEdit textEdit_TenDoiTac;
@@ -681,5 +681,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private DevExpress.XtraEditors.TextEdit textEdit_CongNo;
         private DevExpress.XtraEditors.LabelControl labelControl14;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit_SoLuongTra;
     }
 }
