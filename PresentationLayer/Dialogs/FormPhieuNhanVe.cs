@@ -106,6 +106,8 @@ namespace PresentationLayer.Dialogs
                         var maLoaiVe = row["MALOAIVE"].ToString();
                         var soluong = int.Parse(row["SOVEPHATHANH"].ToString());
                         _PhieuNhanVe_BUS.Insert_chiTietPhieuNhanVe(textEdit_SoPhieu.Text, maLoaiVe, soluong);
+                        decimal thanhtien = (long)(soluong * (long)decimal.Parse(row["MENHGIA"].ToString())*float.Parse(textEdit_TiLeHoaHong.Text));
+                        _DoiTacBUS.UpdateCongNo(thanhtien,lookUpEdit_MaDoiTac.EditValue.ToString());
                     }
                     XtraMessageBox.Show("Thêm Thành Công!");
                     reset();

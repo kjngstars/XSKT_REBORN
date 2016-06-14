@@ -134,6 +134,7 @@ namespace PresentationLayer.Dialogs
                 if (phieuthu.Rows.Count == 0)
                 {
                     _PhieuThu_BUS.Insert(dateEdit_NgayLap.DateTime, lookUpEdit_MaDoiTac.EditValue.ToString(), lookUpEdit_DotPhatHanh.EditValue.ToString(), CongNo);
+                    _DoiTacBUS.UpdateCongNo(decimal.Parse("-"+textEdit_CongNo.Text), lookUpEdit_MaDoiTac.EditValue.ToString());
                     XtraMessageBox.Show(@"Thêm Thành Công!");
                     reset();
                 }

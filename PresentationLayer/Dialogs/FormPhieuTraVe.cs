@@ -113,6 +113,8 @@ namespace PresentationLayer.Dialogs
                         {
                             var maLoaiVe = row["MALOAIVE"].ToString();
                             _PhieuTraVe_BUS.Insert_chiTietPhieuTraVe(textEdit_SoPhieu.Text, maLoaiVe, value);
+                            decimal thanhtien = 0 - (long)(value * (long)decimal.Parse(row["MENHGIA"].ToString()) * float.Parse(textEdit_TiLeHoaHong.Text));
+                            _DoiTacBUS.UpdateCongNo(thanhtien, lookUpEdit_MaDoiTac.EditValue.ToString());
 
                         }
                     }
@@ -163,7 +165,7 @@ namespace PresentationLayer.Dialogs
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
             {
-                e.Handled = true;              
+                e.Handled = true;
             }
         }
     }

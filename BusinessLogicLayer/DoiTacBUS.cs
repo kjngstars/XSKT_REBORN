@@ -63,6 +63,10 @@ namespace BusinessLogicLayer
         {
             return doiTacDAL.SumaryCongNo();
         }
+        public bool UpdateCongNo(decimal CongNo, string maDoiTac)
+        {
+            return doiTacDAL.UpdateCongNo(CongNo, maDoiTac);
+        }
     }
 }
 
