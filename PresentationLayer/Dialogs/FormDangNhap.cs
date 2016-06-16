@@ -28,7 +28,7 @@ namespace PresentationLayer.Dialogs
         {
             TaiKhoanBUS taikhoanBUS = new TaiKhoanBUS();
             MainForm.user = taikhoanBUS.DangNhap(textEdit_TenDangNhap.Text, textEdit_MatKhau.Text);
-            if(MainForm.user == null)
+            if(MainForm.user.TenDangNhap == "")
             {
                 XtraMessageBox.Show("Tên Đăng Nhập Hoặc Mật Khẩu Không Chính Xác!\n\nNếu có vấn đề về tài khoản xin liên hệ với người quản trị.", @"Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
