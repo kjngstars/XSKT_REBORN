@@ -108,7 +108,11 @@ namespace PresentationLayer.Dialogs
                     DataView dt = (DataView)gridView1.DataSource;
                     foreach (DataRow row in dt.Table.Rows)
                     {
-                        var value = int.Parse(row["SOLUONGTRA"].ToString());
+                        int value;
+                        if (row["SOLUONGTRA"].ToString() == "")
+                            value = 0;
+                        else
+                            value = int.Parse(row["SOLUONGTRA"].ToString());
                         if (value > 0)
                         {
                             var maLoaiVe = row["MALOAIVE"].ToString();

@@ -63,7 +63,7 @@ namespace BusinessLogicLayer
             if (dataRow != null)
                 return new TaiKhoan(dataRow);
             else
-                return null;
+                return new TaiKhoan();
         }
 
     }
