@@ -598,7 +598,7 @@
             this.Controls.Add(this.simpleButton_Cancel);
             this.Controls.Add(this.groupControl1);
             this.Name = "FormPhieuThu";
-            this.Text = "FormPhieuThu";
+            this.Text = "Phiếu Thanh Toán";
             this.Load += new System.EventHandler(this.FormPhieuThu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).EndInit();

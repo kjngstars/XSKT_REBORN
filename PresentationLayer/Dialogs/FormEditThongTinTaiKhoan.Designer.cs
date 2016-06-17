@@ -145,7 +145,7 @@
             this.Controls.Add(this.textEdit_TenDangNhap);
             this.Controls.Add(this.labelControl_TenDangNhap);
             this.Name = "FormEditThongTinTaiKhoan";
-            this.Text = "FormEditThongTinTaiKhoan";
+            this.Text = "Tạo Tài Khoản";
             this.Load += new System.EventHandler(this.FormEditThongTinTaiKhoan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_TenDangNhap.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_MatKhau.Properties)).EndInit();

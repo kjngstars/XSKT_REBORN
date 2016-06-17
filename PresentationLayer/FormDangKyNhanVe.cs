@@ -127,7 +127,7 @@ namespace PresentationLayer
                     {
 
                         var maLoaiVe = item["MALOAIVE"].ToString();
-                        var soluong = item["SOVEPHATHANH"].ToString();
+                        var soluong = item["SOLUONG"].ToString();
                             registerDetail.Add(new RegisterDetailObject { RegisterID = registerID, MaLoaiVe = maLoaiVe, Quantity = int.Parse(soluong) });
 
                     }

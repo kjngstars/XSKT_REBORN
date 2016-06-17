@@ -172,5 +172,43 @@ namespace PresentationLayer.Dialogs
                 e.Handled = true;
             }
         }
+
+
+        private void repositoryItemTextEdit_SoLuongTra_EditValueChanged(object sender, EventArgs e)
+        {
+            TextEdit text = (TextEdit)sender;
+
+            int sltra=0;
+            try
+            {
+                sltra = int.Parse(text.EditValue.ToString());
+            }
+            catch
+            {
+                sltra = 0;
+            }
+
+            int slnhan=0;
+            try
+            {
+                int Index = this.gridView1.FocusedRowHandle;
+                string sl = this.gridView1.GetDataRow(Index)["SOLUONGNHAN"].ToString();
+                slnhan = int.Parse(sl);
+            }
+            catch
+            {
+                sltra = slnhan;
+            }
+            if (sltra > slnhan)
+                sltra = slnhan;
+            text.EditValue = sltra;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+       
     }
 }

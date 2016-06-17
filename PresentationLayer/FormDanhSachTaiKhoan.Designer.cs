@@ -125,6 +125,10 @@
             this.QUYENHAN.Visible = true;
             this.QUYENHAN.VisibleIndex = 2;
             // 
+            // repositoryItemImageComboBox2
+            // 
+            this.repositoryItemImageComboBox2.Name = "repositoryItemImageComboBox2";
+            // 
             // FormDanhSachTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -132,7 +136,7 @@
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.gridControl);
             this.Name = "FormDanhSachTaiKhoan";
-            this.Text = "FormDanhSachTaiKhoan";
+            this.Text = "Danh Sách Tài Khoản";
             this.Load += new System.EventHandler(this.FormDanhSachTaiKhoan_Load);
             this.Shown += new System.EventHandler(this.FormDanhSachTaiKhoan_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();

@@ -451,7 +451,7 @@
             this.Controls.Add(this.simpleButton_OK);
             this.Controls.Add(this.groupControl1);
             this.Name = "FormPhieuNhanVe";
-            this.Text = "FormPhieuNhanVe";
+            this.Text = "Phiếu Nhận Vé";
             this.Load += new System.EventHandler(this.FormPhieuNhanVe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();

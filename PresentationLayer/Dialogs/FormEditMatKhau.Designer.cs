@@ -174,7 +174,7 @@
             this.Controls.Add(this.textEdit_TenDangNhap);
             this.Controls.Add(this.labelControl_TenDangNhap);
             this.Name = "FormEditMatKhau";
-            this.Text = "FormEditMatKhau";
+            this.Text = "Đổi Mật Khẩu";
             this.Load += new System.EventHandler(this.FormEditMatKhau_Load);
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_MatKhau.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_TenDangNhap.Properties)).EndInit();

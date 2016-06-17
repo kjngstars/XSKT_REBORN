@@ -5,6 +5,8 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DatabaseAcessLayer
 {
@@ -17,9 +19,8 @@ namespace DatabaseAcessLayer
             try
             {
                 connection = new SqlConnection();
-                connection.ConnectionString = //@"Data Source=.\;Initial Catalog=QLSTK;Integrated Security=True";
+                connection.ConnectionString = 
                 @"Data Source=.\;Initial Catalog=QUANLYXOSO;Integrated Security=True";
-                //@"Data Source=KIUKIU;Initial Catalog=QLSTK;Integrated Security=True"
             }
             catch (Exception)
             { 

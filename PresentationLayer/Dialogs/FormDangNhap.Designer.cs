@@ -123,7 +123,7 @@
             this.Controls.Add(this.simpleButton_OK);
             this.Controls.Add(this.simpleButton_Cancel);
             this.Name = "FormDangNhap";
-            this.Text = "FormDangNhap";
+            this.Text = "Đăng Nhập";
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_MatKhau.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_TenDangNhap.Properties)).EndInit();
             this.ResumeLayout(false);
