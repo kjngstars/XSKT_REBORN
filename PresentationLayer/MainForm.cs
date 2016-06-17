@@ -298,29 +298,29 @@ namespace PresentationLayer
             switch (user.quyenHan)
             {
                 case QuyenHan.Admin:
-                    barButtonItem_DangNhap.Enabled = false;
+                    barButtonItem_DangNhap.Enabled = true;
                     barButtonItem_DangXuat.Enabled = true;
                     barButtonItem_DoiMatKhau.Enabled = true;
                     barButtonItem_ThayDoiQuyDinh.Enabled = true;
                     barButtonItem_Thoat.Enabled = true;
                     barButtonItem_DanhSachDoiTac.Enabled = true;
-                    barButtonItem_TiepNhanDoiTac.Enabled = false;
-                    barButtonItem_PhieuDangKyVe.Enabled = false;
-                    barButtonItem_PhieuNhanVe.Enabled = false;
-                    barButtonItem_PhieuTraVe.Enabled = false;
-                    barButtonItem_PhieuThanhToan.Enabled = false;
+                    barButtonItem_TiepNhanDoiTac.Enabled = true;
+                    barButtonItem_PhieuDangKyVe.Enabled = true;
+                    barButtonItem_PhieuNhanVe.Enabled = true;
+                    barButtonItem_PhieuTraVe.Enabled = true;
+                    barButtonItem_PhieuThanhToan.Enabled = true;
                     barButtonItem_DanhSachLoaiVe.Enabled = true;
                     barButtonItem_ThemLoaiVe.Enabled = true;
                     barButtonItem_DanhSachCCGT.Enabled = true;
                     barButtonItem_ThemCCGT.Enabled = true;
-                    barButtonItem_GhiNhanKQXS.Enabled = false;
+                    barButtonItem_GhiNhanKQXS.Enabled = true;
                     barButtonItem_TraCuuKQXS.Enabled = true;
                     barButtonItem_DanhSachDotPhatHanh.Enabled = true;
-                    barButtonItem_ThemDotPhatHanh.Enabled = false;
+                    barButtonItem_ThemDotPhatHanh.Enabled = true;
                     barButtonItem_DanhSachKeHoachPhatHanh.Enabled = true;
-                    barButtonItem_LapKeHoachPhatHanh.Enabled = false;
+                    barButtonItem_LapKeHoachPhatHanh.Enabled = true;
                     barButtonItem_DanhSachTaiKhoan.Enabled = true;
-                    barButtonItem_BaoCaoCongNo.Enabled = false;
+                    barButtonItem_BaoCaoCongNo.Enabled = true;
                     break;
                 case QuyenHan.User:
 
