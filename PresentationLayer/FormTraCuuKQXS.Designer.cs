@@ -108,6 +108,7 @@
             this.userControlTraCuuKQXS.Name = "userControlTraCuuKQXS";
             this.userControlTraCuuKQXS.Size = new System.Drawing.Size(780, 489);
             this.userControlTraCuuKQXS.TabIndex = 0;
+            this.userControlTraCuuKQXS.TextEditWidth = 200;
             // 
             // FormTraCuuKQXS
             // 
