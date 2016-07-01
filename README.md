@@ -12,6 +12,8 @@ Mai Văn Linh      |
 
 Lê Tiến Hiếu      |
 
+Nguyễn Văn Linh   | 13520440
+
 # SETUP
 Visual Studio 2013 or later
 
